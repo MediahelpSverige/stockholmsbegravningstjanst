@@ -15,10 +15,10 @@ get_header(); ?>
 
 <section class="banner bannerHome">
     <div class="bannerSlide">
-    	<?php $event_query = new WP_Query(array('post_type'  => 'homebanner', 'posts_per_page' => '-1',)        ); 
+    	<?php $event_query = new WP_Query(array('post_type'  => 'homebanner', 'posts_per_page' => '-1',)        );
              while ( $event_query->have_posts() ) : $event_query->the_post(); ?>
         <div class="item">
-        	<?php  $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' ); ?>           				
+        	<?php  $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' ); ?>
             <img src="<?php echo $image[0]; ?>" alt="" />
             <div class="container">
                <div class="banner-text">
@@ -26,13 +26,13 @@ get_header(); ?>
                   <p><?php echo wp_trim_words( get_the_content(), 40 );?></p>
                 </div>
              </div>
-            
+
         </div>
         	 <?php endwhile; ?>
 		<?php wp_reset_postdata(); ?>
 
-        
-        
+
+
     </div>
     <div class="banner-footer">
       <?php echo do_shortcode('[contact-form-7 id="40" title="Home Banner Contact"]'); ?>
@@ -52,30 +52,30 @@ get_header(); ?>
         <!-- <div class="rivew-head ">
         	<?php $customer = get_page(55);?>
             <h3> <?php echo $customer->post_title; ?> </h3>
-           <?php 
+           <?php
            echo $customer->post_content;
            ?>
         </div> -->
        <div class="content-carousel">
-        <?php	
+        <?php
 
 		$the_query = new WP_Query( 'post_type=customer_review&post_per_page=-1' ); $i=0;$k=0; $c=0; $s=1;
-		while($the_query -> have_posts()) : $the_query-> the_post(); 
+		while($the_query -> have_posts()) : $the_query-> the_post();
 		if($s==1)
 		{
 			?>
 			<div class="item">
 			<?php
-			
+
 		}
-		
+
 		if($i%2==0){
 		$k=0
-		
+
 		?>
-		
+
         <div class="row customer-cont ">
-        	<?php } ?>	
+        	<?php } ?>
             <div class="<?php if($c==2) { ?> col-sm-6 col-sm-offset-1 <?php } elseif($c==3){ ?> col-sm-5 <?php } else { ?> col-sm-6 <?php } ?> ">
                 <div class="customer-cont-txt">
                     <h4><?php the_title();?></h4>
@@ -83,8 +83,8 @@ get_header(); ?>
                 </div>
             </div>
 
-		        <?php if($i%2==1) {?>	
-		</div>	
+		        <?php if($i%2==1) {?>
+		</div>
 		<?php } $i++; $k++; $c++; ?>
 		<?php
 		  if($s==4)
@@ -95,16 +95,16 @@ get_header(); ?>
 		  	<?php
 		  }
 		$s++;
-		endwhile; 
+		endwhile;
 		wp_reset_query();
-		
+
 		if($k !=2 )
 		{
 		echo '</div> </div>';
 		}?>
 		</div>
     </div>
-        
+
     </div>
 </div>
 
@@ -113,7 +113,7 @@ get_header(); ?>
         <div class="row">
             <div class="col-sm-5 info-l">
                 <!-- <div class="info-logo">
-                		<?php  $image = wp_get_attachment_image_src( get_post_thumbnail_id(16 ), 'full' ); ?>           				
+                		<?php  $image = wp_get_attachment_image_src( get_post_thumbnail_id(16 ), 'full' ); ?>
                     <img src="<?php echo $image[0]; ?>" alt="info" />
                 </div> -->
                 <?php $contactpage = get_page(16);?>
@@ -121,36 +121,36 @@ get_header(); ?>
                <div class="tab-box">
                    <ul class="nav nav-tabs" role="tablist">
                    	<?php $event_query = new WP_Query(array('post_type'  => 'kotakta', 'posts_per_page' => '-1',)        ); $c=1;
-             while ( $event_query->have_posts() ) : $event_query->the_post(); 
-            
+             while ( $event_query->have_posts() ) : $event_query->the_post();
+
              ?>
                         <li role="presentation" <?php if($c==2){?>class="active"<?php }?>><a href="#address<?php echo $post->ID; ?>" aria-controls="address<?php echo $post->ID; ?>" role="tab" data-toggle="tab"><?php the_title(); ?></a></li>
 
                         	 <?php  endwhile; ?>
 					<?php wp_reset_postdata(); ?>
-					
+
  <li class="presentation1" role="presentation1" ><a href="<?php echo get_the_permalink(369); ?>" >Boka ett kostnadsfritt hembesok</a></li>
                       </ul>
                </div>
             </div>
-            
+
             <div class="col-sm-6 col-sm-offset-1">
-                
+
                 <div class="tab-content">
-                	
+
                 	 	<?php $event_query = new WP_Query(array('post_type'  => 'kotakta', 'posts_per_page' => '-1',)        );
 						// $c=1;
-             while ( $event_query->have_posts() ) : $event_query->the_post(); 
-            
+             while ( $event_query->have_posts() ) : $event_query->the_post();
+
              ?>
-                     
+
                   <div role="tabpanel" class="tab-pane fade <?php //if($c==2){ echo 'in active'; }?>" id="address<?php echo $post->ID; ?>">
                       <div class="info-addrss clearfix">
                         <div class="info-addrss-l info-addrss-ll">
-                          <?php 
+                          <?php
 
 							$location = get_field('map');
-							
+
 							if( !empty($location) ):
 							?>
 							<div class="acf-map">
@@ -158,19 +158,19 @@ get_header(); ?>
 							</div>
 							<?php endif; ?>
                         </div>
-                       
+
                     </div>
-                    
+
                        <div class="info-addrss clearfix">
-                      
-                       
-                
-                    	
+
+
+
+
                         <div class="info-addrss-l innr-co-wrk">
-                        	
-                        	
-                        	
-                        	
+
+
+
+
                         	     <div class="flower-carousel co-worker-outer">
                           <?php
 								if( have_rows('worker_details') ): while ( have_rows('worker_details') ) : the_row();
@@ -185,36 +185,37 @@ get_header(); ?>
                                <h4><?php echo get_sub_field('worker_designation'); ?></h4>
                               </div>
                  </div>
-                         
+
   <?php
 					       endif;
 					   endwhile;
 					endif;
 					?>
                         </div>
-                        	
-	 
+
+
                         </div>
-                        
+
                     </div>
-                     
-                     
+
+
                         <div class="info-addrss clearfix">
-                      
+
                         <div class="info-addrss-l add-dtl">
+                          <div class="co-worker-outer">
 						                           <?php echo get_field('details',false); ?>
 						                            <address>
 						                                <p><?php echo get_field('address');?></p>
                            <p>
-                                <span>Tel: <?php echo get_field('telefon');?></span> 
+                                <span>Tel: <?php echo get_field('telefon');?></span>
                                 <!-- <span>Fax: <?php //echo get_field('fax');?></span>  -->
                             </p>
                             </address>
-                           
+
                         </div>
                      </div>
-                     
-                     
+
+                   </div>
                   </div>
                   	 <?php  endwhile; ?>
 					<?php wp_reset_postdata(); ?>
@@ -231,17 +232,17 @@ get_header(); ?>
            echo $persion->post_content;
            ?>
             </div>
-            
+
         </div>
         <div class="row project-outer">
-           
-            
-           	<?php $event_query = new WP_Query(array('post_type'  => 'personlig_begran', 'posts_per_page' => '4',)        ); 
+
+
+           	<?php $event_query = new WP_Query(array('post_type'  => 'personlig_begran', 'posts_per_page' => '4',)        );
              while ( $event_query->have_posts() ) : $event_query->the_post(); ?>
             <div class="col-md-3 col-xs-6">
                 <div class="project-box">
                     <div class="project-pic">
-                    	<?php  $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' ); ?>           				
+                    	<?php  $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' ); ?>
                         <img src="<?php echo $image[0]; ?>" alt="project">
                     </div>
                     <div class="project-inner">
@@ -255,10 +256,10 @@ get_header(); ?>
             </div>
             <?php endwhile; ?>
 		<?php wp_reset_postdata(); ?>
-            
+
         </div>
     </div>
-  
+
 </div>
 <div class="info-user" id="om-oss-content">
     <div class="container">
@@ -266,7 +267,7 @@ get_header(); ?>
            <div class="col-sm-4">
                <div class="project-box">
                   <div class="project-inner pro-marg">
-                      
+
                   <p> <?php $review_details = get_page(14);
 			           echo $review_details->post_content;
 			           ?></p>
@@ -303,9 +304,9 @@ get_header(); ?>
                     <?php endif; wp_reset_postdata(); ?>
 
                </div>
-               
-               
-               
+
+
+
               <div class="row project-addrss add-info">
               	 <?php $query_partner = new WP_Query('page_id=14');
 				 $awicn=0;
@@ -314,11 +315,11 @@ get_header(); ?>
 								if( have_rows('award_details1') ): while ( have_rows('award_details1') ) : the_row();
 								if( get_row_layout() == 'award_details1' ):
 							?>
-              	
+
                   <div class="col-xs-6">
                       <div class="project-box">
                           <div class="project-inner">
-                              <h3><?php 
+                              <h3><?php
                               $awicn++ ;
                               	switch ($awicn) {
 						    case "1":
@@ -327,15 +328,15 @@ get_header(); ?>
 						        break;
 						    case "2":
 								$cinmg= 'info-2.png';
-						       
+
 						        break;
 						    case "3":
 								$cinmg= 'info-3.png';
-						       
+
 						        break;
 								case "4":
 								$cinmg= 'info-4.png';
-						       
+
 						        break;
 						    default:
 						       $cinmg= 'info-4.png';
@@ -346,14 +347,14 @@ get_header(); ?>
                           </div>
                       </div>
                   </div>
-                  
+
                    <?php
 					       endif;
 					   endwhile;
 					endif;
 					?>
                     <?php endif; wp_reset_postdata(); ?>
-                  
+
                   <!-- <div class="col-xs-6">
                       <div class="project-box">
                           <div class="project-inner">
@@ -378,7 +379,7 @@ get_header(); ?>
                           </div>
                       </div>
                   </div> -->
-                  
+
               </div>
             </div>
        </div>
@@ -391,134 +392,134 @@ get_header(); ?>
 </style>
 <script>
 	jQuery(document).ready(function($){
-		
-		
+
+
 			jQuery('.konta-link > a,.om-oss > a').click(function(e){
-				
+
 				e.preventDefault();
 			});
-		
-		
+
+
 			jQuery('.konta-link').click(function(){
-			
+
 	    			var topofset;
 	    			setTimeout(function(){
-	    				
+
 	    					var n=window.location.pathname;
 			history.pushState('', '', n);
-			
+
 	    			},100);
-	    		
-			
+
+
 			var redr='';
-			
+
 			if($(this).hasClass('ssr1') && $('div').hasClass('vara-glry'))
 			{
 				redr='.scrl-2';
 				topofset=150;
 			}
-			
+
 			if($(this).hasClass('ssr2') && $('div').hasClass('vara-glry'))
 			{
 				topofset=200;
 			redr='.scrl-1';
 			}
-			
+
 				if($(this).parents('.page').hasClass('home'))
 			{
 				topofset=70;
 			redr='.info-area';
 			}
-			
+
 			if(redr !='')
 			{
-				
-		
+
+
 			 jQuery('html, body').animate({
 	        scrollTop: jQuery(redr).offset().top-topofset
 	    }, 500);
-	    
+
 	    		}
-	    			
+
 	    		});
-		
-		
-		
+
+
+
 			$(window).scroll(function(){
 	    		var scrl=jQuery('.info-area').offset().top-70;
 	    		var max=scrl+jQuery('.info-area').height();
-	    			
+
 	    		if($(this).scrollTop() >=scrl && max >=$(this).scrollTop())
 	    		{
 	    			$('.konta-link').addClass('current_page_item');
-	    			
-	    		
+
+
 	    		}
-	    		
+
 	    		else
 	    		{
 	    			$('.konta-link').removeClass('current_page_item');
 	    		}
-	    	});	
-		
-		
-		
+	    	});
+
+
+
 			$(window).scroll(function(){
 	    		var scrl=jQuery('.info-user').offset().top-117;
 	    		var max=scrl+jQuery('.info-user').height();
-	    			
+
 	    		if($(this).scrollTop() >=scrl && max >=$(this).scrollTop())
 	    		{
 	    			$('.om-oss').addClass('current_page_item');
-	    			
-	    		
+
+
 	    		}
-	    		
+
 	    		else
 	    		{
 	    			$('.om-oss').removeClass('current_page_item');
 	    		}
-	    	});	
-		
-		
-		
+	    	});
+
+
+
 function new_map( $el ) {
-	
+
 	// var
 	var $markers = $el.find('.marker');
-	
-	
+
+
 	// vars
 	var args = {
 		zoom		: 15,
 		center		: new google.maps.LatLng(0, 0),
 		mapTypeId	: google.maps.MapTypeId.ROADMAP
 	};
-	
-	
-	// create map	        	
+
+
+	// create map
 	var map = new google.maps.Map( $el[0], args);
-	
-	
+
+
 	// add a markers reference
 	map.markers = [];
-	
-	
+
+
 	// add markers
 	$markers.each(function(){
-		
+
     	add_marker( $(this), map );
-		
+
 	});
-	
-	
+
+
 	// center map
 	center_map( map );
-	
-	
+
+
 	// return
 	return map;
-	
+
 }
 
 /*
@@ -624,37 +625,37 @@ function center_map( map ) {
 // global var
 
 	// $('.acf-map').each(function(){
-// 
+//
 		// // create map
 		// map = new_map( $(this) );
-// 
+//
 // });
 //map = new_map( $('.acf-map:eq(0)') );
 
 $('.nav-tabs > li > a').click(function(){
 	var map = null;
 	var idx=$(this).parent().index();
-	
+
 	setTimeout(function(){
 		if( ! $('.acf-map:eq('+idx+')').find('div').hasClass('gm-style') && idx!=0 )
 		{
 			console.log(idx);
 			map = new_map( $('.acf-map:eq('+idx+')') );
 		}
-	
+
 	},200);
 });
 
 
-	
-			
+
+
 			jQuery('.tab-box > ul > li:first > a').click();
-			
-		
+
+
 setTimeout(function(){
-	
+
 	map = new_map( $('.acf-map:eq('+0+')') );
-	
+
 	},400);
 
 });

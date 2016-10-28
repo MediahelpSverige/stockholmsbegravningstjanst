@@ -263,7 +263,7 @@ p{
 .footerMenu {
     margin-right: 165px;
     width: 170px;
-} 
+}
 .footerMenu li a {
     font-family: 'GothamBook_8';
     font-size: 13px;
@@ -352,7 +352,7 @@ p{
     position: absolute;
     top: 35%;
     width: 740px;
-    
+
 }
 .banner-text h2 {
     color: #fff;
@@ -483,7 +483,7 @@ p{
     margin-bottom: 14px;
 }
 .tab-box .nav>li>a {
-   padding: 8px 13px;
+   padding: 15px 13px;
     text-transform: uppercase;
     font-size: 16px;
     font-family: 'GothamBook_8';
@@ -530,7 +530,7 @@ p{
     color: #ddb448;
 }
 .more {
-    margin-top: 25px;    
+    margin-top: 25px;
 }
 .customer-product {
     padding: 80px 0;
@@ -562,7 +562,7 @@ p{
 .project-inner {
     padding: 20px;
     border: 1px solid #d6d6d6;
-    
+
 }
 .project-outer .project-inner {
     border-top: none;
@@ -586,7 +586,7 @@ p{
     font-size: 14px;
     margin-top: 15px;
    line-height: 22px;
-    
+
 }
 .project-next {
    position: absolute;
@@ -676,7 +676,7 @@ p{
 }
 .project-addrss .project-inner {
     text-align: center;
-   
+
 }
 .project-addrss .project-inner h3 {
     font-size: 20px;
@@ -698,7 +698,7 @@ p{
 }
 .add-info .project-box {
     margin-bottom: 30px;
-   
+
 }
 .add-info.project-addrss .project-inner {
     text-align: left;
@@ -758,7 +758,7 @@ p{
     margin-bottom:24px;
 }
 .begra-r {
-    
+
 }
 .begra-pic {
     border-radius: 5px;
@@ -800,7 +800,7 @@ ul.vara-list {
     margin: 0;
     padding: 0;
     list-style: none;
-   
+
 }
 ul.vara-list li {
     width: 33.333%;
@@ -822,7 +822,7 @@ ul.vara-list.vara-row {
 }
 .vara-box:hover img{
     opacity:0.9;
-    
+
 }
 .vara-box-pic {
     height: 110px;
@@ -939,7 +939,7 @@ ul.vara-list.vara-row {
     color: #d9b562;
 }
 .contactForm {
-    
+
 }
 .fromRow {
     margin-bottom: 20px;
@@ -951,7 +951,7 @@ ul.vara-list.vara-row {
     color: #969696;
     border-radius: 0;
     font-family: 'GothamBook_8';
-   
+
 }
 
 
@@ -1000,13 +1000,13 @@ ul.vara-list.vara-row {
 .right_panel p{
     font-size: 14px;
     line-height: 20px;
-    margin:0 0 20px;    
+    margin:0 0 20px;
 }
 .loader{
     padding:0px 0 40px;
     text-align: center;
     color: #bfbfbf;
-    font-size:35px;   
+    font-size:35px;
 }
 .loader i{
     height: 35px;
@@ -1028,7 +1028,7 @@ ul.vara-list.vara-row {
 .vara-btm .begra h4{
     line-height: 25px;
     margin: 0 0 32px;
-    
+
 }
 
 
@@ -1080,7 +1080,7 @@ ul.vara-list.vara-row {
     color: #969696;
     opacity: 1;
 }
-.form-controls:-ms-input-placeholder {  
+.form-controls:-ms-input-placeholder {
     color: #969696;
     opacity: 1;
 }
@@ -1229,7 +1229,7 @@ textarea.form-controls{
 /*--debabrata--*/
 
 .priser-txt {
-    
+
 }
 .priser-txt h3 {
     color: #393838;
