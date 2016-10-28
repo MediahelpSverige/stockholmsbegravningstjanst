@@ -22,7 +22,7 @@ define('DB_USER', '180958_hp43568');
 define('DB_PASSWORD', 'steel1992');
 
 /** MySQL hostname */
-define('DB_HOST', '180958_hp43568.mysql.binero.se');
+define('DB_HOST', 'stockholmsbegrav-180958.mysql.binero.se');
 
 $table_prefix  = 'wp_';
 
