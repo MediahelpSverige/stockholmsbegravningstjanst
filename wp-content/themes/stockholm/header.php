@@ -33,6 +33,12 @@ var n=window.location.pathname;
 	  history.pushState('', 'New Page Title', n);
 
 	  }
+
+
+
+
+
+
 </script>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 
@@ -48,11 +54,17 @@ var n=window.location.pathname;
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
     <!--css file links-->
+	<link href="<?php bloginfo('template_directory');?>/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="<?php bloginfo('template_directory');?>/css/fonts.css" rel="stylesheet" type="text/css"/>
 	<link href="<?php bloginfo('template_directory');?>/css/owl.carousel.min.css" rel="stylesheet" type="text/css" />
+    <link href="<?php bloginfo('template_directory');?>/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <link href="<?php bloginfo('template_directory');?>/css/slick.css" rel="stylesheet" type="text/css"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css"/>
-		<script src="<?php bloginfo('template_directory'); ?>/dist/bundle.js"></script>
 
+
+	<link href="<?php bloginfo('template_directory');?>/css/custom.css" rel="stylesheet" type="text/css" />
+    <link href="<?php bloginfo('template_directory');?>/css/developer.css" rel="stylesheet" type="text/css" />
+    <link href="<?php bloginfo('template_directory');?>/css/responsive.css" rel="stylesheet" type="text/css" />
 
 
 
