@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /lab5/wordpress/stockholmsbeg/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /lab5/wordpress/stockholmsbeg/index.php [L]
+</IfModule>
+<files wp-config.php>
+order allow,deny 
+deny from all 
+</files>

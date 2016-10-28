@@ -1,0 +1,648 @@
+/*Common responsive Css Used*/
+
+@media (max-width: 1199px) {
+    .navbar-brand > img {
+        width: 100%;
+    }
+    .header .navbar-header .navbar-brand {
+        width: 290px;
+    }
+    .tab-box .nav > li > a {
+        font-size: 14px;
+        padding: 8px 6px;
+    }
+    .footerData{
+        margin-right: 30px;
+    }
+    .footerMenu  {
+        margin-right: 30px;
+    }
+    .banner-input-cell {
+        width: 290px;
+    }
+    .banner-text {
+        top: 25%;
+    }
+    .owl-dots {
+        margin-left: -470px;
+        left: 50%;
+        bottom: 126px;
+    }
+    .project-addrss .project-inner h3 {
+        font-size: 18px;
+    }
+    .menu-top:after {
+        left: 40%;
+    }
+
+
+    .thank-text h2{
+        margin: 0 0 10px;
+        font-size: 50px;
+    }
+    .thank-text {
+        padding-top: 40px;
+        padding-bottom: 0px;
+    }
+    .contact-addrss a{
+        overflow: hidden;
+        white-space: normal;
+        text-overflow: ellipsis;
+    }
+
+
+}
+
+@media (max-width: 991px) {
+    .banner-text h2 {
+        font-size: 34px;
+    }
+    .banner-text h2 span {
+        font-size: 27px;
+    }
+    .banner-input-cell {
+        width: 210px;
+    }
+    .banner-text p {
+        font-size: 15px;
+    }
+    .banner-text {
+        top: 35%;
+        width: 100%;
+        left: 0px;
+        right: 0;
+        padding: 0 20px;
+    }
+    .banner-text h2 {
+        margin-bottom: 10px;
+    }
+    .owl-dots {
+        margin-left: -473px;
+        left: 50%;
+        bottom: 126px;
+    }
+    .banner-footer {
+        padding: 20px 0; 
+    }
+    .body-detail {
+        padding: 30px 0;
+    }
+    .info-area {
+        padding: 40px 0 30px;
+    }
+    .btn-default {
+        font-size: 14px;
+        padding: 8px 18px;
+    }
+    .tab-box .nav-tabs > li {
+        width: 100%;
+        margin-right: 0;
+        float: none;
+        display: block;
+    }
+    .customer-product {
+        padding: 40px 0;
+    }
+     .project-inner h3 a {
+        font-size: 17px;
+         padding-bottom: 10px;
+        
+    }
+    .customer-cont, .info-user {
+        padding: 40px 0 0;
+        margin: 0;
+    }
+    .footerData {
+        width: 198px;
+    }
+    .project-admin {
+        width: 80px;
+        height: 80px;
+    }
+  
+    .project-box {
+        margin-bottom: 30px;
+    }
+    .project-addrss {
+        margin-bottom: 0;
+    }
+    .begra h3 {
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+    .begra h4 {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    .begra p {
+        margin-bottom: 20px;
+    }
+    .begra-pic {
+        margin-bottom: 20px;
+    }
+    .begra-r h3, .vara-glry h3 {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    .begra-r ul li {
+        margin-bottom: 10px;
+    }
+    .vara-box-pic {
+        height: 70px;
+    }
+    .vara-box span {
+        font-size: 13px;
+        padding: 8px 7px;
+    }
+    ul.vara-list.vara-row {
+        margin-bottom: 10px;
+    }
+    .vara-btm {
+        padding: 30px 0;
+    }
+    .menu-top:after {
+        left: 24%;
+        top: -5px;
+    }
+
+
+
+}
+
+
+
+@media (max-width: 767px) {
+    .banner-input-cell {
+        width: 150px;
+    }
+    .banner-footer {
+        position: static;
+    }
+    .owl-dots {
+        bottom: 56px;
+        left: 50%;
+        margin-left: -373px;
+    }
+    p {
+        font-size: 14px;
+    }
+    .info-logo {
+        margin-bottom: 20px;
+    }
+    .info-area {
+        padding: 30px 0 20px;
+        
+    }
+    .tab-box {
+        margin-top: 20px;
+    }
+    .tab-box .nav-tabs > li {
+        float: left;
+        margin-right: 3px;
+        width: 49%;
+    }
+    .tab-box {
+        margin-bottom: 20px;
+    }
+    .info-addrss-l p {
+        margin-bottom: 10px;
+    }
+    .customer-product {
+        padding: 30px 0;
+    }
+    .cus-text p {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .project-outer {
+        margin-top: 20px;
+    }
+    .project-box {
+        margin-bottom: 20px;
+    }
+    .navbar-toggle .icon-bar {
+        background: #000;
+    }
+    .customer-cont, .info-user {
+        padding-top: 20px;
+    }
+    .header .navbar-header .navbar-brand {
+        padding-left: 15px;
+    }
+    .rivew-head {
+        width: auto;
+    }
+    .contact-header, .menu-listingHd {
+        float: none;
+    }
+    .contact-header {
+        text-align: right;
+        margin-top: 0;
+    }
+    .menu-listingHd .navbar-nav {
+        margin: 0;
+    }
+     .header .navbar .goldenBtn {
+        float: none;
+         display: inline-block;
+    }
+    .contact-header {
+        position: absolute;
+        right: 60px;
+        top: 6px;
+    }
+    .contact-header span, .contact-header a {
+        font-size: 13px;
+    }
+    .header .navbar-header .navbar-brand {
+        width: 210px;
+    }
+    .navbar-toggle {
+        margin-top: 1px;
+    }
+    .container > .navbar-collapse {
+        background: rgba(0,0,0,1);
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .menu-listingHd .navbar-nav li a {
+        color: #fff;
+        display: inline-block;
+    }
+    .header {
+        padding-bottom: 0;
+    }
+    .inner-page {
+        padding-top: 0;
+    }
+    .header {
+        position: static;
+    }
+    .vara-box-pic {
+        height: 100px;
+    }
+    .vara-btm {
+        padding: 20px 0;
+    }
+    .vara-glry p {
+        margin-bottom: 10px;
+    }
+    .vara-btm {
+        padding: 10px 0;
+    }
+    .vara-box-pic {
+        height: 80px;
+    }
+    .begra h4 {
+        font-size: 15px;
+    }
+    .menu-top:after  {
+        display: none;
+    }
+    .menu-top ul {
+        margin-left: 50px;
+    }
+
+
+
+    .tab-top-section {
+        padding: 30px 0 20px;
+    }
+    .tab-nav a{
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+    .tab-nav li{
+        margin: 0 0 10px;
+    }
+    .tab-nav{
+        margin-bottom: 20px;
+    }
+    .form-controls{
+        height: 35px;
+        padding: 0 10px;
+    }
+    textarea.form-controls {
+        height: 130px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .submit-controls {
+        width: 90px;
+        height: 35px;
+        font-size: 14px;
+    }
+    .tab-section {
+        padding-bottom: 30px;
+    }
+    .tab-form-row {
+        margin: 0 0 10px;
+    }
+    .flower-carousel .slick-arrow.slick-prev {
+        left: 10px;
+        opacity: 0.8;
+    }
+    .flower-carousel .slick-arrow.slick-next {
+        right: 10px;
+        opacity: 0.8;
+    }
+    .tab-section header {
+        margin: 0px;
+    }
+    .thank-text h2{
+        font-size: 30px;
+    }
+    .thank-text p{
+        line-height: 20px;
+    }
+    .thank-text {
+        padding-top: 20px;
+    }
+    .contact-inner {
+        padding: 10px 0;
+    }
+    .contact-addrss h3{
+        margin-bottom: 10px;
+    }
+    .contact-addrss h4 {
+        margin-bottom: 5px;
+    }
+    .contact-addrss{
+        margin-bottom: 20px;
+    }
+    .contact-map iframe{
+        height: 200px;
+    }
+    .contact-map{
+        margin-bottom: 20px;
+    }
+    .fromRow .form-control{
+        height: 35px;
+    }
+    .form-control{
+        padding: 0 10px;
+    }
+    .fromRow textarea.form-control {
+        height: 130px;
+        padding-top: 5px;
+    }
+    .btn-submit {
+        padding: 8px 25px;
+        font-size: 14px;
+    }
+
+
+
+    .priser-content {
+        padding-bottom: 30px;
+    }
+    .topgap-inner {
+        padding-top: 30px;
+    }
+    .priser-txt h3{
+        margin-bottom: 10px;
+    }
+    .priser-right-block, .priser-text-each {
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+    .priser-right{
+        margin: 30px 0 0 0;
+    }
+    .item {
+        max-height: 350px;
+    }
+
+   
+}
+@media (max-width: 650px) {
+
+    .footerData {
+        width: 100%;
+        margin: 0;
+        float: none;
+        margin-bottom: 20px;
+    }
+    .footerMenu, .footerContact {
+        width: 47%;
+    }
+    .footer {
+        padding: 15px 0 20px;
+    }
+    .footerMenu {
+        margin-right: 20px;
+    }
+    .footerTop {
+        padding: 20px 0;
+    }
+    
+}
+
+
+@media (max-width: 568px) {
+    .banner-input-cell {
+        width: 47%;
+    }
+    .banner-input {
+        padding: 0 15px;
+    }
+    .banner-btn {
+        text-align: left;
+        margin-top: 15px;
+        display: block;
+    }
+    .banner-text h2 span {
+        display: inline;
+    }
+    .owl-dots {
+        bottom: 8px;
+    }
+    .info-addrss-l address p {
+        font-size: 13px;
+    }
+    .customer-product {
+        padding: 30px 0 20px;
+    }
+    .project-addrss .project-inner h3 {
+        font-size: 15px;
+    }
+    .add-info .project-box {
+        margin-bottom: 20px;
+    }
+    .footer {
+        padding-top: 20px;
+    }
+    .contact-header > span {
+        display: none;
+    }
+    .copyTxt {
+        line-height: 18px;
+    }
+    .banner-input {
+        text-align: left;
+    }
+    .menu-top ul {
+        margin-left: 0;
+    }
+    .menu-top ul li a {
+        padding: 0 5px;
+    }
+
+
+    .tab-top-section {
+        padding: 20px 0 10px;
+    }
+    .tab-nav {
+        margin-bottom: 10px;
+    }
+    .flower-carousel {
+        margin: 20px 0;
+    }
+
+
+
+    .thank-text h2 {
+        font-size: 20px;
+        margin: 0 0 5px;
+    }
+
+
+
+    .priser-txt h3{
+        font-size: 20px;
+    }
+    .tyotalblog-cell:first-child {
+        font-size: 14px;
+    }
+    .btn-submit.rd-mr-anc{
+        padding: 5px 14px;
+        font-size: 14px;
+        margin: 5px 0 0 0;
+    }
+    .tyotalblog{
+        width: 500px;
+    }
+    .tyotalblog-wrap{
+        overflow: auto;
+    }
+    .tyotalblog-cell{
+        padding-bottom: 2px;
+    }
+
+
+}
+
+@media (max-width:480px) {
+    .header .navbar-header .navbar-brand {
+        width: 230px;
+    }
+    .navbar-toggle {
+        margin-top: 5px;
+    }
+    .header {
+        padding: 8px 0 5px;
+    }
+    .banner-input-cell {
+        width: 45%;
+    }
+    .banner-text {
+        position: static;
+        margin-top: 20px;
+    }
+    .banner-text h2 {
+        color: #e5a600;
+        font-size: 24px;
+    }
+    .banner-text h2 span {
+        font-size: 23px;
+    }
+    .banner-text p {
+        color: #949494;
+        font-size: 14px;
+    }
+    .banner-footer {
+        margin-top: 20px;
+    }
+    .owl-dots {
+        bottom: -12px;
+    }
+    .body-detail {
+        padding: 20px 0;
+    }
+    .tab-box .nav > li > a {
+        font-size: 10px;
+    }
+    .tab-box .nav-tabs > li {
+        width: 48%;
+    }
+    .info-addrss-l {
+        width: 100%;
+    }
+    .info-addrss-l p {
+        margin-top: 10px
+    }
+    .info-addrss-l > a {
+        margin-top: 10px;
+        display: block;
+    }
+    .cus-text p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .project-outer .col-md-3.col-xs-6 {
+        width: 100%;
+        float: none;
+    }
+    .rivew-head h3 {
+        font-size: 23px;
+        margin-bottom: 15px;
+    }
+    .customer-cont-txt h4, .customer-cont-txt h4 a {
+        font-size: 22px;
+    }
+    .project-addrss .col-md-4.col-xs-6, .add-info .col-xs-6 {
+        width: 100%;
+        float: none;
+    }
+    .contact-header {
+        margin-top: 5px;
+    }
+    .body-detail p {
+        margin-bottom: 20px;
+    }
+    .header {
+        padding: 8px 0 0px;
+    }
+    .footerMenu, .footerContact {
+        width: 100%;
+        margin: 0;
+    }
+    .footerMenu {
+        margin-bottom: 20px;
+    }
+    .footerTop h4 {
+        margin-bottom: 15px;
+    }
+    .header .navbar-header .navbar-brand {
+        width: 210px;
+    }
+    .contact-header, .navbar-toggle {
+        margin-top: 3px;
+    }
+    .begra h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .begra p {
+        margin-bottom: 15px;
+        font-size: 13px;
+        line-height: 20px;
+    }
+    .begra-r h3, .vara-glry h3 {
+        font-size: 15px;
+    }
+    ul.vara-list li {
+        width: 50%;
+    }
+    
+}
