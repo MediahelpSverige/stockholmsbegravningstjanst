@@ -7,7 +7,7 @@ module.exports = {
 	entry: ['bootstrap-loader','./src/app.js'],
 
 	output: {
-		publicPath: "http://localhost:8080/",
+		publicPath: "http://localhost:8080/stockholmsbegravningstjanst/wp-content/themes/stockholm/dist/",
 		path: './dist/',
 		filename: 'bundle.js'
 	},
@@ -61,7 +61,7 @@ module.exports = {
             jQuery: "jQuery",
             "windows.jQuery": "jquery"
         }),
-        //new LiveReloadPlugin(35729,'localhost',true)
+        new LiveReloadPlugin()
     ],
 
 

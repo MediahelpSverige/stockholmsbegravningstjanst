@@ -10,8 +10,9 @@
  */
 ?>
 <!--footer start-->
+<script src="http://localhost:35729/livereload.js"></script>
 <footer class="footer">
-  
+
      <div class="container">
          <div class="footerTop clearfix">
              <div class="footerData clearfix">
@@ -21,7 +22,7 @@
                      <?php echo $om_oss->post_content; ?>
                  </div>
              </div>
-                          
+
              <div class="footerMenu clearfix">
                      <h4>Våra tjänster</h4>
                      <?php
@@ -31,22 +32,22 @@
                                 'container' => 'none',
                              ) );
                         ?>
-                   
+
              </div>
-             
+
              <div class="footerContact">
                  <h4>Kontakta oss</h4>
-                 
+
                  <address>
                     <?php echo get_field('address',16); ?>
-                     
+
                      <!-- <a href="callto:08270370">Telefon - <?php ///echo get_field('telefon',16); ?></a> -->
                  </address>
-                 
+
                  <!-- <a href="javascript:void(0)">Fax -  <?php //echo get_field('fax',16); ?></a> -->
              </div>
          </div>
-         
+
          <div class="footerBottom">
              <p class="copyTxt"><?php echo get_theme_mod( 'copyright_textbox', 'No copyright information has been saved yet.' ); ?>
 </p>
@@ -56,7 +57,7 @@
              </div>
          </div>
      </div>
- 
+
 </footer>
 <?php wp_footer(); ?>
 <!--footer end-->
@@ -86,80 +87,80 @@
 			if(has=='#blommer')
 			{
 				redr='.scrl-2';
-				
+
 				topofset=150;
 			}
 			if(has=='#begravning')
 			{
 				redr='.scrl-1';
-				
+
 				topofset=200;
 			}
-			
+
 				if(has=='#kontakta')
 			{
 				redr='.info-area';
 				topofset=70;
 			}
-			
+
 			if(redr !='')
 			{
-				
-		
+
+
 			 jQuery('html, body').animate({
 	        scrollTop: jQuery(redr).offset().top-topofset
 	    }, 500);
-	    
+
 	    		}
-	    		
-	    		
+
+
 	    		jQuery('.footer-link').click(function(){
 	    			var topofset;
 	    			setTimeout(function(){
-	    				
+
 	    					var n=window.location.pathname;
 			history.pushState('', '', n);
-			
+
 	    			},100);
-	    		
-			
+
+
 			var redr='';
-			
+
 			if($(this).hasClass('ssr1') && $('div').hasClass('vara-glry'))
 			{
 				redr='.scrl-2';
 				topofset=150;
 			}
-			
+
 			if($(this).hasClass('ssr2') && $('div').hasClass('vara-glry'))
 			{
 				topofset=200;
 			redr='.scrl-1';
 			}
-			
+
 				if($(this).parents('.page').hasClass('home'))
 			{
 				topofset=70;
 			redr='.info-area';
 			}
-			
+
 			if(redr !='')
 			{
-				
-		
+
+
 			 jQuery('html, body').animate({
 	        scrollTop: jQuery(redr).offset().top-topofset
 	    }, 500);
-	    
+
 	    		}
-	    			
+
 	    		});
-	    		
-	    		
-	    
-	    		
-	    		
-	    		
+
+
+
+
+
+
 	});
 </script>
 
@@ -180,11 +181,11 @@
                     dots: false
                 }
             }
-        }); 
-        
+        });
+
 //        fancybox
         $(".vara-box a").fancybox({
-           
+
             helpers : {
                 title : {
                     type : 'inside'

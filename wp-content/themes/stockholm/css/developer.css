@@ -25,7 +25,7 @@ div.wpcf7-validation-errors {
     color: #ff0d0d;
     text-align: center;
         margin-bottom: -13px !important;
-}  
+}
 span.wpcf7-not-valid-tip {
 
     margin-bottom: -19px;
@@ -59,7 +59,7 @@ span.wpcf7-not-valid-tip {
 	   }
 .banner-input-cell span {
 position: static;
-}	   
+}
 .priser-right-block div.wpcf7-validation-errors{
 	    width: 100%;
     margin-left: 0px !important;
@@ -116,23 +116,23 @@ position: static;
 .select-class
 {
 	background-color: #ccc;
-	
+
 }
 
-.flower-hidden 
+.flower-hidden
 {
 	visibility:hidden;
 }
 
 
-.flower-car > figure 
+.flower-car > figure
 {
-	
+
 	position: relative;
 }
 
 .flower-car > figure > span {
-	
+
 	position: absolute;
 	left: 0;
 	right: 0;
@@ -145,16 +145,16 @@ position: static;
     border: 1px #04993a solid;
 }
 
-.flower-car > figure > span > i 
+.flower-car > figure > span > i
 {
 	color: #04993a;
 	font-size: 33px;
 	font-weight:lighter;
-	
+
 }
 
 .subheding {
-	
+
 background: #efe0bb;
     padding: 15px 0;
     padding-left: 24px;
@@ -183,7 +183,7 @@ background: #efe0bb;
 .pricea
 {
 	margin-top:15px;
-	
+
 }
 
 .menu li.current-menu-item a{
@@ -196,7 +196,7 @@ background: #efe0bb;
 .inner-page.no-header
 {
 	padding-top: 120px;
-	
+
 }
 
 .section-border {
@@ -204,7 +204,7 @@ background: #efe0bb;
 	    margin-bottom: 40px;
     border-bottom: 1px solid #ccc;
     padding-bottom: 25px;
-	
+
 }
 
 .outer-loop .section-border:last-child
@@ -224,9 +224,9 @@ top: 21%;
 padding-left: 40px;
 width: 900px;
 opacity: 0;
-transition: all 1500ms 
+transition: all 1500ms
 ease-in-out;
-   
+
 }
 
 .active .banner-text {
@@ -259,7 +259,7 @@ div.wpcf7-mail-sent-ok{
 
 .info-addrss-ll {
     width: 100%;
-    
+
 }
 
 .acf-map {
@@ -278,7 +278,7 @@ div.wpcf7-mail-sent-ok{
 }
 
 .co-worker-img {
-	
+
 
       width: 85px;
     height: 85px;
@@ -290,7 +290,7 @@ div.wpcf7-mail-sent-ok{
     -moz-box-shadow: 0 2px 5px rgba(229,166,0,1);
     margin-bottom: 16px;
    }
-   
+
 
 
 .innr-co-wrk{
@@ -320,7 +320,7 @@ width: 100%;
 
 .contact-innerl {
 	    padding: 100px 0 50px 0;
-	
+
 }
 .owl-dots {
 top: 70%;
@@ -329,8 +329,7 @@ bottom: auto;
 
 .co-worker-outer {
 	    background: #ffffff;
-	    margin: 10px -10px;
-	    padding: 20px;
+	    padding: 10px;
 }
 .tab-content>.tab-pane{
 	display: block;

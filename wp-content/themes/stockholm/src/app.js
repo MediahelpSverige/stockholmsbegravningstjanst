@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import '../css/fonts.css'
+import 'file?emitFile=false!../css/fonts.css'
 import 'bootstrap'
 import '../css/custom.css'
 import '../css/developer.css'

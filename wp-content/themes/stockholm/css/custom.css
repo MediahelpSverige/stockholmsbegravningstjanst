@@ -14,6 +14,7 @@
 		-moz-box-sizing: border-box;
 			-webkit-box-sizing: border-box;
             outline: none;
+
 }
 *:after, *:before {
 	box-sizing: border-box;
@@ -26,6 +27,7 @@ body {
     font-family: 'GothamMedium_6';
     font-size: 14px;
     position: relative;
+
 }
 ul, ol, li {
 	list-style-type: none;
@@ -555,13 +557,17 @@ p{
         -moz-box-shadow: 0 0px 27px rgba(0,0,0,0.18);
     position: relative;
     background: #fff;
+
+}
+
+.project-outer .project-box{
+		min-height: 400px;
 }
 .project-box > img {
     width: 100%;
 }
 .project-inner {
     padding: 20px;
-    border: 1px solid #d6d6d6;
 
 }
 .project-outer .project-inner {
@@ -1190,7 +1196,6 @@ textarea.form-controls{
     padding: 10px 0;
 }
 .flower-carousel{
-    margin: 40px -6px;
 }
 .tab-section header p{
     font-size: 14px;
@@ -1311,4 +1316,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .pdng0 {
     padding: 0;
+}
+
+.kontakt-header{
+	margin-top: 0px;
+}
+
+
+.kontakt-header h3{
+	font-size: 30px;
 }

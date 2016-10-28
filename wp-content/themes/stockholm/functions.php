@@ -434,7 +434,7 @@ function example_customizer( $wp_customize ) {
             'priority' => 35,
         )
     );
-	
+
 	$wp_customize->add_section(
         'header_section',
         array(
@@ -443,8 +443,8 @@ function example_customizer( $wp_customize ) {
             'priority' => 34,
         )
 	);
-	
-	
+
+
 	$wp_customize->add_setting(
     	'phone',
 		array(
@@ -481,7 +481,7 @@ $wp_customize->add_control(
 );
 
 
-	
+
 	$wp_customize->add_setting(
     'copyright_textbox',
     array(
@@ -535,31 +535,31 @@ add_action( 'customize_register', 'example_customizer' );
 add_action( 'wp_ajax_testimonial_load_more_function', 'testimonial_load_more_function');
 add_action( 'wp_ajax_nopriv_testimonial_load_more_function', 'testimonial_load_more_function');
 function testimonial_load_more_function(){
-	
+
 							$paged1 = isset( $_GET['paged1'] ) ? (int) $_GET['paged1'] : 1;
                				$paged2 = isset( $_GET['paged2'] ) ? (int) $_GET['paged2'] : 1;
-							$the_queryi = new WP_Query( 'post_type=kotakta'); 
+							$the_queryi = new WP_Query( 'post_type=kotakta');
 							$count = ($the_queryi->found_posts)/1;
-							 wp_reset_query(); 
-							$the_query = new WP_Query( 'post_type=kotakta&posts_per_page=1&paged='.$paged1 ); 
-							
+							 wp_reset_query();
+							$the_query = new WP_Query( 'post_type=kotakta&posts_per_page=1&paged='.$paged1 );
+
 								while($the_query -> have_posts()) : $the_query-> the_post();
-								
+
 								?>
 								<div class="row contact-inner">
                 <div class="col-sm-3 contact-addrss">
                 	<h2><?php the_title(); ?></h2>
                     <h3><?php echo get_field('details'); ?></h3>
                     <h4><?php echo get_field('address'); ?></h4>
-                    <h4><span>Tel: <?php echo get_field('telefon'); ?> </span><span>Fax: <?php echo get_field('fax'); ?></span></h4>
+                    <h4><span><i class="fa fa-phone" aria-hidden="true"></i><?php echo get_field('telefon'); ?> </span><span>Fax: <?php echo get_field('fax'); ?></span></h4>
                     <a href="mailto:<?php echo get_field('email_id'); ?> "><?php echo get_field('email_id'); ?> </a>
                 </div>
                 <div class="col-sm-5">
                     <map>
-                        <?php 
+                        <?php
 
 							$location = get_field('map');
-							
+
 							if( !empty($location) ):
 							?>
 							<div class="acf-map">
@@ -570,27 +570,17 @@ function testimonial_load_more_function(){
                 </div>
                 <div class="col-sm-4 right_panel">
                     <div class="contactForm">
-                        <?php the_content(); 
+                        <?php the_content();
            ?>
-                        
+
                     </div>
                 </div>
             </div>
 							<input type="hidden" class="pg1" value="<?php echo $paged1; ?>" >
 							<input type="hidden" class="pg2" value="<?php echo $count; ?>" >
-							<?php endwhile; wp_reset_query(); 									
+							<?php endwhile; wp_reset_query();
 die;
 ?>
 
 <?php
 }
-
-
-
-
-
-
-
-
-
-

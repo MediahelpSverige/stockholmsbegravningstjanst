@@ -117,7 +117,7 @@ get_header(); ?>
                     <img src="<?php echo $image[0]; ?>" alt="info" />
                 </div> -->
                 <?php $contactpage = get_page(16);?>
-                <p><?php echo $contactpage->post_content;?> </p>
+                <div class="kontakt-header"><?php echo $contactpage->post_content;?> </div>
                <div class="tab-box">
                    <ul class="nav nav-tabs" role="tablist">
                    	<?php $event_query = new WP_Query(array('post_type'  => 'kotakta', 'posts_per_page' => '-1',)        ); $c=1;
