@@ -17,24 +17,24 @@ get_header(3); ?>
     <div class="contact">
         <div class="container">
         	<div class="spl-h3" id="load_outer">
-        
+
             <div class="row contact-innerl" >
-            	
+
                 <div class="col-sm-3 contact-addrss">
-                	
-                	 
-                	
+
+
+
                     <h3><?php echo get_field('details'); ?></h3>
                     <h4><?php echo get_field('address'); ?></h4>
-                    <h4><span>Tel: <?php echo get_field('telefon'); ?> </span><!-- <span>Fax: <?php //echo get_field('fax'); ?></span> --></h4>
+                    <h4><span><i class="fa fa-phone" aria-hidden="true"></i><?php echo get_field('telefon'); ?> </span><!-- <span>Fax: <?php //echo get_field('fax'); ?></span> --></h4>
                     <a href="mailto:<?php echo get_field('email_id'); ?> "><?php echo get_field('email_id'); ?> </a>
                 </div>
                 <div class="col-sm-5">
                     <map>
-                        <?php 
+                        <?php
 
 							$location = get_field('map');
-							
+
 							if( !empty($location) ):
 							?>
 							<div class="acf-map">
@@ -47,7 +47,7 @@ get_header(3); ?>
                     <div class="contactForm">
                         <?php echo apply_filters( 'the_content', $post->post_content );
            ?>
-                        
+
                     </div>
                 </div>
             </div>
@@ -63,14 +63,14 @@ get_header(3); ?>
 		var has;
 		has=window.location.hash;
 			var n=window.location.pathname;
-			
+
 			var mhas=has.split('#');
 			console.log('#p-'+mhas[1]);
 			 jQuery('html, body').animate({
 	        scrollTop: jQuery('#p-'+mhas[1]).offset().top-110
 	    }, 500);
-	    
-	     setTimeout(function(){history.pushState('', '', n);},00);		
+
+	     setTimeout(function(){history.pushState('', '', n);},00);
 	});
 </script>
 
@@ -101,7 +101,7 @@ get_header(3); ?>
 
 <script type="application/javascript">
         (function($) {
-            
+
         function new_map( $el ) {
 
             // var
@@ -114,7 +114,7 @@ get_header(3); ?>
                 mapTypeId	: google.maps.MapTypeId.ROADMAP
             };
 
-            // create map	        	
+            // create map
             var map = new google.maps.Map( $el[0], args);
 
             // add a markers reference
@@ -210,4 +210,4 @@ get_header(3); ?>
         });
 
 })(jQuery);
-</script>  
+</script>

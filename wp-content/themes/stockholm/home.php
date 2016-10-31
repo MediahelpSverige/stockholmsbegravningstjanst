@@ -17,9 +17,9 @@ get_header(); ?>
     <div class="bannerSlide">
     	<?php $event_query = new WP_Query(array('post_type'  => 'homebanner', 'posts_per_page' => '-1',)        );
              while ( $event_query->have_posts() ) : $event_query->the_post(); ?>
-        <div class="item">
-        	<?php  $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' ); ?>
-            <img src="<?php echo $image[0]; ?>" alt="" />
+              <?php  $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' ); ?>
+        <div class="item" style="background-image:url('<?php echo $image[0]; ?>')">
+            <img src="" alt="" />
             <div class="container">
                <div class="banner-text">
                     <h2><?php the_title(); ?></h2>
@@ -66,7 +66,7 @@ get_header(); ?>
              while ( $event_query->have_posts() ) : $event_query->the_post();
 
              ?>
-                        <li role="presentation" <?php if($c==2){?>class="active"<?php }?>><a href="#address<?php echo $post->ID; ?>" aria-controls="address<?php echo $post->ID; ?>" role="tab" data-toggle="tab"><?php the_title(); ?></a></li>
+                        <li role="presentation" <?php if($c==2){?>class="active"<?php }?>><a href="#address<?php echo $post->ID; ?>" aria-controls="address<?php echo $post->ID; ?>"><?php the_title(); ?></a></li>
 
                         	 <?php  endwhile; ?>
 					<?php wp_reset_postdata(); ?>
@@ -148,7 +148,7 @@ get_header(); ?>
 						                            <address>
 						                                <p><?php echo get_field('address');?></p>
                            <p>
-                                <span>Tel: <?php echo get_field('telefon');?></span>
+                                <span><i class="fa fa-phone" aria-hidden="true"></i><?php echo get_field('telefon');?></span>
                                 <!-- <span>Fax: <?php //echo get_field('fax');?></span>  -->
                             </p>
                             </address>
@@ -271,7 +271,7 @@ get_header(); ?>
                                <h4><?php echo get_sub_field('designation'); ?></h4>
                                <p><i class="fa fa-mobile" aria-hidden="true"></i>  <?php echo get_sub_field('mobile_number'); ?></p>
                                <p><img src="<?php bloginfo('template_directory'); ?>/images/phone.png" alt="phone" />  <?php echo get_sub_field('phone_number'); ?></p>
-                               <p><a href="mailto:jacob@mediahelp.se"><i class="fa fa-envelope" aria-hidden="true"></i> <?php echo get_sub_field('email_id'); ?></a></p>
+                               <p><a href="mailto:<?php echo get_sub_field('email_id'); ?>"><i class="fa fa-envelope" aria-hidden="true"></i> <?php echo get_sub_field('email_id'); ?></a></p>
                            </div>
                        </div>
                    </div>

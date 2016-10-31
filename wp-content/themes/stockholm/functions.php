@@ -283,6 +283,12 @@ function twentysixteen_scripts() {
 
 	wp_enqueue_script( 'twentysixteen-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20160816', true );
 
+wp_enqueue_script( 'ajaxcall', get_template_directory_uri() . '/js/ajaxcall.js', array ( 'jquery' ), 1.1, true);
+
+wp_localize_script( 'ajaxcall', 'ajaxpagination', array(
+	'ajaxurl' => admin_url( 'admin-ajax.php' ),
+));
+
 	wp_localize_script( 'twentysixteen-script', 'screenReaderText', array(
 		'expand'   => __( 'expand child menu', 'twentysixteen' ),
 		'collapse' => __( 'collapse child menu', 'twentysixteen' ),
@@ -528,12 +534,50 @@ $wp_customize->add_control(
 add_action( 'customize_register', 'example_customizer' );
 
 
+add_action('wp_ajax_get_hembesok','get_hembesok');
+add_action('wp_ajax_nopriv_get_hembesok','get_hembesok');
+
+
+
+function get_hembesok() {
+
+	$query_vars['p'] = $_POST['id'];
+$query_vars['post_type'] = 'page';
+
+
+
+	 $posts = new WP_Query( $query_vars );
+
+	 	  if( ! $posts->have_posts() ) {
+        echo "no posts found";
+    }else{
+
+
+			  $posts->the_post();
+
+				the_content();
+
+
+
+
+
+		}
+
+
+
+
+	die;
+}
+
+
 
 
 
 
 add_action( 'wp_ajax_testimonial_load_more_function', 'testimonial_load_more_function');
 add_action( 'wp_ajax_nopriv_testimonial_load_more_function', 'testimonial_load_more_function');
+
+
 function testimonial_load_more_function(){
 
 							$paged1 = isset( $_GET['paged1'] ) ? (int) $_GET['paged1'] : 1;
@@ -584,3 +628,4 @@ die;
 
 <?php
 }
+?>

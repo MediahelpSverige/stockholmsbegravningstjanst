@@ -17,17 +17,17 @@ get_header(); ?>
     <div class="bannerSlide">
     	<?php $event_query = new WP_Query(array('post_type'  => 'homebanner', 'posts_per_page' => '-1',)        );
              while ( $event_query->have_posts() ) : $event_query->the_post(); ?>
-        <div class="item">
-        	<?php  $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' ); ?>
-            <img src="<?php echo $image[0]; ?>" alt="" />
-            <div class="container">
-               <div class="banner-text">
-                    <h2><?php the_title(); ?></h2>
-                  <p><?php echo wp_trim_words( get_the_content(), 40 );?></p>
-                </div>
-             </div>
+             <?php  $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' ); ?>
+       <div class="item" style="background-image:url('<?php echo $image[0]; ?>')">
+           <img src="" alt="" />
+           <div class="container">
+              <div class="banner-text">
+                   <h2><?php the_title(); ?></h2>
+                 <p><?php echo wp_trim_words( get_the_content(), 40 );?></p>
+               </div>
+            </div>
 
-        </div>
+       </div>
         	 <?php endwhile; ?>
 		<?php wp_reset_postdata(); ?>
 
@@ -112,10 +112,6 @@ get_header(); ?>
     <div class="container">
         <div class="row">
             <div class="col-sm-5 info-l">
-                <!-- <div class="info-logo">
-                		<?php  $image = wp_get_attachment_image_src( get_post_thumbnail_id(16 ), 'full' ); ?>
-                    <img src="<?php echo $image[0]; ?>" alt="info" />
-                </div> -->
                 <?php $contactpage = get_page(16);?>
                 <div class="kontakt-header"><?php echo $contactpage->post_content;?> </div>
                <div class="tab-box">
@@ -124,19 +120,26 @@ get_header(); ?>
              while ( $event_query->have_posts() ) : $event_query->the_post();
 
              ?>
-                        <li role="presentation" <?php if($c==2){?>class="active"<?php }?>><a href="#address<?php echo $post->ID; ?>" aria-controls="address<?php echo $post->ID; ?>" role="tab" data-toggle="tab"><?php the_title(); ?></a></li>
+                        <li  class="kontor-li" role="presentation" <?php if($c==2){?>class="active"<?php }?>><a class="kontor-btn" href="#address<?php echo $post->ID; ?>" aria-controls="address<?php echo $post->ID; ?>" role="tab" data-toggle="tab"><?php the_title(); ?></a></li>
 
                         	 <?php  endwhile; ?>
 					<?php wp_reset_postdata(); ?>
 
- <li class="presentation1" role="presentation1" ><a href="<?php echo get_the_permalink(369); ?>" >Boka ett kostnadsfritt hembesok</a></li>
+        <?php
+
+        //AJAX for the hemkontor
+        $hemkontor = get_page(369);
+        ?>
+
+ <li class="presentation1"><a class="besok" id="<?php echo $hemkontor->ID; ?>">Boka ett kostnadsfritt hembesok</a></li>
                       </ul>
                </div>
             </div>
 
             <div class="col-sm-6 col-sm-offset-1">
 
-                <div class="tab-content">
+                <div class="tab-content" id="kontor-tab">
+                  <div id="hembesok-ajax"></div>
 
                 	 	<?php $event_query = new WP_Query(array('post_type'  => 'kotakta', 'posts_per_page' => '-1',)        );
 						// $c=1;
@@ -206,8 +209,8 @@ get_header(); ?>
 						                           <?php echo get_field('details',false); ?>
 						                            <address>
 						                                <p><?php echo get_field('address');?></p>
-                           <p>
-                                <span>Tel: <?php echo get_field('telefon');?></span>
+                           <a href="callto:<?php the_field('telefon'); ?>">
+                                <span class="callIcon"><i class="fa fa-phone" aria-hidden="true"></i></span><span><?php echo get_field('telefon');?></span>
                                 <!-- <span>Fax: <?php //echo get_field('fax');?></span>  -->
                             </p>
                             </address>
@@ -292,7 +295,7 @@ get_header(); ?>
                                <h4><?php echo get_sub_field('designation'); ?></h4>
                                <p><i class="fa fa-mobile" aria-hidden="true"></i>  <?php echo get_sub_field('mobile_number'); ?></p>
                                <p><img src="<?php bloginfo('template_directory'); ?>/images/phone.png" alt="phone" />  <?php echo get_sub_field('phone_number'); ?></p>
-                               <p><a href="mailto:jacob@mediahelp.se"><i class="fa fa-envelope" aria-hidden="true"></i> <?php echo get_sub_field('email_id'); ?></a></p>
+                               <p><a href="mailto: <?php echo get_sub_field('email_id'); ?>"><i class="fa fa-envelope" aria-hidden="true"></i></a></p>
                            </div>
                        </div>
                    </div>
@@ -636,10 +639,12 @@ $('.nav-tabs > li > a').click(function(){
 	var map = null;
 	var idx=$(this).parent().index();
 
+  			console.log(idx);
+
 	setTimeout(function(){
 		if( ! $('.acf-map:eq('+idx+')').find('div').hasClass('gm-style') && idx!=0 )
 		{
-			console.log(idx);
+
 			map = new_map( $('.acf-map:eq('+idx+')') );
 		}
 

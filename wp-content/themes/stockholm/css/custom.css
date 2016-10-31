@@ -177,6 +177,13 @@ p{
     font-size: 18px;
     color: #cb971e;
 }
+
+.co-worker-outer .callIcon{
+font-family: 'GothamBook_8';
+line-height: 100%;
+display: inline-block;
+vertical-align: middle;
+}
 .callIcon {
     border-radius: 50%;
     -webkit-border-radius: 50%;
@@ -1325,4 +1332,49 @@ h1, h2, h3, h4, h5, h6 {
 
 .kontakt-header h3{
 	font-size: 30px;
+}
+
+.banner .item {
+    height: 650px;
+		background-size: cover;
+}
+
+#hembesok-ajax h4{
+	color: #e5a600;
+font-size: 24px;
+font-family: 'GothamMedium_6';
+margin-bottom: 10px;
+}
+
+#hembesok-ajax input[type="submit"]{
+	font-family: 'GothamBook_8';
+	color: #cb971e;
+	background-color: white;
+	min-width: 169px;
+	height: 34px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	/* line-height: 0.2; */
+	border: 1px solid #cb971e;
+	-webkit-border: 1px solid #cb971e;
+	-moz-border: 1px solid #cb971e;
+	-ms-border: 1px solid #cb971e;
+	-o-border: 1px solid #cb971e;
+	text-align: center;
+	transition: all 0.4s ease-in-out 0s;
+	-o-transition: all 0.4s ease-in-out 0s;
+	-ms-transition: all 0.4s ease-in-out 0s;
+	-moz-transition: all 0.4s ease-in-out 0s;
+	-webkit-transition: all 0.4s ease-in-out 0s;
+}
+
+#hembesok-ajax input[type="submit"]:hover{
+
+	background: #cb971e;
+	border-color: rgba(0,0,0,0.3);
+	color: #fff;
+
 }

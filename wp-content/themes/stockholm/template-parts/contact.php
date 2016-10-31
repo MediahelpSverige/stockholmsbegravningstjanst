@@ -17,13 +17,13 @@ get_header(); ?>
     <div class="contact">
         <div class="container">
         	<div id="load_outer">
-        	<?php 
+        	<?php
         	// $paged1 = isset( $_GET['paged1'] ) ? (int) $_GET['paged1'] : 1;
                				// $paged2 = isset( $_GET['paged2'] ) ? (int) $_GET['paged2'] : 1;
-							//$the_queryi = new WP_Query( 'post_type=kotakta'); 
+							//$the_queryi = new WP_Query( 'post_type=kotakta');
 							//$count = ($the_queryi->found_posts)/1;
-							 wp_reset_query(); 
-        	
+							 wp_reset_query();
+
         	$event_query = new WP_Query(array('post_type'  => 'kotakta', 'posts_per_page' => '-1','order' => 'ASC') ); //$c=0;
              while ( $event_query->have_posts() ) : $event_query->the_post(); ?>
             <div class="row contact-inner" id="p-<?php echo get_post_field( 'post_name', get_post() ); ?>">
@@ -33,15 +33,15 @@ get_header(); ?>
                 	 <?php } ?>
                     <h3><?php echo get_field('details'); ?></h3>
                     <h4><?php echo get_field('address'); ?></h4>
-                    <h4><span>Tel: <?php echo get_field('telefon'); ?> </span><!-- <span>Fax: <?php //echo get_field('fax'); ?></span> --></h4>
+                    <h4><span><i class="fa fa-phone" aria-hidden="true"></i><?php echo get_field('telefon'); ?> </span><!-- <span>Fax: <?php //echo get_field('fax'); ?></span> --></h4>
                     <a href="mailto:<?php echo get_field('email_id'); ?> "><?php echo get_field('email_id'); ?> </a>
                 </div>
                 <div class="col-sm-5">
                     <map>
-                        <?php 
+                        <?php
 
 							$location = get_field('map');
-							
+
 							if( !empty($location) ):
 							?>
 							<div class="acf-map">
@@ -52,16 +52,16 @@ get_header(); ?>
                 </div>
                 <div class="col-sm-4 <?php if($c !=0) { echo 'right_panel'; } ?>">
                     <div class="contactForm">
-                        <?php the_content(); 
+                        <?php the_content();
            ?>
-                        
+
                     </div>
                 </div>
             </div>
-  <?php //$c++; 
+  <?php //$c++;
   endwhile; ?>
-		
-           
+
+
 							<?php wp_reset_postdata(); ?>
            </div>
 
@@ -74,14 +74,14 @@ get_header(); ?>
 		var has;
 		has=window.location.hash;
 			var n=window.location.pathname;
-			
+
 			var mhas=has.split('#');
 			console.log('#p-'+mhas[1]);
 			 jQuery('html, body').animate({
 	        scrollTop: jQuery('#p-'+mhas[1]).offset().top-110
 	    }, 500);
-	    
-	     setTimeout(function(){history.pushState('', '', n);},00);		
+
+	     setTimeout(function(){history.pushState('', '', n);},00);
 	});
 </script>
 
@@ -112,7 +112,7 @@ get_header(); ?>
 
 <script type="application/javascript">
         (function($) {
-            
+
         function new_map( $el ) {
 
             // var
@@ -125,7 +125,7 @@ get_header(); ?>
                 mapTypeId	: google.maps.MapTypeId.ROADMAP
             };
 
-            // create map	        	
+            // create map
             var map = new google.maps.Map( $el[0], args);
 
             // add a markers reference
@@ -221,4 +221,4 @@ get_header(); ?>
         });
 
 })(jQuery);
-</script>  
+</script>
