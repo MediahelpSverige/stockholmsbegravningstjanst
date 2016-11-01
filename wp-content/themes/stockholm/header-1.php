@@ -9,7 +9,7 @@
  * @since Twenty Sixteen 1.0
  */
 
-?>			
+?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">
 	<head>
@@ -22,46 +22,46 @@ omoss=0;
 	omoss=1;
 var n=window.location.pathname;
 	  history.pushState('', 'New Page Title', n);
-	 
+
 	  }
-var tabe;	  
+var tabe;
 tabe=0;
 	if(window.location.hash=='#tab2')
 {
 	tabe=1;
 var n=window.location.pathname;
 	  history.pushState('', 'New Page Title', n);
-	 
-	  }
-	  
-	  
 
-	
+	  }
+
+
+
+
 
 
 </script>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 
 	<title>stockholmsbegravningsbyra</title>
-    
-    <!--favicon-->    
+
+    <!--favicon-->
     <link rel="icon" href="<?php bloginfo('template_directory');?>/images/favicon.ico" type="image/x-icon">
     <link rel="icon" type="<?php bloginfo('template_directory');?>/image/png" href="images/favicon.png">
-      
-    <!--meta tag-->  
+
+    <!--meta tag-->
     <meta name="description" content="" />
     <meta name="author" content="admin" />
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-        
-    <!--css file links-->    
+
+    <!--css file links-->
 	<link href="<?php bloginfo('template_directory');?>/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
     <link href="<?php bloginfo('template_directory');?>/css/fonts.css" rel="stylesheet" type="text/css"/>
 	<link href="<?php bloginfo('template_directory');?>/css/owl.carousel.min.css" rel="stylesheet" type="text/css" />
     <link href="<?php bloginfo('template_directory');?>/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <link href="<?php bloginfo('template_directory');?>/css/slick.css" rel="stylesheet" type="text/css"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css"/>
-        
-    
+
+
 	<link href="<?php bloginfo('template_directory');?>/css/custom.css" rel="stylesheet" type="text/css" />
     <link href="<?php bloginfo('template_directory');?>/css/developer.css" rel="stylesheet" type="text/css" />
     <link href="<?php bloginfo('template_directory');?>/css/responsive.css" rel="stylesheet" type="text/css" />
@@ -90,7 +90,7 @@ var n=window.location.pathname;
     </div>
       <div class="contact-header">
          <span><?php echo get_theme_mod( 'header_txt', '' ); ?></span>
-         
+
          <a href="callto:<?php echo get_theme_mod( 'phone', '' ); ?>">
              <span class="callIcon"><i class="fa fa-phone" aria-hidden="true"></i></span>
              <span class="hidden-xs"><?php echo get_theme_mod( 'phone', '' ); ?></span>
@@ -99,8 +99,8 @@ var n=window.location.pathname;
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-     
-      
+
+
       <div class="menu-listingHd clearfix">
       		<?php
 									wp_nav_menu( array(
@@ -110,18 +110,18 @@ var n=window.location.pathname;
 									 ) );
 								?>
           <!-- <ul class="nav navbar-nav">
-          
+
             <li><a href="#">Våra Begravning</a></li>
             <li><a href="#">Priser</a></li>
             <li><a href="#">Juridik</a></li>
             <li><a href="#">Om oss</a></li>
             <li><a href="#">Kontakta oss</a></li>
           </ul> -->
-        
+
           <a class="goldenBtn" href="<?php echo get_the_permalink(131); ?>">Begravningsgäst</a>
     </div>
     </div><!-- /.navbar-collapse -->
-      
+
   </div><!-- /.container-fluid -->
 </nav>
    <div class="menu-top">
@@ -132,12 +132,8 @@ var n=window.location.pathname;
                 <li class="blommor" ><a href="javascript:void(0)" ><?php echo get_the_title(24); ?></a></li>
                  <li class="kistore" ><a href="javascript:void(0)" ><?php echo get_the_title(191); ?></a></li>
                 <li class="<?php if($post->ID == 10){ echo 'active'; }?>" ><a href="<?php echo get_the_permalink(10); ?>"><?php echo get_the_title(10); ?></a></li>
-                <li class="<?php if($post->ID == 12){ echo 'active'; }?>" ><a href="<?php echo get_the_permalink(12); ?>"><?php echo get_the_title(12); ?></a></li>
             </ul>
         </div>
     </div>
 </header>
-<!--header end-->			
-			
-			
-			
+<!--header end-->
