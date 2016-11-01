@@ -646,3 +646,18 @@
     }
 
 }
+@media (max-height: 700px) {
+
+  .bannerHome{
+    max-height:450px;
+  }
+
+}
+
+@media (max-height: 500px) {
+
+  .bannerHome{
+    max-height: 300px;
+  }
+
+}
