@@ -131,7 +131,6 @@ var n=window.location.pathname;
                 <li class="begravning"><a href="javascript:void(0)" ><?php echo get_the_title(26); ?></a></li>
                 <li class="blommor" ><a href="javascript:void(0)" ><?php echo get_the_title(24); ?></a></li>
                  <li class="kistore" ><a href="javascript:void(0)" ><?php echo get_the_title(191); ?></a></li>
-                <li class="<?php if($post->ID == 10){ echo 'active'; }?>" ><a href="<?php echo get_the_permalink(10); ?>"><?php echo get_the_title(10); ?></a></li>
             </ul>
         </div>
     </div>
