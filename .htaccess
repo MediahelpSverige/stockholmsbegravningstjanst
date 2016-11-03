@@ -9,3 +9,7 @@ RewriteRule . /stockholmsbegravningstjanst/index.php [L]
 </IfModule>
 
 # END WordPress
+
+<filesMatch ". (css|js)$">
+Header set Cache-Control "max-age=20, public"
+</filesMatch>
