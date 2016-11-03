@@ -109,7 +109,7 @@ p{
 
 /*header starts*/
 .header {
-    padding: 18px 0;
+    padding: 5px 0;
     background: rgba(255,255,255,0.9);
     position: absolute;
     left: 0;
@@ -1336,7 +1336,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .banner .item {
     height: 650px;
-		background-size: cover;
+    background-size: cover;
+    background-image: -webkit-linear-gradient(270deg, rgba(61, 61, 61, .2), rgba(61, 61, 61, .2)), url('../images/banner1.jpg');
+    background-image: linear-gradient(180deg, rgba(61, 61, 61, .2), rgba(61, 61, 61, .2)), url('../images/banner1.jpg');
+    background-position: 0px 0px, 0px 0px;
 }
 
 #hembesok-ajax h4{

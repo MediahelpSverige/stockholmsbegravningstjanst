@@ -69,7 +69,7 @@
     .banner-text {
         top: 35%;
         width: 100%;
-        left: 0px;
+        left: 10px;
         right: 0;
         padding: 0 20px;
     }
@@ -648,8 +648,37 @@
 }
 @media (max-height: 700px) {
 
+  .banner-footer{
+    padding: 10px 0px;
+  }
+
+  .body-detail{
+    padding: 30px 0px;
+  }
+
   .bannerHome{
-    max-height:450px;
+    max-height: 500px;
+  }
+
+  .banner-text h2{
+    font-size: 45px;
+  }
+
+  .btn-default{
+    font-size: 14px;
+  }
+
+  .header {
+    padding: 5px 0;
+  }
+
+  .navbar-brand{
+padding: 20px 0px;
+  }
+
+  .navbar-brand>img{
+    max-width: 300px;
+    height: auto;
   }
 
 }

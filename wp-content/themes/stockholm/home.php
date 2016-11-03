@@ -12,13 +12,13 @@
  */
 
 get_header(); ?>
-
+<h1>gradient</h1>
 <section class="banner bannerHome">
     <div class="bannerSlide">
     	<?php $event_query = new WP_Query(array('post_type'  => 'homebanner', 'posts_per_page' => '-1',)        );
              while ( $event_query->have_posts() ) : $event_query->the_post(); ?>
               <?php  $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' ); ?>
-        <div class="item" style="background-image:url('<?php echo $image[0]; ?>')">
+        <div class="item" style="background-image:-webkit-linear-gradient(180deg, rgba(61, 61, 61, .2), rgba(61, 61, 61, .2)), url('<?php echo $image[0]; ?>')">
             <img src="" alt="" />
             <div class="container">
                <div class="banner-text">

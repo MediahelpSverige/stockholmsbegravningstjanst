@@ -1,38 +1,26 @@
 <?php
-/**
- * Template Name: Home
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages and that
- * other "pages" on your WordPress site will use a different template.
- *
- * @package WordPress
- * @subpackage Twenty_Sixteen
- * @since Twenty Sixteen 1.0
- */
-
 get_header(); ?>
 
 <section class="banner bannerHome">
     <div class="bannerSlide">
-    	<?php $event_query = new WP_Query(array('post_type'  => 'homebanner', 'posts_per_page' => '-1',)        ); 
+    	<?php $event_query = new WP_Query(array('post_type'  => 'homebanner', 'posts_per_page' => '-1',)        );
              while ( $event_query->have_posts() ) : $event_query->the_post(); ?>
-        <div class="item">
-        	<?php  $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' ); ?>           				
-            <img src="<?php echo $image[0]; ?>" alt="" />
-            <div class="container">
-               <div class="banner-text">
-                    <h2><?php the_title(); ?></h2>
-                  <p><?php echo wp_trim_words( get_the_content(), 40 );?></p>
-                </div>
-             </div>
-            
-        </div>
+             <?php  $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' ); ?>
+       <div class="item" style="background-image:-webkit-linear-gradient(180deg, rgba(61, 61, 61, .2), rgba(61, 61, 61, .2)), url('<?php echo $image[0]; ?>')">
+           <img src="" alt="" />
+           <div class="container">
+              <div class="banner-text">
+                   <h2><?php the_title(); ?></h2>
+                 <p><?php echo wp_trim_words( get_the_content(), 40 );?></p>
+               </div>
+            </div>
+
+       </div>
         	 <?php endwhile; ?>
 		<?php wp_reset_postdata(); ?>
 
-        
-        
+
+
     </div>
     <div class="banner-footer">
       <?php echo do_shortcode('[contact-form-7 id="40" title="Home Banner Contact"]'); ?>
@@ -48,50 +36,112 @@ get_header(); ?>
                ?>
             </div>
         </div>
+          <div class="rivew-part ">
+        <!-- <div class="rivew-head ">
+        	<?php $customer = get_page(55);?>
+            <h3> <?php echo $customer->post_title; ?> </h3>
+           <?php
+           echo $customer->post_content;
+           ?>
+        </div> -->
+       <div class="content-carousel">
+        <?php
+
+		$the_query = new WP_Query( 'post_type=customer_review&post_per_page=-1' ); $i=0;$k=0; $c=0; $s=1;
+		while($the_query -> have_posts()) : $the_query-> the_post();
+		if($s==1)
+		{
+			?>
+			<div class="item">
+			<?php
+
+		}
+
+		if($i%2==0){
+		$k=0
+
+		?>
+
+        <div class="row customer-cont ">
+        	<?php } ?>
+            <div class="<?php if($c==2) { ?> col-sm-6 col-sm-offset-1 <?php } elseif($c==3){ ?> col-sm-5 <?php } else { ?> col-sm-6 <?php } ?> ">
+                <div class="customer-cont-txt">
+                    <h4><?php the_title();?></h4>
+                    <p><?php echo wp_trim_words( get_the_content(), 25 );?></p>
+                </div>
+            </div>
+
+		        <?php if($i%2==1) {?>
+		</div>
+		<?php } $i++; $k++; $c++; ?>
+		<?php
+		  if($s==4)
+		  {
+		  	$s=0;
+		  	?>
+		  </div>
+		  	<?php
+		  }
+		$s++;
+		endwhile;
+		wp_reset_query();
+
+		if($k !=2 )
+		{
+		echo '</div> </div>';
+		}?>
+		</div>
+    </div>
+
     </div>
 </div>
+
 <div class="info-area">
     <div class="container">
         <div class="row">
             <div class="col-sm-5 info-l">
-                <div class="info-logo">
-                		<?php  $image = wp_get_attachment_image_src( get_post_thumbnail_id(16 ), 'full' ); ?>           				
-                    <img src="<?php echo $image[0]; ?>" alt="info" />
-                </div>
                 <?php $contactpage = get_page(16);?>
-                <p><?php echo $contactpage->post_content;?> </p>
+                <div class="kontakt-header"><?php echo $contactpage->post_content;?> </div>
                <div class="tab-box">
                    <ul class="nav nav-tabs" role="tablist">
                    	<?php $event_query = new WP_Query(array('post_type'  => 'kotakta', 'posts_per_page' => '-1',)        ); $c=1;
-             while ( $event_query->have_posts() ) : $event_query->the_post(); 
-             if($c !=1){
-             ?>
-                        <li role="presentation" <?php if($c==2){?>class="active"<?php }?>><a href="#address<?php echo $post->ID; ?>" aria-controls="address<?php echo $post->ID; ?>" role="tab" data-toggle="tab"><?php the_title(); ?></a></li>
+             while ( $event_query->have_posts() ) : $event_query->the_post();
 
-                        	 <?php } $c++; endwhile; ?>
+             ?>
+                        <li  class="kontor-li" role="presentation" <?php if($c==2){?>class="active"<?php }?>><a class="kontor-btn" href="#address<?php echo $post->ID; ?>" aria-controls="address<?php echo $post->ID; ?>" role="tab" data-toggle="tab"><?php the_title(); ?></a></li>
+
+                        	 <?php  endwhile; ?>
 					<?php wp_reset_postdata(); ?>
-					
- <li class="presentation1" role="presentation1" ><a href="<?php echo get_the_permalink(16); ?>" aria-controls="address<?php echo $post->ID; ?>" >Boka ett kostnadsfritt hembesok</a></li>
+
+        <?php
+
+        //AJAX for the hemkontor
+        $hemkontor = get_page(369);
+        ?>
+
+ <li class="presentation1"><a class="besok" id="<?php echo $hemkontor->ID; ?>">Boka ett kostnadsfritt hembesok</a></li>
                       </ul>
                </div>
             </div>
-            
+
             <div class="col-sm-6 col-sm-offset-1">
-                
-                <div class="tab-content">
-                	
-                	 	<?php $event_query = new WP_Query(array('post_type'  => 'kotakta', 'posts_per_page' => '-1',)        ); $c=1;
-             while ( $event_query->have_posts() ) : $event_query->the_post(); 
-             if($c !=1){
+
+                <div class="tab-content" id="kontor-tab">
+                  <div id="hembesok-ajax"></div>
+
+                	 	<?php $event_query = new WP_Query(array('post_type'  => 'kotakta', 'posts_per_page' => '-1',)        );
+						// $c=1;
+             while ( $event_query->have_posts() ) : $event_query->the_post();
+
              ?>
-                     
-                  <div role="tabpanel" class="tab-pane fade <?php if($c==2){ echo 'in active'; }?>" id="address<?php echo $post->ID; ?>">
+
+                  <div role="tabpanel" class="tab-pane fade <?php //if($c==2){ echo 'in active'; }?>" id="address<?php echo $post->ID; ?>">
                       <div class="info-addrss clearfix">
-                        <div class="info-addrss-l">
-                          <?php 
+                        <div class="info-addrss-l info-addrss-ll">
+                          <?php
 
 							$location = get_field('map');
-							
+
 							if( !empty($location) ):
 							?>
 							<div class="acf-map">
@@ -99,33 +149,66 @@ get_header(); ?>
 							</div>
 							<?php endif; ?>
                         </div>
-                        <div class="info-addrss-l">
+
+                    </div>
+
+                       <div class="info-addrss clearfix">
+
+
+
+
+                        <div class="info-addrss-l innr-co-wrk">
+
+
+
+
+                        	     <div class="flower-carousel co-worker-outer">
+                          <?php
+								if( have_rows('worker_details') ): while ( have_rows('worker_details') ) : the_row();
+								if( get_row_layout() == 'worker' ):
+							?>
+                  <div class="item">
+                  	<div class="co-worker-img">
+                                   <img src="<?php echo get_sub_field('worker_image'); ?>" alt="user" />
+                             </div>
+                             <div class="co-worker-txt">
+                               <h3><?php echo get_sub_field('worker_name'); ?></h3>
+                               <h4><?php echo get_sub_field('worker_designation'); ?></h4>
+                              </div>
+                 </div>
+
+  <?php
+					       endif;
+					   endwhile;
+					endif;
+					?>
+                        </div>
+
+
+                        </div>
+
+                    </div>
+
+
+                        <div class="info-addrss clearfix">
+
+                        <div class="info-addrss-l add-dtl">
+                          <div class="co-worker-outer">
 						                           <?php echo get_field('details',false); ?>
 						                            <address>
 						                                <p><?php echo get_field('address');?></p>
-                           <p>
-                                <span>Tel: <?php echo get_field('telefon');?></span> 
-                                <span>Fax: <?php echo get_field('fax');?></span> 
+                           <a href="callto:<?php the_field('telefon'); ?>">
+                                <span class="callIcon"><i class="fa fa-phone" aria-hidden="true"></i></span><span><?php echo get_field('telefon');?></span>
+                                <!-- <span>Fax: <?php //echo get_field('fax');?></span>  -->
                             </p>
                             </address>
-                           
+
                         </div>
-                    </div>
-                    <div class="info-addrss clearfix">
-                        <div class="info-addrss-l">
-                          <?php  $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' ); ?>           				
-           					 <img src="<?php echo $image[0]; ?>" alt="" />
-                        </div>
-                        <div class="info-addrss-l">
-                           <a href="mailto:info@stockholmsbegravningsbyra.se "><?php echo get_field('email_id'); ?> </a>
-                           <div class="more">
-                               <a href="<?php echo get_the_permalink(16)?>" class="btn btn-default">More Info link</a>
-                           </div>
-                        </div>
-                    </div>
-                      
+                     </div>
+
+                   </div>
                   </div>
-                  	 <?php } $c++; endwhile; ?>
+                  	 <?php  endwhile; ?>
 					<?php wp_reset_postdata(); ?>
                 </div>
             </div>
@@ -140,69 +223,34 @@ get_header(); ?>
            echo $persion->post_content;
            ?>
             </div>
-            
+
         </div>
         <div class="row project-outer">
-           
-            
-           	<?php $event_query = new WP_Query(array('post_type'  => 'personlig_begran', 'posts_per_page' => '4',)        ); 
+
+
+           	<?php $event_query = new WP_Query(array('post_type'  => 'personlig_begran', 'posts_per_page' => '4',)        );
              while ( $event_query->have_posts() ) : $event_query->the_post(); ?>
             <div class="col-md-3 col-xs-6">
                 <div class="project-box">
                     <div class="project-pic">
-                    	<?php  $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' ); ?>           				
+                    	<?php  $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' ); ?>
                         <img src="<?php echo $image[0]; ?>" alt="project">
                     </div>
                     <div class="project-inner">
                         <h3><a href="<?php the_permalink();  ?>"><?php the_title(); ?></a></h3>
                         <p><?php echo wp_trim_words( get_the_content(), 20 );?></p>
                         <div class="arrow-link">
-                            <a href="<?php the_permalink();  ?>" class="project-next"><img src="<?php bloginfo('template_directory'); ?>/images/arrow.png" alt="arrow"></a>
+                            <a href="<?php echo get_field('personlig_begran');  ?>" class="project-next"><img src="<?php bloginfo('template_directory'); ?>/images/arrow.png" alt="arrow"></a>
                         </div>
                     </div>
                 </div>
             </div>
             <?php endwhile; ?>
 		<?php wp_reset_postdata(); ?>
-            
+
         </div>
     </div>
-    <div class="rivew-part">
-        <div class="rivew-head">
-        	<?php $customer = get_page(55);?>
-            <h3> <?php echo $customer->post_title; ?> </h3>
-           <?php 
-           echo $customer->post_content;
-           ?>
-        </div>
-        <?php	
 
-		$the_query = new WP_Query( 'post_type=customer_review&post_per_page=4' ); $i=0;$k=0; $c=0;
-		while($the_query -> have_posts()) : $the_query-> the_post(); 
-		
-		if($i%2==0){
-		$k=0
-		?>
-        <div class="row customer-cont">
-        	<?php } ?>	
-            <div class="<?php if($c==2) { ?> col-sm-6 col-sm-offset-1 <?php } elseif($c==3){ ?> col-sm-5 <?php } else { ?> col-sm-6 <?php } ?> ">
-                <div class="customer-cont-txt">
-                    <h4><?php the_title();?></h4>
-                    <p><?php echo wp_trim_words( get_the_content(), 25 );?></p>
-                </div>
-            </div>
-
-		        <?php if($i%2==1) {?>	
-		</div>
-		<?php } $i++; $k++; $c++; ?>
-		<?php  endwhile; 
-		wp_reset_query();
-		
-		if($k !=2 )
-		{
-		echo '</div>';
-		}?>
-    </div>
 </div>
 <div class="info-user" id="om-oss-content">
     <div class="container">
@@ -210,16 +258,16 @@ get_header(); ?>
            <div class="col-sm-4">
                <div class="project-box">
                   <div class="project-inner pro-marg">
-                      
-                   <?php $review_details = get_page(63);
+
+                  <p> <?php $review_details = get_page(14);
 			           echo $review_details->post_content;
-			           ?>
+			           ?></p>
                   </div>
                </div>
            </div>
            <div class="col-sm-8">
                <div class="row project-addrss">
-            <?php $query_partner = new WP_Query('page_id=63');
+            <?php $query_partner = new WP_Query('page_id=14');
   		  	  			   if( $query_partner->have_posts() ) : $query_partner->the_post(); ?>
                             <?php
 								if( have_rows('contact_persian_details') ): while ( have_rows('contact_persian_details') ) : the_row();
@@ -235,7 +283,7 @@ get_header(); ?>
                                <h4><?php echo get_sub_field('designation'); ?></h4>
                                <p><i class="fa fa-mobile" aria-hidden="true"></i>  <?php echo get_sub_field('mobile_number'); ?></p>
                                <p><img src="<?php bloginfo('template_directory'); ?>/images/phone.png" alt="phone" />  <?php echo get_sub_field('phone_number'); ?></p>
-                               <p><a href="mailto:jacob@mediahelp.se"><i class="fa fa-envelope" aria-hidden="true"></i> <?php echo get_sub_field('email_id'); ?></a></p>
+                               <p><a href="mailto: <?php echo get_sub_field('email_id'); ?>"><i class="fa fa-envelope" aria-hidden="true"></i></a></p>
                            </div>
                        </div>
                    </div>
@@ -247,19 +295,58 @@ get_header(); ?>
                     <?php endif; wp_reset_postdata(); ?>
 
                </div>
-               
-               
-               
+
+
+
               <div class="row project-addrss add-info">
+              	 <?php $query_partner = new WP_Query('page_id=14');
+				 $awicn=0;
+  		  	  			   if( $query_partner->have_posts() ) : $query_partner->the_post(); ?>
+                            <?php
+								if( have_rows('award_details1') ): while ( have_rows('award_details1') ) : the_row();
+								if( get_row_layout() == 'award_details1' ):
+							?>
+
                   <div class="col-xs-6">
                       <div class="project-box">
                           <div class="project-inner">
-                              <h3><img src="<?php bloginfo('template_directory'); ?>/images/info-1.png" alt="" /> Vår Begravning</h3>
-                              <p>Nulla tempus dolor neque, ac dapibus nisl luctus ac. In hac habitasse.</p>
+                              <h3><?php
+                              $awicn++ ;
+                              	switch ($awicn) {
+						    case "1":
+								$cinmg= 'info-1.png';
+						        //echo "Your favorite color is red!";
+						        break;
+						    case "2":
+								$cinmg= 'info-2.png';
+
+						        break;
+						    case "3":
+								$cinmg= 'info-3.png';
+
+						        break;
+								case "4":
+								$cinmg= 'info-4.png';
+
+						        break;
+						    default:
+						       $cinmg= 'info-4.png';
+						}?>
+                              	<img src="<?php bloginfo('template_directory'); ?>/images/<?php echo $cinmg ; ?>" alt="" />
+                              	<?php echo get_sub_field('title'); ?> </h3>
+                              <p><?php echo get_sub_field('content'); ?></p>
                           </div>
                       </div>
                   </div>
-                  <div class="col-xs-6">
+
+                   <?php
+					       endif;
+					   endwhile;
+					endif;
+					?>
+                    <?php endif; wp_reset_postdata(); ?>
+
+                  <!-- <div class="col-xs-6">
                       <div class="project-box">
                           <div class="project-inner">
                               <h3><img src="<?php bloginfo('template_directory'); ?>/images/info-2.png" alt="" /> Borgerlig begravning</h3>
@@ -282,65 +369,148 @@ get_header(); ?>
                               <p>Nulla tempus dolor neque, ac dapibus nisl luctus ac. In hac habitasse.</p>
                           </div>
                       </div>
-                  </div>
+                  </div> -->
+
               </div>
             </div>
        </div>
     </div>
 </div>
+
 <style type="text/css">
 
-.acf-map {
-	width: 100%;
-	height: 200px;
-	border: #ccc solid 1px;
-}
-
-/* fixes potential theme css conflict */
-.acf-map img {
-   max-width: inherit !important;
-}
 
 </style>
 <script>
 	jQuery(document).ready(function($){
+
+
+			jQuery('.konta-link > a,.om-oss > a').click(function(e){
+
+				e.preventDefault();
+			});
+
+
+			jQuery('.konta-link').click(function(){
+
+	    			var topofset;
+	    			setTimeout(function(){
+
+	    					var n=window.location.pathname;
+			history.pushState('', '', n);
+
+	    			},100);
+
+
+			var redr='';
+
+			if($(this).hasClass('ssr1') && $('div').hasClass('vara-glry'))
+			{
+				redr='.scrl-2';
+				topofset=150;
+			}
+
+			if($(this).hasClass('ssr2') && $('div').hasClass('vara-glry'))
+			{
+				topofset=200;
+			redr='.scrl-1';
+			}
+
+				if($(this).parents('.page').hasClass('home'))
+			{
+				topofset=70;
+			redr='.info-area';
+			}
+
+			if(redr !='')
+			{
+
+
+			 jQuery('html, body').animate({
+	        scrollTop: jQuery(redr).offset().top-topofset
+	    }, 500);
+
+	    		}
+
+	    		});
+
+
+
+			$(window).scroll(function(){
+	    		var scrl=jQuery('.info-area').offset().top-70;
+	    		var max=scrl+jQuery('.info-area').height();
+
+	    		if($(this).scrollTop() >=scrl && max >=$(this).scrollTop())
+	    		{
+	    			$('.konta-link').addClass('current_page_item');
+
+
+	    		}
+
+	    		else
+	    		{
+	    			$('.konta-link').removeClass('current_page_item');
+	    		}
+	    	});
+
+
+
+			$(window).scroll(function(){
+	    		var scrl=jQuery('.info-user').offset().top-117;
+	    		var max=scrl+jQuery('.info-user').height();
+
+	    		if($(this).scrollTop() >=scrl && max >=$(this).scrollTop())
+	    		{
+	    			$('.om-oss').addClass('current_page_item');
+
+
+	    		}
+
+	    		else
+	    		{
+	    			$('.om-oss').removeClass('current_page_item');
+	    		}
+	    	});
+
+
+
 function new_map( $el ) {
-	
+
 	// var
 	var $markers = $el.find('.marker');
-	
-	
+
+
 	// vars
 	var args = {
 		zoom		: 15,
 		center		: new google.maps.LatLng(0, 0),
 		mapTypeId	: google.maps.MapTypeId.ROADMAP
 	};
-	
-	
-	// create map	        	
+
+
+	// create map
 	var map = new google.maps.Map( $el[0], args);
-	
-	
+
+
 	// add a markers reference
 	map.markers = [];
-	
-	
+
+
 	// add markers
 	$markers.each(function(){
-		
+
     	add_marker( $(this), map );
-		
+
 	});
-	
-	
+
+
 	// center map
 	center_map( map );
-	
-	
+
+
 	// return
 	return map;
-	
+
 }
 
 /*
@@ -444,33 +614,44 @@ function center_map( map ) {
 *  @return	n/a
 */
 // global var
-var map = null;
 
 	// $('.acf-map').each(function(){
-// 
+//
 		// // create map
 		// map = new_map( $(this) );
-// 
+//
 // });
-map = new_map( $('.acf-map:eq(0)') );
+//map = new_map( $('.acf-map:eq(0)') );
 
 $('.nav-tabs > li > a').click(function(){
 	var map = null;
 	var idx=$(this).parent().index();
-	
+
+  			console.log(idx);
+
 	setTimeout(function(){
-		if( ! $('.acf-map:eq('+idx+')').find('div').hasClass('gm-style') )
+		if( ! $('.acf-map:eq('+idx+')').find('div').hasClass('gm-style') && idx!=0 )
 		{
-			
+
 			map = new_map( $('.acf-map:eq('+idx+')') );
 		}
-	
+
 	},200);
 });
 
 
+
+
+			jQuery('.tab-box > ul > li:first > a').click();
+
+
+setTimeout(function(){
+
+	map = new_map( $('.acf-map:eq('+0+')') );
+
+	},400);
+
 });
 </script>
-
 
 <?php get_footer(); ?>
