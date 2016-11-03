@@ -708,10 +708,14 @@
 
 }
 @media (max-height: 780px) {
-  
+
   .bannerHome{
     max-height: 500px;
   }
+
+  .navbar {
+    margin-bottom: 8px;
+}
 
 }
 @media (max-height: 700px) {

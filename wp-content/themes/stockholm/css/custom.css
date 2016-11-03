@@ -1460,12 +1460,19 @@ body .container .minnesrummet-se-client .bo-content{
 
 .btn-primary{
 	background-color: #e5a600;
+	border-color: #e8e8e8;
 }
 
 .btn-primary:hover {
     color: #fff;
     background-color: black;
     border-color: white;
+}
+
+.btn-primary.focus, .btn-primary:focus {
+    color: #fff;
+    background-color: #e5a600;
+    border-color: #122b40;
 }
 
 .kontaktinfo{
