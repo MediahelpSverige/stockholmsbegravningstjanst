@@ -513,6 +513,10 @@ vertical-align: middle;
     margin-right: 20px;
     border-radius: 3px;
     overflow: hidden;
+    /* box-shadow: 0 3px 100px rgba(229,166,0,0.01),0 15px 10px rgba(229, 169, 9, 0.09),0 5px 15px rgba(0,0,0,.1); */
+    border-radius: 4px;
+    border: 1px solid #eaeaea;
+    background-color: white;
 }
 .info-addrss-l:last-child {
     margin-right: 0;
@@ -1374,10 +1378,38 @@ margin-bottom: 10px;
 	-webkit-transition: all 0.4s ease-in-out 0s;
 }
 
+#hembesok-ajax input{
+
+	padding: 15px 13px;
+	text-transform: uppercase;
+	font-size: 16px;
+	font-family: 'GothamBook_8';
+	border: 1px solid #000;
+	border-radius: 3px;
+
+}
+
 #hembesok-ajax input[type="submit"]:hover{
 
 	background: #cb971e;
 	border-color: rgba(0,0,0,0.3);
 	color: #fff;
 
+}
+
+::-webkit-input-placeholder {
+   color: #000;
+}
+
+div#hembesok-ajax {
+    width: 100%;
+    float: left;
+    margin-right: 20px;
+    border-radius: 3px;
+    overflow: hidden;
+    /* box-shadow: 0 3px 100px rgba(229,166,0,0.01),0 15px 10px rgba(229, 169, 9, 0.09),0 5px 15px rgba(0,0,0,.1); */
+    border-radius: 4px;
+    border: 1px solid #eaeaea;
+    background-color: white;
+    padding: 10px;
 }

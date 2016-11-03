@@ -99,7 +99,7 @@ get_header(); ?>
 <div class="info-area">
     <div class="container">
         <div class="row">
-            <div class="col-sm-5 info-l">
+            <div class="col-sm-6 info-l">
                 <?php $contactpage = get_page(16);?>
                 <div class="kontakt-header"><?php echo $contactpage->post_content;?> </div>
                <div class="tab-box">
@@ -124,7 +124,7 @@ get_header(); ?>
                </div>
             </div>
 
-            <div class="col-sm-6 col-sm-offset-1">
+            <div class="col-sm-6">
 
                 <div class="tab-content" id="kontor-tab">
                   <div id="hembesok-ajax"></div>
@@ -198,9 +198,14 @@ get_header(); ?>
 						                            <address>
 						                                <p><?php echo get_field('address');?></p>
                            <a href="callto:<?php the_field('telefon'); ?>">
-                                <span class="callIcon"><i class="fa fa-phone" aria-hidden="true"></i></span><span><?php echo get_field('telefon');?></span>
+                                <span class="callIcon"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span><i class="fa fa-phone" aria-hidden="true"></i></span><span><?php echo get_field('telefon');?></span>
                                 <!-- <span>Fax: <?php //echo get_field('fax');?></span>  -->
-                            </p>
+                              </a>
+                              <a href="callto:<?php the_field('email_id'); ?>">
+                                   <span class="callIcon"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></span><span><?php echo get_field('email_id');?></span>
+                                   <!-- <span>Fax: <?php //echo get_field('fax');?></span>  -->
+                                 </a>
+
                             </address>
 
                         </div>
