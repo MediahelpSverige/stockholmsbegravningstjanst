@@ -1,23 +1,23 @@
 
 
 
-//Footer fixed	
-$(window).bind("load", function() {        
+//Footer fixed
+$(window).bind("load", function() {
     var footerHeight = 0,
         footerTop = 0,
-        $footer = $(".footer");           
-    positionFooter();       
-    function positionFooter() {     
-        
+        $footer = $(".footer");
+    positionFooter();
+    function positionFooter() {
+
          footerHeight = $footer.height();
          footerTop = ($(window).scrollTop()+$(window).height()-footerHeight)+"px";
-        
-        
+
+
         if ( ($(document.body).height()) < $(window).height()) {
             $footer.css({
                  position: "fixed",
-                 bottom: "0px", 
-                 left: "0", 
+                 bottom: "0px",
+                 left: "0",
                  right: "0"
             })
         } else {
@@ -25,13 +25,13 @@ $(window).bind("load", function() {
                  position: "relative",
                  display: "block"
             })
-        }               
+        }
     }
     $(window)
     .scroll(positionFooter)
     .resize(positionFooter)
     .click(positionFooter)
-            
+
 });
 
 $(document).ready(function (){
@@ -63,6 +63,7 @@ $(document).ready(function (){
         infinite: false,
         slidesToShow: 3,
         slidesToScroll: 3,
+        centerMode: true,
         dots: false,
         arrows: true,
         focusOnSelect: true,
@@ -97,15 +98,18 @@ $(document).ready(function (){
             }
         ]
     });
-    
-    
+
+
     /// Co worker slider
-    
+
+    console.log('slick');
+
     $('.worker-carousel').slick({
         infinite: false,
-        slidesToShow: 4,
-        slidesToScroll: 4,
+        slidesToShow: 3,
+        slidesToScroll: 1,
         dots: false,
+        centerMode: false,
         arrows: true,
         focusOnSelect: true,
         responsive: [
@@ -139,12 +143,12 @@ $(document).ready(function (){
             }
         ]
     });
-    
-    
+
+
     //home-content-carosel
-    
-    
-        
+
+
+
     $('.content-carousel').slick({
         infinite: false,
         slidesToShow: 1,
@@ -183,12 +187,12 @@ $(document).ready(function (){
             }
         ]
     });
-    
- 
+
+
 
 if(tabe==1)
 {
-	 $('.tab-anc:eq(1) > a').click();	
+	 $('.tab-anc:eq(1) > a').click();
 }
 
 
@@ -197,12 +201,12 @@ if(tabe==1)
 if(omoss==1)
 {
 	setTimeout(function(){
-		
+
 			$('html, body').animate({
-	        scrollTop: $('#om-oss-content').offset().top-110 
+	        scrollTop: $('#om-oss-content').offset().top-110
 	    }, 500);
 		// console.log($('#om-oss-content').offset().top);
-		 
+
 		 },300);
 }
 
@@ -212,18 +216,18 @@ if(omoss==1)
 		setTimeout(function(){
 			var n=window.location.pathname;
 	  history.pushState('', 'New Page Title', n);
-			
+
 		},50);
-			 
-	  
+
+
 	 // console.log($('#om-oss-content').offset().top);
 			$('html, body').animate({
 	        scrollTop: $('#om-oss-content').offset().top -110
 	    }, 500);
-	    
-	 
+
+
 		});
-		 
+
 
 
 //------------------------------------------------------------------------
@@ -238,15 +242,15 @@ $('.flower-car').each(function()
 if($(this).hasClass('select-class'))
 {
 	$(this).removeClass('select-class');
-	$(this).find('figure > span').remove();	
-}	
+	$(this).find('figure > span').remove();
+}
 });
 
 obj.find('figure').prepend('<span><i    class="fa fa-check" aria-hidden="true" > </i></span>');
-obj.addClass('select-class');	
+obj.addClass('select-class');
 //console.log(obj.find('h3').text());
 $('.flower-hidden').val(obj.find('h3').text());
-	
+
 });
 
 //slick-current

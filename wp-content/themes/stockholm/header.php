@@ -53,6 +53,14 @@ var n=window.location.pathname;
     <meta name="author" content="admin" />
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
+		<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+
     <!--css file links-->
 	<link href="<?php bloginfo('template_directory');?>/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
     <link href="<?php bloginfo('template_directory');?>/css/fonts.css" rel="stylesheet" type="text/css"/>
@@ -65,6 +73,10 @@ var n=window.location.pathname;
 	<link href="<?php bloginfo('template_directory');?>/css/custom.css" rel="stylesheet" type="text/css" />
     <link href="<?php bloginfo('template_directory');?>/css/developer.css" rel="stylesheet" type="text/css" />
     <link href="<?php bloginfo('template_directory');?>/css/responsive.css" rel="stylesheet" type="text/css" />
+
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 
 

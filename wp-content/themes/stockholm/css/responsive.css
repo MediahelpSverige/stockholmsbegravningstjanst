@@ -707,6 +707,13 @@
     }
 
 }
+@media (max-height: 780px) {
+  
+  .bannerHome{
+    max-height: 500px;
+  }
+
+}
 @media (max-height: 700px) {
 
   .banner-footer{

@@ -278,18 +278,16 @@ div.wpcf7-mail-sent-ok{
 }
 
 .co-worker-img {
-
-
-      width: 85px;
-    height: 85px;
-    overflow: hidden;
-    border-radius: 55%;
-    margin: 0 auto;
-    box-shadow: 0 2px 5px rgba(229,166,0,1);
-    -webkit-box-shadow: 0 2px 5px rgba(229,166,0,1);
-    -moz-box-shadow: 0 2px 5px rgba(229,166,0,1);
-    margin-bottom: 16px;
-   }
+width: 80px;
+height: 80px;
+overflow: hidden;
+border-radius: 55%;
+margin: 0 auto;
+box-shadow: 0 2px 5px rgba(229,166,0,1);
+-webkit-box-shadow: 0 2px 5px rgba(229,166,0,1);
+-moz-box-shadow: 0 2px 5px rgba(229,166,0,1);
+margin-bottom: 16px;
+}
 
 
 
@@ -326,8 +324,10 @@ bottom: auto;
 }
 
 .co-worker-outer {
-	    background: #ffffff;
-	    padding: 10px;
+	    background: white;
+	    padding: 19px;
+	    /* height: 205px; */
+	    /* overflow-y: auto; */
 }
 .tab-content>.tab-pane{
 	display: block;

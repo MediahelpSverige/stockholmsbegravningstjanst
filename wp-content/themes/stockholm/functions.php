@@ -552,12 +552,35 @@ $query_vars['post_type'] = 'page';
         echo "no posts found";
     }else{
 
+			?>
+
+			<div class="info-addrss-l add-dtl" id="hembesok">
+
+			<div class="co-worker-outer">
+
+			<?php
 
 			  $posts->the_post();
 
+				?>
+				<div class="hembesokImg" style="background-image:url('<?php the_post_thumbnail_url('large'); ?>')"></div>
+				
+				<?php
+
 				the_content();
 
+?>
 
+<button type="button" class="btn btn-primary" aria-label="Left Align">
+  <span class="glyphicon glyphicon glyphicon-envelope" aria-hidden="true"></span>
+	<span class="button-text"><a href="mailto:info@email.se">Kontakta oss idag</a></span>
+</button>
+
+
+	</div>
+	</div>
+
+<?php
 
 
 

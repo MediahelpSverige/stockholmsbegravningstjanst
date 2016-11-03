@@ -16,9 +16,8 @@ get_header(); ?>
 	<div class="contact topgap-inner priser-content">
 		<div class="container">
 			<div class="row omouter">
-				<h2><?php the_title(); ?></h2>
            <div class="col-sm-12 ommoss">
-               <div class="row project-addrss">
+               <div class="row">
                  <?php the_content(); ?>
                </div>
                <!-- css -->

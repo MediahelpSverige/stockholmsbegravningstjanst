@@ -162,7 +162,7 @@ get_header(); ?>
 
 
 
-                        	     <div class="flower-carousel co-worker-outer">
+                        	     <div class="worker-carousel co-worker-outer">
                           <?php
 								if( have_rows('worker_details') ): while ( have_rows('worker_details') ) : the_row();
 								if( get_row_layout() == 'worker' ):
@@ -192,19 +192,21 @@ get_header(); ?>
 
                         <div class="info-addrss clearfix">
 
-                        <div class="info-addrss-l add-dtl">
+                        <div class="info-addrss-l add-dtl kontaktinfo">
                           <div class="co-worker-outer">
 						                           <?php echo get_field('details',false); ?>
 						                            <address>
 						                                <p><?php echo get_field('address');?></p>
-                           <a href="callto:<?php the_field('telefon'); ?>">
-                                <span class="callIcon"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span><i class="fa fa-phone" aria-hidden="true"></i></span><span><?php echo get_field('telefon');?></span>
-                                <!-- <span>Fax: <?php //echo get_field('fax');?></span>  -->
-                              </a>
-                              <a href="callto:<?php the_field('email_id'); ?>">
-                                   <span class="callIcon"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></span><span><?php echo get_field('email_id');?></span>
-                                   <!-- <span>Fax: <?php //echo get_field('fax');?></span>  -->
-                                 </a>
+                                            <div class="btn-group" role="group" aria-label="...">
+                                              <button type="button" class="btn btn-primary">
+                                                 <span class="glyphicon glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                                              	<span class="button-text"><a href="mailto:info@email.se">Kontakta oss idag</a></span>
+                                              </button>
+                                              <button type="button" class="btn btn-primary">
+                                                <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
+                                                <span class="button-text"><a href="<?php echo get_field('telefon');?>"><?php echo get_field('telefon');?></a></span>
+                                              </button>
+                                            </div>
 
                             </address>
 
@@ -242,7 +244,7 @@ get_header(); ?>
                         <img src="<?php echo $image[0]; ?>" alt="project">
                     </div>
                     <div class="project-inner">
-                        <h3><a href="<?php the_permalink();  ?>"><?php the_title(); ?></a></h3>
+                        <h3><a href="<?php echo get_field('personlig_begran');  ?>"><?php the_title(); ?></a></h3>
                         <p><?php echo wp_trim_words( get_the_content(), 20 );?></p>
                         <div class="arrow-link">
                             <a href="<?php echo get_field('personlig_begran');  ?>" class="project-next"><img src="<?php bloginfo('template_directory'); ?>/images/arrow.png" alt="arrow"></a>
