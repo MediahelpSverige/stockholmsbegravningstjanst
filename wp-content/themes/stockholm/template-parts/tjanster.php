@@ -53,7 +53,7 @@ $cntimg=0;
                     <div class="vara-box">
                         <div class="vara-box-pic">
 
-                            <a href="<?php  damiu_image(); ?>" data-id="" title=" <?php echo damiu_text(); ?>
+                            <a class="fancyboxgroup" href="<?php  damiu_image(); ?>" rel="group1" data-id="" title=" <?php echo damiu_text(); ?>
                             	<form action='<?php echo get_the_permalink(131); ?>#tab2' class='galform' method='POST' >
                             	<p class='pricea'>
                             		<a  class='bestimg btn-default-small' href='javascript:void(0);' >Beställ nu</a></p>
@@ -108,9 +108,9 @@ $cntimg=0;
              	?>
 
                 <li>
-                    <div class="vara-box">
+                    <div class="vara-box vara2">
                         <div class="vara-box-pic">
-                            <a href="<?php  damiu_image(); ?>" data-id="" title=" <?php echo damiu_text(); ?> ">
+                            <a href="<?php  damiu_image(); ?>" rel="group2" data-id="" title=" <?php echo damiu_text(); ?> ">
                             		<img src="<?php  damiu_image(); ?>" alt="" /></a>
                         </div>
                         <span><a href="javascript:void();"><?php echo damiu_title() ?></a></span>

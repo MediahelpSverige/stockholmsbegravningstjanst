@@ -848,6 +848,7 @@ ul.vara-list.vara-row {
 }
 .vara-box-pic img {
     width: 100%;
+    /* display: none; */
 }
 
 .vara-box span {
@@ -1497,4 +1498,24 @@ body .container .minnesrummet-se-client .bo-content{
 
 .besok:hover {
     cursor: pointer;
+}
+
+
+::selection {
+  background: rgb(221, 180, 72);; /* WebKit/Blink Browsers */
+  color: white;
+}
+
+.fancybox-wrap.fancybox-desktop.fancybox-type-image.fancybox-opened{
+	height: auto;
+}
+
+.fancybox-inner{
+
+}
+
+.fancybox-wrap.fancybox-desktop.fancybox-type-image.fancybox-opened img{
+	height: auto;
+	margin: auto;
+	display: block;
 }

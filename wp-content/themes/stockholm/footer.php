@@ -183,16 +183,38 @@
             }
         });
 
-//        fancybox
-        $(".vara-box a").fancybox({
+        //        fancybox
+                $(".vara-box a").fancybox({
+                    fitToView: false,
+                    beforeShow: function(){
 
-            helpers : {
-                title : {
-                    type : 'inside'
-                }
-            }
-        });
+                      $(".fancybox-image").css({
+                      "width": 500,
+                      "height": "auto",
+                      });
+
+                      this.width = 500,
+                      this.height = 500
+
+              }
     });
+
+    $(".vara2 a").fancybox({
+        fitToView: false,
+        beforeShow: function(){
+
+          $(".fancybox-image").css({
+          "width": 500,
+          "height": "auto",
+          });
+
+          this.width = 500,
+          this.height = 250
+
+  }
+});
+
+  });
 </script>
 
 
