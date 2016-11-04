@@ -1507,7 +1507,7 @@ body .container .minnesrummet-se-client .bo-content{
 }
 
 .fancybox-wrap.fancybox-desktop.fancybox-type-image.fancybox-opened{
-	height: auto;
+	/* height: auto; */
 }
 
 .fancybox-inner{

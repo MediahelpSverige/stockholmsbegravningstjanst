@@ -190,7 +190,7 @@
 
                       $(".fancybox-image").css({
                       "width": 500,
-                      "height": "auto",
+                      "height": 500,
                       });
 
                       this.width = 500,

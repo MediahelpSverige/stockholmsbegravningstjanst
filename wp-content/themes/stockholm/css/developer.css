@@ -93,12 +93,15 @@ position: static;
 
 /*soumojit css*/
 .fancybox-title-float-wrap .child {
-    width: 450px;
+    width: 100%;
     white-space: normal;
     border-radius: 4px;
+    margin-right: 0px;
 }
 .fancybox-title-float-wrap {
     top: 100%;
+    left: 0px;
+    right: 0px;
 }
 .fancybox-skin {
     padding: 5px !important;
