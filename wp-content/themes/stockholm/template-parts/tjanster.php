@@ -36,6 +36,8 @@ get_header(1); ?>
 </div>
 <?php
 $cntimg=0;
+$imgCount = 0;
+$imgMaxCount = 9;
  $data = damiu_query_by_id($post->ID);
 
  if(have_damiu() >1){
@@ -43,13 +45,16 @@ $cntimg=0;
         <div class="row vara-btm scrl-2" id="p-Blommor">
         <div class="col-sm-7 vara-glry">
 
-            <h3>Vara Blommor</h3>
+          <div id="flowers-slider">
+
             <ul class="vara-list vara-row clearfix">
 
              <?php while(have_damiu()): the_damiu();
+
+
              	?>
 
-                <li>
+                <li <?php if($cntimg >= $imgMaxCount){ echo 'class="hidden"'; } ?>>
                     <div class="vara-box">
                         <div class="vara-box-pic">
 
@@ -72,8 +77,19 @@ $cntimg=0;
                  <?php $cntimg++ ;  endwhile; ?>
 				<?php wp_reset_postdata(); ?>
 
-            </ul>
 
+
+            </ul>
+            <div class="product-pagination">
+              <div id="next" class="nav-arrow">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+              </div>
+              <div id="prev" class="nav-arrow">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
            <?php echo get_field('below_section'); ?>
         </div>
         <?php if( get_field('right_text_area2') ){ ?>
@@ -98,10 +114,13 @@ $cntimg=0;
   ?><hr>
         <div class="row vara-btm scrl-3" id="p-kistor">
 
-        <div class="col-sm-7 vara-glry">
+          <?php if( get_field('right_text_area2',191) ){ ?>
+          <div class="col-sm-5 begra">
+             <?php echo get_field('right_text_area2',191); ?>
+          </div>
+          <?php } ?>
 
-            <h3><?php  //the_title() ;
-             echo get_the_title(191); ?></h3>
+        <div class="col-sm-7 vara-glry">
             <ul class="vara-list vara-row clearfix">
 
              <?php while(have_damiu()): the_damiu();
@@ -126,11 +145,7 @@ $cntimg=0;
 
            <?php echo get_field('below_section',191); ?>
         </div>
-        <?php if( get_field('right_text_area2',191) ){ ?>
-        <div class="col-sm-5 begra">
-           <?php echo get_field('right_text_area2',191); ?>
-        </div>
-        <?php } ?>
+
     </div>
      <?php
      //endwhile;  wp_reset_query(); ?>
@@ -155,6 +170,73 @@ $cntimg=0;
 
 <script>
 	jQuery(document).ready(function($){
+
+    // our variable holding starting index of this "page"
+var index = 0;
+
+    // display our initial list
+    //displayNext();
+
+    //slideshow for the flower
+    var maxFlowerCount = 9;
+    var flowersarray = []
+    console.log($('#p-Blommor .vara-glry ul')[0]);
+    $('#p-Blommor .vara-glry li').each( function( index ) {
+      flowersarray.push(this);
+    });
+
+    //Pagination nect
+    $('#next').click(function(){
+      console.log('next');
+      displayNext();
+
+    });
+
+    $('#prev').click(function(){
+      console.log('prev');
+      displayPrev();
+
+    });
+
+
+
+    //pagination for
+  function displayNext() {
+    var list = $("#p-Blommor .vara-glry ul");
+    var index = list.data('index') % flowersarray.length || 0;
+
+
+
+    console.log(index);
+
+    // save next index - for next call
+    list.data('index', index + maxFlowerCount);
+
+    list.html($.map(flowersarray.slice(index, index + maxFlowerCount), function(val){
+      console.log(val);
+      return '<li>' + val.innerHTML + '</li>';
+    }).join(''));
+  }
+
+  function displayPrev(){
+    var list = $("#p-Blommor .vara-glry ul");
+    var index = list.data('index') % flowersarray.length || 0;
+
+
+
+    console.log(index);
+
+    // save prev index - for prev call
+    list.data('index', index - maxFlowerCount);
+
+    list.html($.map(flowersarray.slice(index, index - maxFlowerCount), function(val){
+      console.log(val);
+      return '<li>' + val.innerHTML + '</li>';
+    }).join(''));
+  }
+
+
+
 		jQuery('body').on("click",".bestimg",function(){
 			var obj=jQuery(this);
 

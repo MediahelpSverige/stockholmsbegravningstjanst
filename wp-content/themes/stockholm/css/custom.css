@@ -817,8 +817,9 @@ vertical-align: middle;
 ul.vara-list {
     margin: 0;
     padding: 0;
+    min-height: 600px;
     list-style: none;
-
+    position: relative;
 }
 ul.vara-list li {
     width: 33.333%;
@@ -1518,4 +1519,39 @@ body .container .minnesrummet-se-client .bo-content{
 	height: auto;
 	margin: auto;
 	display: block;
+}
+.clearfix{
+	clear: both;
+}
+
+#flowers-slider{
+
+}
+
+.product-pagination {
+    background-color: orange;
+    /* padding: 10px; */
+}
+
+.nav-arrow{
+	color: white;
+	transition: 0.5s ease all;
+	cursor: pointer;
+	padding: 10px;
+}
+
+.nav-arrow:hover{
+	background-color: #efe0bb;
+	color: black;
+}
+
+div#next {
+    float: left;
+    width: 50%;
+}
+
+div#prev {
+    float: right;
+    width: 50%;
+    text-align: right;
 }
