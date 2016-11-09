@@ -120,13 +120,18 @@ $imgMaxCount = 9;
           </div>
           <?php } ?>
 
+          <?php $paginationv = 0; ?>
+
+
+
         <div class="col-sm-7 vara-glry">
+          <div id="kistor-slider">
             <ul class="vara-list vara-row clearfix">
 
              <?php while(have_damiu()): the_damiu();
              	?>
 
-                <li>
+                <li <?php if($paginationv >= 9){ echo 'class="hidden"'; } ?>>
                     <div class="vara-box vara2">
                         <div class="vara-box-pic">
                             <a href="<?php  damiu_image(); ?>" rel="group2" data-id="" title=" <?php echo damiu_text(); ?> ">
@@ -138,10 +143,20 @@ $imgMaxCount = 9;
 
 
 
-                 <?php $cntimg++ ;  endwhile; ?>
+                 <?php $paginationv++; $cntimg++;  endwhile; ?>
 				<?php wp_reset_postdata(); ?>
 
             </ul>
+            <div class="product-pagination">
+              <div id="nextkistor" class="nav-arrow">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+              </div>
+              <div id="prevkistor" class="nav-arrow">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
 
            <?php echo get_field('below_section',191); ?>
         </div>
@@ -170,6 +185,68 @@ $imgMaxCount = 9;
 
 <script>
 	jQuery(document).ready(function($){
+
+    //vara2 kistor
+
+    // our variable holding starting index of this "page"
+var index2 = 0;
+
+    // display our initial list
+    //displayNext();
+
+    //slideshow for the flower
+    var maxKistorCount = 9;
+    var kistorarray = []
+    $('#kistor-slider li').each( function( index ) {
+      kistorarray.push(this);
+    });
+
+    //Pagination nect
+    $('#nextkistor').click(function(){
+      displayNext2();
+
+    });
+
+    $('#prevkistor').click(function(){
+      displayPrev2();
+
+    });
+
+
+
+    //pagination for
+  function displayNext2() {
+    var list2 = $("#kistor-slider ul");
+    var index2 = list2.data('index') % kistorarray.length || 0;
+
+
+
+    // save next index - for next call
+    list2.data('index', index2 + maxKistorCount);
+
+    list2.html($.map(kistorarray.slice(index2, index2 + maxKistorCount), function(val){
+      return '<li>' + val.innerHTML + '</li>';
+    }).join(''));
+  }
+
+  function displayPrev2(){
+    var list2 = $("#kistor-slider ul");
+    var index2 = list2.data('index') % kistorarray.length || 0;
+
+
+
+    // save prev index - for prev call
+    list2.data('index', index2 - maxKistorCount);
+
+    list2.html($.map(kistorarray.slice(index2, index2 - maxKistorCount), function(val){
+      console.log(val);
+      return '<li>' + val.innerHTML + '</li>';
+    }).join(''));
+  }
+
+
+
+
 
     // our variable holding starting index of this "page"
 var index = 0;
