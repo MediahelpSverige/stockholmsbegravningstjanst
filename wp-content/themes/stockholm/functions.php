@@ -564,18 +564,22 @@ $query_vars['post_type'] = 'page';
 
 				?>
 				<div class="hembesokImg" style="background-image:url('<?php the_post_thumbnail_url('large'); ?>')"></div>
-				
+
 				<?php
 
 				the_content();
 
 ?>
-
+<div class="btn-group" role="group" aria-label="...">
 <button type="button" class="btn btn-primary" aria-label="Left Align">
   <span class="glyphicon glyphicon glyphicon-envelope" aria-hidden="true"></span>
 	<span class="button-text"><a href="mailto:info@email.se">Kontakta oss idag</a></span>
 </button>
-
+<button type="button" class="btn btn-primary">
+	<span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
+	<span class="button-text"><a href="<?php echo get_field('telefon');?>"><?php echo get_field('telefon');?></a></span>
+</button>
+</div>
 
 	</div>
 	</div>
