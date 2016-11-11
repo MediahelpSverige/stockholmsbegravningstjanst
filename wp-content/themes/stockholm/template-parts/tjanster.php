@@ -203,6 +203,8 @@ var index2 = 0;
 
     //Pagination nect
     $('#nextkistor').click(function(){
+      console.log(currentPageKistor);
+
       if(currentPageKistor == numberOfPagesKistor){
 
     }else{
@@ -212,6 +214,8 @@ var index2 = 0;
     });
 
     $('#prevkistor').click(function(){
+
+      console.log(currentPageKistor);
 
       if(currentPageKistor == 1){
 
@@ -291,12 +295,12 @@ function getNumberOfPages() {
 
 function displayNext() {
 
-    currentPageKistor += 1;
+    currentPage += 1;
     loadList();
   }
 
-function displayPrevKistor() {
-    currentPageKistor -= 1;
+function displayPrev() {
+    currentPage -= 1;
     loadList();
 }
 
@@ -330,7 +334,7 @@ function loadKistor() {
 }
 
 function getNumberOfPagesKistor() {
-  return Math.ceil(list.length / numberPerPageKistor);
+  return Math.ceil(listKistor.length / numberPerPageKistor);
 }
 
 function displayNextKistor() {
@@ -338,7 +342,7 @@ function displayNextKistor() {
     loadKistor();
   }
 
-function previousPageKistor() {
+function displayPrevKistor() {
     currentPageKistor -= 1;
     loadKistor();
 }

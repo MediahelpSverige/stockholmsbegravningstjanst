@@ -844,7 +844,7 @@ ul.vara-list.vara-row {
 
 }
 .vara-box-pic {
-    height: 150px;
+    height: 190px;
     overflow: hidden;
 }
 .vara-box-pic img {
@@ -1531,7 +1531,6 @@ body .container .minnesrummet-se-client .bo-content{
 .product-pagination {
     background-color: orange;
     /* padding: 10px; */
-    margin-bottom: 25px;
 }
 
 .nav-arrow{
@@ -1559,14 +1558,15 @@ div#previous {
 }
 
 div#nextkistor {
-    float: left;
-    width: 50%;
-}
-
-div#prevkistor {
     float: right;
     width: 50%;
     text-align: right;
+}
+
+div#prevkistor {
+    float: left;
+    width: 50%;
+    text-align: left;
 }
 
 #kistor-slider{
