@@ -1532,6 +1532,27 @@ body .container .minnesrummet-se-client .bo-content{
     background-color: orange;
     /* padding: 10px; */
 }
+.vara-btm:nth-child(odd) .law-image{
+    width: 20%;
+    height: 290px;
+    float: left;
+}
+
+ .vara-btm:nth-child(even) .law-image{
+    width: 30%;
+    height: 300px;
+    float: right;
+}
+
+.vara-btm:nth-child(odd) .law-content{
+	float: right;
+	width: 75%;
+}
+
+.vara-btm:nth-child(even) .law-content{/* text-align: center; */float: left;width: 65%;}
+
+.law-content:nth-child(even) p{
+}
 
 .nav-arrow{
 	color: white;
