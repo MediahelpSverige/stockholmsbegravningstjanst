@@ -47,7 +47,7 @@ $imgMaxCount = 9;
 
           <div id="flowers-slider">
 
-            <ul class="vara-list vara-row clearfix">
+            <ul id="flowers-list" class="vara-list vara-row clearfix">
 
              <?php while(have_damiu()): the_damiu();
 
@@ -82,10 +82,10 @@ $imgMaxCount = 9;
             </ul>
             <div class="product-pagination">
               <div id="next" class="nav-arrow">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-              </div>
-              <div id="prev" class="nav-arrow">
                 <span class="glyphicon glyphicon-chevron-right"></span>
+              </div>
+              <div id="previous" class="nav-arrow">
+                <span class="glyphicon glyphicon-chevron-left"></span>
               </div>
               <div class="clearfix"></div>
             </div>
@@ -126,7 +126,7 @@ $imgMaxCount = 9;
 
         <div class="col-sm-7 vara-glry">
           <div id="kistor-slider">
-            <ul class="vara-list vara-row clearfix">
+            <ul id="kistor-list" class="vara-list vara-row clearfix">
 
              <?php while(have_damiu()): the_damiu();
              	?>
@@ -203,115 +203,160 @@ var index2 = 0;
 
     //Pagination nect
     $('#nextkistor').click(function(){
-      displayNext2();
+      if(currentPageKistor == numberOfPagesKistor){
+
+    }else{
+      displayNextKistor();
+    }
 
     });
 
     $('#prevkistor').click(function(){
-      displayPrev2();
+
+      if(currentPageKistor == 1){
+
+    }else{
+      displayPrevKistor();
+
+    }
 
     });
-
-
-
-    //pagination for
-  function displayNext2() {
-    var list2 = $("#kistor-slider ul");
-    var index2 = list2.data('index') % kistorarray.length || 0;
-
-
-
-    // save next index - for next call
-    list2.data('index', index2 + maxKistorCount);
-
-    list2.html($.map(kistorarray.slice(index2, index2 + maxKistorCount), function(val){
-      return '<li>' + val.innerHTML + '</li>';
-    }).join(''));
-  }
-
-  function displayPrev2(){
-    var list2 = $("#kistor-slider ul");
-    var index2 = list2.data('index') % kistorarray.length || 0;
-
-
-
-    // save prev index - for prev call
-    list2.data('index', index2 - maxKistorCount);
-
-    list2.html($.map(kistorarray.slice(index2, index2 - maxKistorCount), function(val){
-      console.log(val);
-      return '<li>' + val.innerHTML + '</li>';
-    }).join(''));
-  }
-
-
-
-
-
     // our variable holding starting index of this "page"
 var index = 0;
 
-    // display our initial list
-    //displayNext();
+//Pagination nect
+$('#next').click(function(e){
+  console.log(currentPage);
+  if(currentPage == numberOfPages){
 
-    //slideshow for the flower
+}else{
+  nextPage();
+}
+
+});
+
+$('#previous').click(function(e){
+
+  console.log(currentPage);
+
+  if(currentPage == 1){
+
+}else{
+  previousPage();
+
+}
+
+});
+
     var maxFlowerCount = 9;
     var flowersarray = []
     console.log($('#p-Blommor .vara-glry ul')[0]);
-    $('#p-Blommor .vara-glry li').each( function( index ) {
+    $('#p-Blommor .vara-glry li').each( function( i ) {
       flowersarray.push(this);
     });
 
-    //Pagination nect
-    $('#next').click(function(){
-      console.log('next');
-      displayNext();
-
-    });
-
-    $('#prev').click(function(){
-      console.log('prev');
-      displayPrev();
-
-    });
+    var list = flowersarray;
+    var pageList = new Array();
+    var currentPage = 1;
+    var numberPerPage = 9;
+    var numberOfPages = 0;
 
 
+var numberOfPages = getNumberOfPages();
 
-    //pagination for
-  function displayNext() {
-    var list = $("#p-Blommor .vara-glry ul");
-    var index = list.data('index') % flowersarray.length || 0;
+console.log(numberOfPages);
 
+function nextPage() {
+    currentPage += 1;
+    loadList();
+}
 
+function previousPage() {
+    currentPage -= 1;
+    loadList();
+}
 
-    console.log(index);
+function loadList() {
+    var begin = ((currentPage - 1) * numberPerPage);
+    var end = begin + numberPerPage;
 
-    // save next index - for next call
-    list.data('index', index + maxFlowerCount);
+    pageList = list.slice(begin, end);
+    console.log(pageList);
+    drawList();
+}
 
-    list.html($.map(flowersarray.slice(index, index + maxFlowerCount), function(val){
-      console.log(val);
-      return '<li>' + val.innerHTML + '</li>';
-    }).join(''));
+function getNumberOfPages() {
+  return Math.ceil(list.length / numberPerPage);
+}
+
+function displayNext() {
+
+    currentPageKistor += 1;
+    loadList();
   }
 
-  function displayPrev(){
-    var list = $("#p-Blommor .vara-glry ul");
-    var index = list.data('index') % flowersarray.length || 0;
+function displayPrevKistor() {
+    currentPageKistor -= 1;
+    loadList();
+}
+
+function drawList() {
+    document.getElementById("flowers-list").innerHTML = "";
+    for (r = 0; r < pageList.length; r++) {
+        document.getElementById("flowers-list").innerHTML += "<li>" + pageList[r].innerHTML + "</li>";
+    }
+}
 
 
 
-    console.log(index);
+///functions for kistor
+var listKistor = kistorarray;
+var pageListKistor = new Array();
+var currentPageKistor = 1;
+var numberPerPageKistor = 6;
+var numberOfPagesKistor = 0;
 
-    // save prev index - for prev call
-    list.data('index', index - maxFlowerCount);
+var numberOfPagesKistor = getNumberOfPagesKistor();
 
-    list.html($.map(flowersarray.slice(index, index - maxFlowerCount), function(val){
-      console.log(val);
-      return '<li>' + val.innerHTML + '</li>';
-    }).join(''));
+
+
+function loadKistor() {
+    var begin = ((currentPageKistor - 1) * numberPerPageKistor);
+    var end = begin + numberPerPageKistor;
+
+    pageListKistor = listKistor.slice(begin, end);
+    console.log(pageListKistor);
+    drawListKistor();
+}
+
+function getNumberOfPagesKistor() {
+  return Math.ceil(list.length / numberPerPageKistor);
+}
+
+function displayNextKistor() {
+    currentPageKistor += 1;
+    loadKistor();
   }
 
+function previousPageKistor() {
+    currentPageKistor -= 1;
+    loadKistor();
+}
+
+function drawListKistor() {
+    document.getElementById("kistor-list").innerHTML = "";
+    for (i = 0; i < pageListKistor.length; i++) {
+        document.getElementById("kistor-list").innerHTML += "<li>" + pageListKistor[i].innerHTML + "</li>";
+    }
+}
+
+
+function load() {
+loadList();
+loadKistor()
+}
+
+load();
 
 
 		jQuery('body').on("click",".bestimg",function(){

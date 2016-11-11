@@ -1531,6 +1531,7 @@ body .container .minnesrummet-se-client .bo-content{
 .product-pagination {
     background-color: orange;
     /* padding: 10px; */
+    margin-bottom: 25px;
 }
 
 .nav-arrow{
@@ -1546,11 +1547,23 @@ body .container .minnesrummet-se-client .bo-content{
 }
 
 div#next {
+    float: right;
+    width: 50%;
+    text-align: right;
+}
+
+div#previous {
+    float: left;
+    width: 50%;
+    text-align: left;
+}
+
+div#nextkistor {
     float: left;
     width: 50%;
 }
 
-div#prev {
+div#prevkistor {
     float: right;
     width: 50%;
     text-align: right;
