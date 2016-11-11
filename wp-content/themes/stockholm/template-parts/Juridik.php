@@ -17,11 +17,12 @@ get_header(2); ?>
 	<div class="container page-top">
 
   		<div class="vara-btm scrl-1 pdng0">
-				<div class="law-image" style="background-image:url('<?php the_post_thumbnail_url('full'); ?>')"></div>
-				<div class="law-content">
+
   			<?php
       			global $post; $post = get_post( 193 , OBJECT ); setup_postdata( $post );
       		?>
+					<div class="law-image" style="background-image:url('<?php the_post_thumbnail_url('full'); ?>')"></div>
+					<div class="law-content">
       		<h3><?php echo get_the_title(193); ?></h3>
 	      <?php
 	      	echo apply_filters( 'the_content', $post->post_content );
@@ -31,12 +32,13 @@ get_header(2); ?>
 			<div class="clearfix"></div>
       	</div>
    		<div class="vara-btm scrl-2 pdng0">
-				<div class="law-image" style="background-image:url('<?php the_post_thumbnail_url('full'); ?>')"></div>
-				<div class="law-content">
+
 	  	  	<hr>
 			<?php
 				global $post; $post = get_post( 195 , OBJECT ); setup_postdata( $post );
 			?>
+			<div class="law-image" style="background-image:url('<?php the_post_thumbnail_url('full'); ?>')"></div>
+			<div class="law-content">
       	<h3><?php echo get_the_title(195); ?></h3>
       	<?php
       		echo apply_filters( 'the_content', $post->post_content );
@@ -46,12 +48,13 @@ get_header(2); ?>
 			<div class="clearfix"></div>
 		</div>
        	<div class="vara-btm scrl-3 pdng0">
-					<div class="law-image" style="background-image:url('<?php the_post_thumbnail_url('full'); ?>')"></div>
-					<div class="law-content">
+
   	  		<hr>
       		<?php
       			global $post; $post = get_post( 197 , OBJECT ); setup_postdata( $post );
       		?>
+					<div class="law-image" style="background-image:url('<?php the_post_thumbnail_url('full'); ?>')"></div>
+					<div class="law-content">
       		<h3><?php echo get_the_title(197); ?></h3>
       		<?php
       			echo apply_filters( 'the_content', $post->post_content );
@@ -61,12 +64,13 @@ get_header(2); ?>
 				<div class="clearfix"></div>
 			</div>
   	 	<div class="vara-btm scrl-4">
-				<div class="law-image" style="background-image:url('<?php the_post_thumbnail_url('full'); ?>')"></div>
-				<div class="law-content">
+
   	  		<hr>
       		<?php
       			global $post; $post = get_post( 199 , OBJECT ); setup_postdata( $post );
       		?>
+					<div class="law-image" style="background-image:url('<?php the_post_thumbnail_url('full'); ?>')"></div>
+					<div class="law-content">
       		<h3><?php echo get_the_title(199); ?></h3>
       		<?php
       			echo apply_filters( 'the_content', $post->post_content );
