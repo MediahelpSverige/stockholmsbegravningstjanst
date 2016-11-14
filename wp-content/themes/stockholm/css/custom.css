@@ -1464,12 +1464,14 @@ body .container .minnesrummet-se-client .bo-content{
 .btn-primary{
 	background-color: #e5a600;
 	border-color: #e8e8e8;
+	background-image: linear-gradient(to bottom,#e0ba5d 0,#e5a600 100%);
 }
 
 .btn-primary:hover {
     color: #fff;
     background-color: black;
     border-color: white;
+    background-image: linear-gradient(to bottom,#000000 0,#000000 100%);
 }
 
 .btn-primary.focus, .btn-primary:focus {
@@ -1529,6 +1531,19 @@ body .container .minnesrummet-se-client .bo-content{
 
 }
 
+div.nav-arrow:first-child {
+    border-left: 2px solid white;
+}
+
+p#kont_text {
+    font-size: 15px;
+    color: #4f4e4e;
+}
+
+div#top-row {
+    margin-bottom: 50px;
+}
+
 .law-image{
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -1559,6 +1574,11 @@ body .container .minnesrummet-se-client .bo-content{
 .vara-btm:nth-child(even) .law-content{/* text-align: center; */float: left;width: 65%;}
 
 .law-content:nth-child(even) p{
+}
+
+.begra-r h3:last-child{
+background-color: #efe0bb;
+padding: 19px;
 }
 
 .nav-arrow{
@@ -1599,4 +1619,38 @@ div#prevkistor {
 
 #kistor-slider{
 	position: relative;
+}
+
+div#top-text{
+	float: left;
+	width: 70%;
+	margin-bottom: 74px;
+}
+
+.right_contact_field {
+    float: right;
+    width: 25%;
+    padding: 10px;
+    border: 2px solid rgb(239, 224, 187);
+    background-color: white;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 2px 2px 6px 6px rgba(245, 236, 213, 0.35);
+}
+
+.right_contact_field img{
+	max-height: 150px;
+	width: auto;
+	margin: auto;
+	display: block;
+}
+
+h3#kont_titel {
+    margin: 10px 0px;
+    border-bottom: 1px solid #efe0bb;
+    padding-bottom: 5px;
+}
+h2#kont_tel{
+	font-size: 24px;
+	margin: 5px 0px;
 }

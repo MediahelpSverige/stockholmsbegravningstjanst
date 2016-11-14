@@ -149,10 +149,10 @@ $imgMaxCount = 9;
             </ul>
             <div class="product-pagination">
               <div id="nextkistor" class="nav-arrow">
-                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="glyphicon glyphicon-chevron-right"></span>
               </div>
               <div id="prevkistor" class="nav-arrow">
-                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="glyphicon glyphicon-chevron-left"></span>
               </div>
               <div class="clearfix"></div>
             </div>

@@ -14,25 +14,50 @@
 get_header(3); ?>
 
 <section class="inner-page no-header">
-	  
+
 	<div class="contact topgap-inner priser-content">
 		<div class="container page-top">
-			<div>
+			<div class="row" id="top-row">
+			<div id="top-text">
 			<?php echo apply_filters( 'the_content', $post->post_content );  ?>
 			</div>
-			<div class="outer-loop">
+
 				<?php $query_partner = new WP_Query('page_id=10');
-  		  	  			   if( $query_partner->have_posts() ) : $query_partner->the_post(); ?>
-                            <?php
+			 if( $query_partner->have_posts() ) : $query_partner->the_post(); ?>
+			 <?php
+
+			 if( have_rows('kontakt') ): while ( have_rows('kontakt') ) : the_row(); ?>
+
+			 <?php if( get_row_layout() == 'kontaktperson_layout' ): ?>
+
+				 <div class="right_contact_field">
+					 <div class="border-wrap">
+
+				 <img src="<?php echo get_sub_field('kontaktperson'); ?>">
+				 <h3 id="kont_titel"><?php echo get_sub_field('titel'); ?></h3>
+				 <h2 id="kont_tel"><?php echo get_sub_field('telefon'); ?></h2>
+				 <p id="kont_text"><?php echo get_sub_field('text'); ?></p>
+			 </div>
+		 </div>
+</div>
+			 <?php endif;
+
+ endwhile;
+
+ endif;
+
+			  ?>
+				<div class="outer-loop">
+				<?php
 								if( have_rows('prise_description_area') ): while ( have_rows('prise_description_area') ) : the_row();
 								if( get_row_layout() == 'prise_description_area_sub' ):
 									 $form_code=get_sub_field('form_code');
 							?>
 						<div class="section-border">
-								
+
 			<div class="row">
 				<div class="col-sm-8 priser-txt">
-				
+
 					<div class="priser-text-each">
 						<h3 class="subheding"><?php echo get_sub_field('prise_title'); ?></h3>
 						<p><?php echo get_sub_field('prise_description'); ?></p>
@@ -41,8 +66,8 @@ get_header(3); ?>
 								  <?php
 								if( have_rows('prise_listing') ): while ( have_rows('prise_listing') ) : the_row();
 								if( get_row_layout() == 'prise_listing_sub' ):
-									
-								
+
+
 							?>
 								<div class="tyotalblog-row">
 									<div class="tyotalblog-cell"><?php echo get_sub_field('name'); ?></div>
@@ -57,8 +82,8 @@ get_header(3); ?>
 							</div>
 						</div>
 					</div>
-					
-					
+
+
 				</div>
 				<div class="col-sm-4 priser-right">
 					<div class="priser-right-block">
@@ -81,7 +106,7 @@ get_header(3); ?>
 	                        </div> -->
 	                    </div>
 	                </div>
-	              
+
 				</div>
 			</div>
 		</div>
@@ -102,16 +127,16 @@ get_header(3); ?>
 
 <script>
 	$(document).ready(function(){
-		
+
 		$('.section-border').each(function(){
-			
+
 $(this).find('input[name="sub"]').attr('type','hidden');
 				$(this).find('input[name="sub"]').val($(this).find('.subheding').text());
-		
+
 		});
-		
-		
-	
-		
+
+
+
+
 	});
 </script>
