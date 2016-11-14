@@ -1529,6 +1529,12 @@ body .container .minnesrummet-se-client .bo-content{
 
 }
 
+.law-image{
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center center;
+}
+
 .product-pagination {
     background-color: orange;
     /* padding: 10px; */
