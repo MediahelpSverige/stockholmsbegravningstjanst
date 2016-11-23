@@ -86,23 +86,22 @@ h1,h2,h3,h4,h5,h6{
 h1{
 	font-size:50px;
 	color:#ffffff;
-	font-family: 'GothamBold_6';
+	font-family: 'GothamBook_8';
 }
 h2{
 	font-size:36px;
 	color:#4f4e4e;
-	font-family: 'GothamBold_6';
+	font-family: 'GothamBook_8';
 }
 h3{
 	font-size:18px;
 	color:#cb971e;
-    font-family: 'GothamBold_6';
+    font-family: 'GothamBook_8';
 }
 p{
 	font-size:18px;
 	color:#949494;
 	font-family: 'GothamBook_8';
-	line-height:24px;
 }
 /*global css end*/
 
@@ -118,7 +117,7 @@ p{
     width: 100%;
 }
 .navbar {
-    height: auto;
+    height: 79px;
     border: none;
     border-radius: 0;
     min-height: 1px;
@@ -212,7 +211,7 @@ vertical-align: middle;
 }
 .contact-header {
     margin-top: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 .menu-listingHd .navbar-nav li a {
     line-height: 34px;
@@ -249,7 +248,7 @@ vertical-align: middle;
     border-bottom: 1px solid #393939;
 }
 .footerData {
-    width: 435px;
+    width: 409px;
     margin-right: 80px;
 }
 .footerTop h4 {
@@ -366,7 +365,7 @@ vertical-align: middle;
 .banner-text h2 {
     color: #fff;
     font-size: 54px;
-    font-family: 'GothamBold_6';
+    font-family: 'GothamBook_8';
     text-transform: uppercase;
     margin-bottom: 30px;
 }
@@ -436,7 +435,7 @@ vertical-align: middle;
 .btn-default {
     background: #ddb448;
     color: #fff;
-    font-family: 'GothamBold_6';
+    font-family: 'GothamBook_8';
     font-size: 16px;
     text-transform: uppercase;
     border: 1px solid transparent;
@@ -463,7 +462,7 @@ vertical-align: middle;
 .body-detail h3 {
     font-size: 18px;
     color: #e5a600;
-    font-family: 'GothamBold_6';
+    font-family: 'GothamBook_8';
 }
 .info-area {
     background: rgb(247, 247, 247);
@@ -525,7 +524,7 @@ vertical-align: middle;
 .info-addrss-l p {
     font-size: 16px;
     margin-bottom: 20px;
-    font-family: 'GothamBook_8';
+    font-family: autoplayTimeout:5000;
     color: #000;
 }
 .info-addrss-l p:last-child {
@@ -558,7 +557,7 @@ vertical-align: middle;
     line-height: 38px;
 }
 .cus-text p strong {
-    font-family: 'GothamBold_6';
+    font-family: 'GothamBook_8';
 }
 .project-box {
     overflow: hidden;
@@ -640,7 +639,7 @@ vertical-align: middle;
     color: #232323;
     font-size: 28px;
     text-transform: uppercase;
-    font-family: 'GothamBold_6';
+    font-family: 'GothamBook_8';
     margin-bottom: 20px;
 }
 .rivew-head p {
@@ -738,6 +737,7 @@ vertical-align: middle;
 }
  .container > .navbar-collapse {
     margin: 0 -15px;
+    float: right;
 }
 .project-inner p i {
     font-size: 17px;
@@ -753,7 +753,7 @@ vertical-align: middle;
 .begra h3 {
     font-size: 24px;
     color: #cb971e;
-    font-family: 'GothamBold_6';
+    font-family: 'GothamBook_8';
     margin-bottom: 30px;
 }
 .inner-page {
@@ -786,7 +786,7 @@ vertical-align: middle;
 .begra-r h3, .vara-glry h3 {
     font-size: 20px;
     color: #232323;
-    font-family: 'GothamBold_6';
+    font-family: 'GothamBook_8';
     margin-bottom: 25px;
 }
 .begra-r ul {
@@ -1004,7 +1004,7 @@ ul.vara-list.vara-row {
     font-size: 18px;
     color: #000;
     text-transform: uppercase;
-    font-family: 'GothamBold_6';
+    font-family: 'GothamBook_8';
     margin-bottom: 20px;
 }
 .pic_area{
@@ -1155,7 +1155,7 @@ textarea.form-controls{
 }
 .tab-nav li.active a{
     background-color: #ddb448;
-    font-family: 'GothamBold_6';
+    font-family: 'GothamBook_8';
     color: #000;
 }
 .tab-nav li{
@@ -1273,7 +1273,7 @@ textarea.form-controls{
 }
 .tyotalblog-cell:first-child {
     font-size: 18px;
-    font-family: 'GothamBold_6';
+    font-family: 'GothamBook_8';
 }
 .topgap-inner {
     padding-top: 90px;
@@ -1323,7 +1323,7 @@ textarea.form-controls{
     z-index: 999;
     margin-top: 8px;
 }
-header.header {padding-bottom: 0;}
+header.header {padding-bottom: 0;height: 110px;}
 
 h1, h2, h3, h4, h5, h6 {
     margin-bottom: 18px;
@@ -1524,7 +1524,7 @@ body .container .minnesrummet-se-client .bo-content{
 	display: block;
 }
 .clearfix{
-	clear: both;
+	/* clear: both; */
 }
 
 #flowers-slider{
@@ -1653,4 +1653,8 @@ h3#kont_titel {
 h2#kont_tel{
 	font-size: 24px;
 	margin: 5px 0px;
+}
+
+body .fancybox-title-float-wrap .child{
+	    background: rgba(144, 144, 144, 0.8);
 }

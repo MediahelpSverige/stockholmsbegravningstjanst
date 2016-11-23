@@ -175,7 +175,7 @@ background: #efe0bb;
 .btn-default-small {
     background: #ddb448;
     color: #fff;
-    font-family: 'GothamBold_6';
+    font-family: 'GothamBook_8';
     font-size: 11px;
     text-transform: uppercase;
     border: 1px solid transparent;
@@ -243,8 +243,9 @@ padding: 0;
 }
 .bannerHome {
     position: relative;
-    max-height: 700px;
+    max-height: 650px;
     overflow: hidden;
+    margin-top: 70px;
 }
 .vara-btm h3{
 	font-size: 24px;

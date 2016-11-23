@@ -67,7 +67,7 @@ get_header(); ?>
             <div class="<?php if($c==2) { ?> col-sm-6 col-sm-offset-1 <?php } elseif($c==3){ ?> col-sm-5 <?php } else { ?> col-sm-6 <?php } ?> ">
                 <div class="customer-cont-txt">
                     <h4><?php the_title();?></h4>
-                    <p><?php echo wp_trim_words( get_the_content(), 25 );?></p>
+                    <p><?php the_content(); ?></p>
                 </div>
             </div>
 

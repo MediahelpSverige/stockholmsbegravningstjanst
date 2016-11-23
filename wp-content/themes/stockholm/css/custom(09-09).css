@@ -84,17 +84,17 @@ h1,h2,h3,h4,h5,h6{
 h1{
 	font-size:50px;
 	color:#ffffff;
-	font-family: 'GothamBold_6';
+	font-family: 'GothamBook_8';
 }
 h2{
 	font-size:36px;
 	color:#4f4e4e;
-	font-family: 'GothamBold_6';
+	font-family: 'GothamBook_8';
 }
 h3{
 	font-size:18px;
 	color:#167cc1;
-    font-family: 'GothamBold_6';
+    font-family: 'GothamBook_8';
 }
 p{
 	font-size:18px;
@@ -357,7 +357,7 @@ p{
 .banner-text h2 {
     color: #fff;
     font-size: 54px;
-    font-family: 'GothamBold_6';
+    font-family: 'GothamBook_8';
     text-transform: uppercase;
     margin-bottom: 30px;
 }
@@ -427,7 +427,7 @@ p{
 .btn-default {
     background: #ddb448;
     color: #fff;
-    font-family: 'GothamBold_6';
+    font-family: 'GothamBook_8';
     font-size: 16px;
     text-transform: uppercase;
     border: 1px solid transparent;
@@ -454,7 +454,7 @@ p{
 .body-detail h3 {
     font-size: 18px;
     color: #e5a600;
-    font-family: 'GothamBold_6';
+    font-family: 'GothamBook_8';
 }
 .info-area {
     background: #f7f7f7;
@@ -544,7 +544,7 @@ p{
     line-height: 38px;
 }
 .cus-text p strong {
-    font-family: 'GothamBold_6';
+    font-family: 'GothamBook_8';
 }
 .project-box {
     overflow: hidden;
@@ -622,7 +622,7 @@ p{
     color: #232323;
     font-size: 28px;
     text-transform: uppercase;
-    font-family: 'GothamBold_6';
+    font-family: 'GothamBook_8';
     margin-bottom: 20px;
 }
 .rivew-head p {
@@ -735,7 +735,7 @@ p{
 .begra h3 {
     font-size: 24px;
     color: #cb971e;
-    font-family: 'GothamBold_6';
+    font-family: 'GothamBook_8';
     margin-bottom: 30px;
 }
 .inner-page {
@@ -768,7 +768,7 @@ p{
 .begra-r h3, .vara-glry h3 {
     font-size: 20px;
     color: #232323;
-    font-family: 'GothamBold_6';
+    font-family: 'GothamBook_8';
     margin-bottom: 25px;
 }
 .begra-r ul {
@@ -981,7 +981,7 @@ ul.vara-list.vara-row {
     font-size: 18px;
     color: #000;
     text-transform: uppercase;
-    font-family: 'GothamBold_6';
+    font-family: 'GothamBook_8';
     margin-bottom: 20px;
 }
 .pic_area{
@@ -1132,7 +1132,7 @@ textarea.form-controls{
 }
 .tab-nav li.active a{
     background-color: #ddb448;
-    font-family: 'GothamBold_6';
+    font-family: 'GothamBook_8';
     color: #000;
 }
 .tab-nav li{
@@ -1251,7 +1251,7 @@ textarea.form-controls{
 }
 .tyotalblog-cell:first-child {
     font-size: 18px;
-    font-family: 'GothamBold_6';
+    font-family: 'GothamBook_8';
 }
 .topgap-inner {
     padding-top: 75px;

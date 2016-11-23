@@ -171,6 +171,8 @@
             loop:true,
             margin:10,
             nav:false,
+            autoplayTimeout:5000,
+            autoplay:true,
             //dots: true,
             items: 1,
             responsive:{
