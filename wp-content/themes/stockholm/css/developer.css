@@ -222,16 +222,8 @@ background: #efe0bb;
 }
 
 
-.banner-text {
-position: absolute;
-top: 21%;
-padding-left: 40px;
-width: 900px;
-opacity: 0;
-transition: all 1500ms
-ease-in-out;
-
-}
+.banner-text {position: absolute;top: 50%;padding-left: 40px;width: 900px;opacity: 0;transition: all 1500ms
+ease-in-out;transform: translate3d(0, -50%, 0);}
 
 .active .banner-text {
 opacity: 1;

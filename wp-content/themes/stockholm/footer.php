@@ -78,6 +78,7 @@
 
 <script>
 	jQuery(document).ready(function($){
+    console.log($('.bannerSlide'));
     $('.bannerSlide').owlCarousel({
          loop:true,
          nav:false,
