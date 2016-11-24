@@ -78,6 +78,22 @@
 
 <script>
 	jQuery(document).ready(function($){
+    $('.bannerSlide').owlCarousel({
+         loop:true,
+         nav:false,
+         autoplayTimeout:5000,
+         autoplay:true,
+         //dots: true,
+         items: 1,
+         responsive:{
+              991:{
+                 dots: true
+             },
+              0:{
+                 dots: false
+             }
+         }
+     });
 		var has;
 		has=window.location.hash;
 			var n=window.location.pathname;
@@ -166,24 +182,8 @@
 
 
 <script>
-    $(document).ready (function() {
-       $('.bannerSlide').owlCarousel({
-            loop:true,
-            margin:10,
-            nav:false,
-            autoplayTimeout:5000,
-            autoplay:true,
-            //dots: true,
-            items: 1,
-            responsive:{
-                 991:{
-                    dots: true
-                },
-                 0:{
-                    dots: false
-                }
-            }
-        });
+    $(document).ready(function() {
+
 
         //        fancybox
                 $(".vara-box a").fancybox({

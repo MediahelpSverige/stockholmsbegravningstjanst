@@ -218,6 +218,7 @@ background: #efe0bb;
 
 .tab-box .nav-tabs>li.presentation1 {
     width: 96%;
+    margin-bottom: 0px;
 }
 
 
@@ -245,7 +246,7 @@ padding: 0;
     position: relative;
     max-height: 650px;
     overflow: hidden;
-    margin-top: 70px;
+    margin-top: 0px;
 }
 .vara-btm h3{
 	font-size: 24px;
@@ -329,7 +330,7 @@ bottom: auto;
 
 .co-worker-outer {
 	    background: white;
-	    padding: 19px;
+	    padding: 15.5px;
 	    /* height: 205px; */
 	    /* overflow-y: auto; */
 }
