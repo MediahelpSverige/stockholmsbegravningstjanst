@@ -645,14 +645,14 @@ header .navbar-header{
         transform: translate3d(0,-50%,0);
     }
     .banner-text h2 {
-        color: #e5a600;
+        color: #ffffff;
         font-size: 24px;
     }
     .banner-text h2 span {
         font-size: 23px;
     }
     .banner-text p {
-        color: #949494;
+        color: #ffffff;
         font-size: 14px;
     }
     .banner-footer {

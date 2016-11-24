@@ -15,7 +15,7 @@
 
      <div class="container">
          <div class="footerTop clearfix">
-             <div class="footerData clearfix">
+             <div class="footerData">
                  <div class="footerDesc">
                   <?php $om_oss = get_page(425); ?>
                      <!-- <h4><?php echo $om_oss->post_title;  ?></h4> -->
@@ -23,7 +23,7 @@
                  </div>
              </div>
 
-             <div class="footerMenu clearfix">
+             <div class="footerMenu">
                      <h4>Våra tjänster</h4>
                      <?php
                             wp_nav_menu( array(
