@@ -49,17 +49,20 @@ get_header(3); ?>
 			  ?>
 				<div class="outer-loop">
 				<?php
+				$count = 0;
 								if( have_rows('prise_description_area') ): while ( have_rows('prise_description_area') ) : the_row();
+								$count++;
+
 								if( get_row_layout() == 'prise_description_area_sub' ):
 									 $form_code=get_sub_field('form_code');
 							?>
 						<div class="section-border">
 
-			<div class="row">
+			<div class="row" id="row-<?php echo $count; ?>">
 				<div class="col-sm-8 priser-txt">
 
 					<div class="priser-text-each">
-						<h3 class="subheding"><?php echo get_sub_field('prise_title'); ?></h3>
+						<h3 id="heading-<?php echo $count; ?>" class="subheding"><?php echo get_sub_field('prise_title'); ?></h3>
 						<p><?php echo get_sub_field('prise_description'); ?></p>
 						<div class="tyotalblog-wrap">
 							<div class="tyotalblog">

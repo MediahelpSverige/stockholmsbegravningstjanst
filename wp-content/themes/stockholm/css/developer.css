@@ -157,17 +157,16 @@ position: static;
 }
 
 .subheding {
-
-background: #efe0bb;
-    padding: 15px 0;
-    padding-left: 24px;
-    border-top: 1px solid #efe0bb;
-    border-bottom: 1px solid #efe0bb;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1)inset;
-    -webkit-box-shadow: 0 2px 10px rgba(0,0,0,0.1)inset;
-    -moz-box-shadow: 0 2px 10px rgba(0,0,0,0.1)inset;
-    -ms-box-shadow: 0 2px 10px rgba(0,0,0,0.1)inset;
-    position: relative;
+background: #efe0bb;
+padding: 15px 0;
+padding-left: 24px;
+border-top: 1px solid #efe0bb;
+border-bottom: 1px solid #efe0bb;
+box-shadow: 0 2px 10px rgba(0,0,0,0.1)inset;
+-webkit-box-shadow: 0 2px 10px rgba(0,0,0,0.1)inset;
+-moz-box-shadow: 0 2px 10px rgba(0,0,0,0.1)inset;
+-ms-box-shadow: 0 2px 10px rgba(0,0,0,0.1)inset;
+position: relative;
 }
 
 

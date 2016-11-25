@@ -50,7 +50,7 @@
 
          <div class="footerBottom">
              <p class="copyTxt"><?php echo get_theme_mod( 'copyright_textbox', 'No copyright information has been saved yet.' ); ?>
-</p>
+            </p>
              <div class="socialFooter">
                  <a target="_blank" href="<?php echo get_theme_mod( 'facebook_url', 'No copyright information has been saved yet.' ); ?>" class="fbIcon"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                  <a target="_blank" href="<?php echo get_theme_mod( 'linkdIN_URL', 'No copyright information has been saved yet.' ); ?>" class="linkdIcon"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
