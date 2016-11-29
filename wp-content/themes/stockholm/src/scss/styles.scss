@@ -38,6 +38,19 @@ body{
       width: 100%;
     }
   }
+.project-outer{
+  .project-box{
+    min-height: 450px;
+  }
+}
+.project-inner.pro-marg {
+    min-height: 688px;
+}
+
+.item{
+  width:33%;
+  float: left;
+}
 }
 
 div#row-2{

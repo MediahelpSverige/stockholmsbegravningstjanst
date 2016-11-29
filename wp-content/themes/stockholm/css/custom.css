@@ -578,7 +578,7 @@ vertical-align: middle;
 }
 
 .project-outer .project-box{
-		min-height: 400px;
+		min-height: 442px;
 }
 .project-box > img {
     width: 100%;
@@ -682,7 +682,7 @@ vertical-align: middle;
     margin-bottom: 3px;
 }
 .project-inner.pro-marg {
-    min-height: 656px;
+    min-height: 688px;
 }
 .project-admin {
     width: 110px;

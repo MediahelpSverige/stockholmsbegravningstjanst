@@ -103,15 +103,11 @@ $(document).ready(function (){
     /// Co worker slider
 
     console.log('slick');
-
+/*
     $('.worker-carousel').slick({
-        infinite: false,
+        infinite: true,
         slidesToShow: 3,
         slidesToScroll: 1,
-        dots: false,
-        centerMode: false,
-        arrows: true,
-        focusOnSelect: true,
         responsive: [
             {
                 breakpoint: 1000,
@@ -143,6 +139,7 @@ $(document).ready(function (){
             }
         ]
     });
+    */
 
 
     //home-content-carosel

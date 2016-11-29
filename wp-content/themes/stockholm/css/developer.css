@@ -302,7 +302,7 @@ div.wpcf7-mail-sent-ok{
 	text-align:center;
 }
 .innr-co-wrk .co-worker-txt h4{
-	word-wrap: break-word;
+	/* word-wrap: break-word; */
 	font-size: 15px;
 }
 .co-worker-txt h3{
@@ -458,5 +458,4 @@ bottom: auto;
 	    margin-bottom: 30px;
 	    width: 80%;
 	    margin: auto;
-	}
-}
+	      
