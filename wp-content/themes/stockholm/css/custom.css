@@ -1331,7 +1331,7 @@ textarea.form-controls{
     top: 100%;
     position: absolute;
     z-index: 999;
-    margin-top: 8px;
+    margin-top: 20px;
 }
 header.header {padding-bottom: 0;height: 110px;}
 

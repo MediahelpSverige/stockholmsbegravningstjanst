@@ -25,36 +25,7 @@ get_header(); ?>
                    	?>
                 </div>
             </div>
-            
-            <div class="row contact-inner contact-inner-thank">
-                <div class="col-sm-3 contact-addrss">
-                    <h3><?php echo get_field('details'); ?></h3>
-                    <h4><?php echo get_field('address'); ?></h4>
-                    <h4><span>Tel: <?php echo get_field('telefon'); ?> </span><span>Fax: <?php echo get_field('fax'); ?></span></h4>
-                    <a href="mailto:<?php echo get_field('email_id'); ?> "><?php echo get_field('email_id'); ?> </a>
-                </div>
-                <div class="col-sm-5 contact-map">
-                    <map>
-                       <?php 
 
-							$location = get_field('map');
-							
-							if( !empty($location) ):
-							?>
-							<div class="acf-map">
-								<div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
-							</div>
-							<?php endif; ?>
-                    </map>
-                </div>
-                <div class="col-sm-4">
-                    <div class="contactForm">
-                         <?php echo do_shortcode('[contact-form-7 id="122" title="kontakta oss"]'); 
-           ?>
-                        
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </div>
@@ -91,42 +62,42 @@ get_header(); ?>
 */
 
 function new_map( $el ) {
-	
+
 	// var
 	var $markers = $el.find('.marker');
-	
-	
+
+
 	// vars
 	var args = {
 		zoom		: 16,
 		center		: new google.maps.LatLng(0, 0),
 		mapTypeId	: google.maps.MapTypeId.ROADMAP
 	};
-	
-	
-	// create map	        	
+
+
+	// create map
 	var map = new google.maps.Map( $el[0], args);
-	
-	
+
+
 	// add a markers reference
 	map.markers = [];
-	
-	
+
+
 	// add markers
 	$markers.each(function(){
-		
+
     	add_marker( $(this), map );
-		
+
 	});
-	
-	
+
+
 	// center map
 	center_map( map );
-	
-	
+
+
 	// return
 	return map;
-	
+
 }
 
 /*
