@@ -17,26 +17,26 @@
 
 /**
  * WordPress Multi-Environment Config
- * 
+ *
  * Loads config file based on current environment, environment can be set
- * in either the environment variable 'WP_ENV' or can be set based on the 
+ * in either the environment variable 'WP_ENV' or can be set based on the
  * server hostname.
- * 
- * This also overrides the option_home and option_siteurl settings in the 
+ *
+ * This also overrides the option_home and option_siteurl settings in the
  * WordPress database to ensure site URLs are correct between environments.
- * 
+ *
  * Common environment names are as follows, though you can use what you wish:
- * 
+ *
  *   production
  *   staging
  *   development
- * 
+ *
  * For each environment a config file must exist named wp-config.{environment}.php
- * with any settings specific to that environment. For example a development 
+ * with any settings specific to that environment. For example a development
  * environment would use the config file: wp-config.development.php
- * 
+ *
  * Default settings that are common to all environments can exist in wp-config.default.php
- * 
+ *
  * @package    Studio 24 WordPress Multi-Environment Config
  * @version    1.0.1
  * @author     Studio 24 Ltd  <info@studio24.net>
@@ -52,7 +52,7 @@ if (!defined('ABSPATH')) {
 if (getenv('WP_ENV') !== false) {
     // Filter non-alphabetical characters for security
     define('WP_ENV', preg_replace('/[^a-z]/', '', getenv('WP_ENV')));
-} 
+}
 
 // Define site host
 if (isset($_SERVER['HTTP_X_FORWARDED_HOST']) && !empty($_SERVER['HTTP_X_FORWARDED_HOST'])) {

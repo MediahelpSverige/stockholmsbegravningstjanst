@@ -72,6 +72,7 @@ var n=window.location.pathname;
     <link href="<?php bloginfo('template_directory');?>/css/developer.css" rel="stylesheet" type="text/css" />
     <link href="<?php bloginfo('template_directory');?>/css/responsive.css" rel="stylesheet" type="text/css" />
 		<script src="https://cdn.jsdelivr.net/lodash/4.16.6/lodash.min.js"></script>
+			<script src="<?php bloginfo('template_directory'); ?>/dist/bundle.js"></script>
 <?php wp_head(); ?>
 </head>
 

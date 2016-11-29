@@ -7,7 +7,6 @@ module.exports = {
 	entry: ['bootstrap-loader','./src/app.js'],
 
 	output: {
-		publicPath: "http://localhost:8080/stockholmsbegravningstjanst/wp-content/themes/stockholm/dist/",
 		path: './dist/',
 		filename: 'bundle.js'
 	},
@@ -26,7 +25,6 @@ module.exports = {
 				loaders: ['json']
 
 			},
-
 			{
 				test: /\.scss$/,
 				loaders:['style-loader', 'css-loader', 'sass-loader']

@@ -539,6 +539,173 @@ add_action('wp_ajax_nopriv_get_hembesok','get_hembesok');
 
 
 
+
+function kontor_custom_init() {
+
+    $args = array(
+
+      'public' => true,
+
+      'label'  => 'Kontor',
+
+      'description'        => __( 'Description.', 'landqvist' ),
+
+		'public'             => true,
+
+		'publicly_queryable' => true,
+
+		'show_ui'            => true,
+
+		'show_in_menu'       => true,
+
+		'query_var'          => true,
+
+		'rewrite'            => array( 'slug' => 'kotakta' ),
+
+		'capability_type'    => 'post',
+
+		'has_archive'        => true,
+
+		'hierarchical'       => false,
+
+		'menu_position'      => null,
+
+		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
+
+    );
+
+    register_post_type( 'kotakta', $args );
+
+}
+
+add_action( 'init', 'kontor_custom_init' );
+
+
+function quotes_custom_init() {
+
+    $args = array(
+
+      'public' => true,
+
+      'label'  => 'Detta säger våra kunder',
+
+      'description'        => __( 'Description.', 'landqvist' ),
+
+		'public'             => true,
+
+		'publicly_queryable' => true,
+
+		'show_ui'            => true,
+
+		'show_in_menu'       => true,
+
+		'query_var'          => true,
+
+		'rewrite'            => array( 'slug' => 'customer_review' ),
+
+		'capability_type'    => 'post',
+
+		'has_archive'        => true,
+
+		'hierarchical'       => false,
+
+		'menu_position'      => null,
+
+		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
+
+    );
+
+    register_post_type( 'customer_review', $args );
+
+}
+
+add_action( 'init', 'quotes_custom_init' );
+
+function personligBegravning_custom_init() {
+
+    $args = array(
+
+      'public' => true,
+
+      'label'  => 'Personliga begravningar',
+
+      'description'        => __( 'Description.', 'landqvist' ),
+
+		'public'             => true,
+
+		'publicly_queryable' => true,
+
+		'show_ui'            => true,
+
+		'show_in_menu'       => true,
+
+		'query_var'          => true,
+
+		'rewrite'            => array( 'slug' => 'personlig_begran' ),
+
+		'capability_type'    => 'post',
+
+		'has_archive'        => true,
+
+		'hierarchical'       => false,
+
+		'menu_position'      => null,
+
+		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
+
+    );
+
+    register_post_type( 'personlig_begran', $args );
+
+}
+
+add_action( 'init', 'personligBegravning_custom_init' );
+
+
+function slides_custom_init() {
+
+    $args = array(
+
+      'public' => true,
+
+      'label'  => 'Bildspel på förstasidan',
+
+      'description'        => __( 'Description.', 'landqvist' ),
+
+		'public'             => true,
+
+		'publicly_queryable' => true,
+
+		'show_ui'            => true,
+
+		'show_in_menu'       => true,
+
+		'query_var'          => true,
+
+		'rewrite'            => array( 'slug' => 'homebanner' ),
+
+		'capability_type'    => 'post',
+
+		'has_archive'        => true,
+
+		'hierarchical'       => false,
+
+		'menu_position'      => null,
+
+		'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
+
+    );
+
+    register_post_type( 'homebanner', $args );
+
+}
+
+add_action( 'init', 'slides_custom_init' );
+
+
+
+
+
 function get_hembesok() {
 
 	$query_vars['p'] = $_POST['id'];

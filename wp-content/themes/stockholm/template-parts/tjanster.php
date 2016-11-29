@@ -38,9 +38,7 @@ get_header(1); ?>
 $cntimg=0;
 $imgCount = 0;
 $imgMaxCount = 9;
- $data = damiu_query_by_id($post->ID);
 
- if(have_damiu() >1){
   ?>
         <div class="row vara-btm scrl-2" id="p-Blommor">
         <div class="col-sm-7 vara-glry">
@@ -49,7 +47,10 @@ $imgMaxCount = 9;
 
             <ul id="flowers-list" class="vara-list vara-row clearfix">
 
-             <?php while(have_damiu()): the_damiu();
+             <?php
+             $blommor = get_post_meta( $post->ID, 'blommor', true );
+             print_r($blommor);
+                 foreach( $blommor as $blomma){
 
 
              	?>
@@ -58,17 +59,29 @@ $imgMaxCount = 9;
                     <div class="vara-box">
                         <div class="vara-box-pic">
 
-                            <a class="fancyboxgroup" href="<?php  damiu_image(); ?>" rel="group1" data-id="" title="<?php echo damiu_text(); ?>">
-                            		<img src="<?php  damiu_image(); ?>" alt="" /></a>
+                          <?php
+                            $src = wp_get_attachment_image_src($blomma['blommor-bild'], 'medium');
+
+
+                          ?>
+
+                            <a class="fancyboxgroup" href="<?php echo $src[0]; ?>" rel="group1" data-id="" title="<?php echo $blomma['blommor-titel']; ?>
+                              <form action='<?php echo get_the_permalink(131); ?>#tab2' class='galform' method='POST' >
+                            	<p class='pricea'>
+                            		<a  class='bestimg btn-default-small' href='javascript:void(0);' >Beställ nu</a></p>
+                            		<input type='hidden' name='imgcnt' value='<?php echo $cntimg ;?>' />
+                            		  </form>">
+                            		<img src="<?php echo  $src[0]; ?>" alt="" /></a>
 
                         </div>
-                        <span><a href="javascript:void();"><?php echo damiu_title() ?></a></span>
+                        <span><a href="javascript:void();"><?php echo $blomma['blommor-text']; ?></a></span>
                     </div>
                 </li>
 
 
 
-                 <?php $cntimg++ ;  endwhile; ?>
+                 <?php $cntimg++ ;
+               } ?>
 				<?php wp_reset_postdata(); ?>
 
 
@@ -90,7 +103,6 @@ $imgMaxCount = 9;
         <div class="col-sm-5 begra">
            <?php echo get_field('right_text_area2'); ?>
         </div>
-        <?php } ?>
     </div>
      <?php } ?>
 
@@ -101,9 +113,19 @@ $imgMaxCount = 9;
 //
 	  // while ( $kistorepage->have_posts() ) : $kistorepage->the_post();
 
-	  global $post; $post = get_post( 191 , OBJECT ); setup_postdata( $post );
+	  global $post;
+    $query = get_posts(
+    array(
+        'name'      => 'kistor',
+        'post_type' => 'page'
+    )
+);
 
- $data = damiu_query_by_id($post->ID);
+
+    setup_postdata( $query[0]->ID );
+
+
+
 
   ?><hr>
         <div class="row vara-btm scrl-3" id="p-kistor">
@@ -122,22 +144,30 @@ $imgMaxCount = 9;
           <div id="kistor-slider">
             <ul id="kistor-list" class="vara-list vara-row clearfix">
 
-             <?php while(have_damiu()): the_damiu();
+             <?php
+
+          $kistor = get_post_meta( $query[0]->ID, 'kistor1', true );
+          print_r($kistor);
+              foreach( $kistor as $kista){
+
              	?>
 
                 <li <?php if($paginationv >= 9){ echo 'class="hidden"'; } ?>>
                     <div class="vara-box vara2">
                         <div class="vara-box-pic">
-                            <a href="<?php  damiu_image(); ?>" rel="group2" data-id="" title=" <?php echo damiu_text(); ?> ">
-                            		<img src="<?php  damiu_image(); ?>" alt="" /></a>
+                          <?php
+                            $src = wp_get_attachment_image_src($kista['kistor-bild'], 'medium');
+                          ?>
+                            <a class="fancyboxgroup" href="<?php echo $src[0]; ?>" rel="group1" data-id="" title="<?php echo $kista['kistor-titel']; ?>">
+                            		<img src="<?php echo  $src[0]; ?>" alt="" /></a>
                         </div>
-                        <span><a href="javascript:void();"><?php echo damiu_title() ?></a></span>
+                        <span><a href="javascript:void();"><?php echo $kista['kistor-text']; ?></a></span>
                     </div>
                 </li>
 
 
 
-                 <?php $paginationv++; $cntimg++;  endwhile; ?>
+                 <?php $paginationv++; $cntimg++;  } ?>
 				<?php wp_reset_postdata(); ?>
 
             </ul>
@@ -315,7 +345,6 @@ var numberPerPageKistor = 6;
 var numberOfPagesKistor = 0;
 
 var numberOfPagesKistor = getNumberOfPagesKistor();
-
 
 
 function loadKistor() {

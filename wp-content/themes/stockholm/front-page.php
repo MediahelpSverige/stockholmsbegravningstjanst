@@ -30,9 +30,7 @@ get_header(); ?>
     <div class="container">
         <div class="row">
             <div class="col-sm-offset-1 col-sm-10">
-               <?php $homecontent = get_page(5);
-               echo $homecontent->post_content;
-               ?>
+              <?php the_content(); ?>
             </div>
         </div>
           <div class="rivew-part ">

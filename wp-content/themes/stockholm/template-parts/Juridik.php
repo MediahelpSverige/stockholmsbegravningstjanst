@@ -21,7 +21,21 @@ get_header(2); ?>
   			<?php
       			global $post; $post = get_post( 193 , OBJECT ); setup_postdata( $post );
       		?>
-					<div class="law-image" style="background-image:url('<?php the_post_thumbnail_url('full'); ?>')"></div>
+					<div class="law-image">
+						<img src="<?php the_post_thumbnail_url('full'); ?>">
+					<div class="kontakt-text-wrap">
+						<div class="kontakt-title"><h4><?php the_field('kontakt-titel'); ?></h4></div>
+						<div class="kontakt-title"><h5><?php the_field('kontakt-text'); ?></h5></div>
+						<div class="kontakt-number">
+							<button type="button" class="btn btn-primary">
+								<span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
+								<span class="button-text"><a href="<?php echo get_field('telefon');?>"><?php echo get_field('kontakt-number');?></a></span>
+							</button>
+						</div>
+
+					</div>
+
+					</div>
 					<div class="law-content">
       		<h3><?php echo get_the_title(193); ?></h3>
 	      <?php
