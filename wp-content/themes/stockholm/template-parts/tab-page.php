@@ -13,16 +13,16 @@
 
 get_header(); ?>
 
-<?php  
-$name=$_REQUEST['imgcnt'];  
-echo $name;  
-?> 
+<?php
+$name=$_REQUEST['imgcnt'];
+echo $name;
+?>
 <input type="hidden" name="imcn" id="imcnid" value="<?php echo $name; ?>" />
 <script>
 //alert();
  var cntnum = "<?php print $name; ?>";
 	//alert(cntnum);
-</script> 
+</script>
 
 <div class="inner-page no-header">
 
@@ -60,16 +60,23 @@ echo $name;
                           <p><?php echo $sendflower->post_content; ?></p>
                         </header>
                         <div class="flower-carousel">
-                        	<?php 
- damiu_query_by_id(18); 
- while(have_damiu()): the_damiu(); ?>
+                        	<?php
+
+                          $blommor = get_post_meta( 18, 'blommor', true );
+                              foreach( $blommor as $blomma){
+
+
+                                $src = wp_get_attachment_image_src($blomma['blommor-bild'], 'medium');
+
+
+                          	?>
                             <div class="item">
                                 <div class="flower-car select-class">
-                                    <figure><img src="<?php damiu_image(); ?>" alt="flower" /></figure>
-                                    <h3> <?php echo damiu_title() ?></h3>
+                                    <figure><img src="<?php echo $src[0]; ?>" alt="flower" /></figure>
+                                    <h3> <?php $blomma['blommor-text']; ?></h3>
                                 </div>
                             </div>
-<?php endwhile; ?>
+<?php }; ?>
                         </div>
                         <div class="tab-form">
                             <div>
@@ -92,21 +99,21 @@ echo $name;
 			var obj=$(this);
 				var url = (document.domain+document.location.pathname).split('/tab/');
 				var redi_url= 'http://'+url[0]+'/thank-you';
-			setTimeout(function(){ 
-			
+			setTimeout(function(){
+
 					var non_val= obj.parents('form').find('.wpcf7-validation-errors').text();
 					var val = obj.parents('form').find('.wpcf7-mail-sent-ok').text();
 					if(val !=''){
-					
+
 						window.location.replace(redi_url);
 					}
 				},1000);
-			
+
 		});
-	
+
 	});
-	
-	
+
+
 </script>
 
 <?php get_footer(); ?>
