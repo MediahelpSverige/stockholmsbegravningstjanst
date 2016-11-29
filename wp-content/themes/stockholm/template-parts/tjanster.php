@@ -49,7 +49,6 @@ $imgMaxCount = 9;
 
              <?php
              $blommor = get_post_meta( $post->ID, 'blommor', true );
-             print_r($blommor);
                  foreach( $blommor as $blomma){
 
 

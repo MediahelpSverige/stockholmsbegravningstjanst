@@ -845,6 +845,7 @@ ul.vara-list.vara-row {
     background: #f4f4f4;
     overflow: hidden;
     margin-bottom: 12px;
+    /* height: 107px; */
 }
 .vara-box:hover span a{
     color: #cb971e;
@@ -856,9 +857,10 @@ ul.vara-list.vara-row {
 .vara-box-pic {
     height: 190px;
     overflow: hidden;
+    background-color: white;
 }
 .vara-box-pic img {
-    width: 100%;
+    /* width: 100%; */
     /* display: none; */
 }
 
