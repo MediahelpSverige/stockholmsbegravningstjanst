@@ -1,0 +1,14 @@
+header{
+  .navbar-nav li.hasdrop.current_page_item > a:after{
+    margin-top: 20px;
+  }
+  .navbar{
+    margin-bottom: 0px;
+
+    a{
+      &:hover{
+        background: none;
+      }
+    }
+  }
+}

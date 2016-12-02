@@ -18,6 +18,7 @@ get_header(3); ?>
 	<div class="contact topgap-inner priser-content">
 		<div class="container page-top">
 			<div class="row" id="top-row">
+				<div class="col-sm-9">
 			<div id="top-text">
 			<?php echo apply_filters( 'the_content', $post->post_content );  ?>
 			</div>
@@ -29,7 +30,8 @@ get_header(3); ?>
 			 if( have_rows('kontakt') ): while ( have_rows('kontakt') ) : the_row(); ?>
 
 			 <?php if( get_row_layout() == 'kontaktperson_layout' ): ?>
-
+	 </div>
+	 <div class="col-sm-3">
 				 <div class="right_contact_field">
 					 <div class="border-wrap">
 
@@ -39,6 +41,7 @@ get_header(3); ?>
 				 <p id="kont_text"><?php echo get_sub_field('text'); ?></p>
 			 </div>
 		 </div>
+</div>
 </div>
 			 <?php endif;
 

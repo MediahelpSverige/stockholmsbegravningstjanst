@@ -44,7 +44,7 @@ var n=window.location.pathname;
 
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 
-	<title>stockholmsbegravningsbyra</title>
+	<title><?php wp_title(''); ?></title>
 
     <!--favicon-->
     <link rel="icon" href="<?php bloginfo('template_directory');?>/images/favicon.ico" type="image/x-icon">
@@ -68,7 +68,7 @@ var n=window.location.pathname;
     <link href="<?php bloginfo('template_directory');?>/css/developer.css" rel="stylesheet" type="text/css" />
     <link href="<?php bloginfo('template_directory');?>/css/responsive.css" rel="stylesheet" type="text/css" />
 			<script src="<?php bloginfo('template_directory'); ?>/dist/bundle.js"></script>
-			
+
 <?php wp_head(); ?>
 </head>
 
@@ -128,11 +128,5 @@ var n=window.location.pathname;
 
   </div><!-- /.container-fluid -->
 </nav>
-    <div class="menu-top">
-        <div class="container">
-            <span><?php the_title(); ?></span>
-
-        </div>
-    </div>
 </header>
 <!--header end-->

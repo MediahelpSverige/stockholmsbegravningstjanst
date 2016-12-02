@@ -59,7 +59,7 @@ get_header(); ?>
 
 		?>
 
-        <div class="row customer-cont ">
+        <div class="row customer-cont">
         	<?php } ?>
             <div class="<?php if($c==2) { ?> col-sm-6 col-sm-offset-1 <?php } elseif($c==3){ ?> col-sm-5 <?php } else { ?> col-sm-6 <?php } ?> ">
                 <div class="customer-cont-txt">
@@ -116,7 +116,7 @@ get_header(); ?>
         $hemkontor = get_page(369);
         ?>
 
- <li class="presentation1"><a class="besok" id="<?php echo $hemkontor->ID; ?>">Boka ett kostnadsfritt hembesok</a></li>
+ <li class="presentation1"><a class="besok" id="<?php echo $hemkontor->ID; ?>"><?php the_field('button_text', 369); ?></a></li>
                       </ul>
                </div>
             </div>
@@ -259,20 +259,21 @@ get_header(); ?>
 <div class="info-user" id="om-oss-content">
     <div class="container">
        <div class="row">
-           <div class="col-sm-4">
-               <div class="project-box">
-                  <div class="project-inner pro-marg">
 
-                  <p> <?php $review_details = get_page(14);
-			           echo $review_details->post_content;
-			           ?></p>
-                  </div>
-               </div>
-           </div>
-           <div class="col-sm-8">
-               <div class="row project-addrss">
+
             <?php $query_partner = new WP_Query('page_id=14');
   		  	  			   if( $query_partner->have_posts() ) : $query_partner->the_post(); ?>
+                     <div class="col-sm-4">
+                         <div class="project-box">
+                            <div class="project-inner pro-marg">
+
+          <?php the_content(); ?>
+                            </div>
+                         </div>
+                     </div>
+
+                     <div class="col-sm-8">
+                         <div class="row project-addrss">
                             <?php
 								if( have_rows('contact_persian_details') ): while ( have_rows('contact_persian_details') ) : the_row();
 								if( get_row_layout() == 'contact_persian_details_sub' ):

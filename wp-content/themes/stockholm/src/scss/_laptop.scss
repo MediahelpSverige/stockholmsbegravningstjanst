@@ -1,0 +1,43 @@
+$orange: #ddb448;
+
+//STYLES FOR laptop with smaller screen heights
+@media (max-height:780px){
+body{
+
+  header{
+
+    height: 100px;
+
+    .navbar{
+    height: 100px;
+    }
+
+  }
+
+  .banner{
+    .item{
+      .banner-text{
+        top: 40%;
+        h2{
+          margin-top: 0px;
+          margin-bottom: 15px;
+        }
+      }
+    }
+    .banner-footer{
+      padding: 20px 0px;
+    }
+
+    .btn-default{
+      background-color:$orange;
+      border-radius: 3px;
+font-family: 'GothamBook_8';
+height: 40px;
+border: none;
+outline: none;
+color: white;
+    }
+  }
+
+}
+}
