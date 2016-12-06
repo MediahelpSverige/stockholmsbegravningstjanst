@@ -31,11 +31,12 @@ get_header(3); ?>
 
 			 <?php if( get_row_layout() == 'kontaktperson_layout' ): ?>
 	 </div>
-	 <div class="col-sm-3">
-				 <div class="right_contact_field">
-					 <div class="border-wrap">
+	 <div class="col-sm-3 law-image">
+				 <div class="">
+					 <img src="<?php echo get_sub_field('kontaktperson'); ?>">
+					 <div class="kontakt-text-wrap">
 
-				 <img src="<?php echo get_sub_field('kontaktperson'); ?>">
+
 				 <h3 id="kont_titel"><?php echo get_sub_field('titel'); ?></h3>
 				 <h2 id="kont_tel"><?php echo get_sub_field('telefon'); ?></h2>
 				 <p id="kont_text"><?php echo get_sub_field('text'); ?></p>

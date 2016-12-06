@@ -1214,12 +1214,13 @@ textarea.form-controls{
     margin: 0 6px;
 }
 .flower-car h3{
-    font-size: 16px;
+    font-size: 14px;
     color: #232323;
     font-weight: normal;
     font-family: 'GothamBook_8';
     text-align: center;
     padding: 10px 0;
+    margin: 0px;
 }
 .flower-carousel{
 }

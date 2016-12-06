@@ -65,6 +65,8 @@ echo $name;
                           $blommor = get_post_meta( 18, 'blommor', true );
                               foreach( $blommor as $blomma){
 
+                                //print_r($blomma);
+
 
                                 $src = wp_get_attachment_image_src($blomma['blommor-bild'], 'medium');
 
@@ -73,7 +75,7 @@ echo $name;
                             <div class="item">
                                 <div class="flower-car select-class">
                                     <figure><img src="<?php echo $src[0]; ?>" alt="flower" /></figure>
-                                    <h3> <?php $blomma['blommor-text']; ?></h3>
+                                    <h3> <?php echo $blomma['blommor-text']; ?></h3>
                                 </div>
                             </div>
 <?php }; ?>
