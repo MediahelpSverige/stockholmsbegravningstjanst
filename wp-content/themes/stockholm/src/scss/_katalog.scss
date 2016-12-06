@@ -2,19 +2,52 @@ body{
 
   .lightbox{
 
+    .lb-outerContainer{
+      overflow: hidden;
+    }
+
+  .lb-dataContainer {
+    background: rgba(132, 132, 132, 0.8);
+    position: relative;
+
+  }
+
+  //Close container
   .lb-closeContainer{
     position: absolute;
-    top: 0px;
-    right: 0px;
+    display: block;
+    background-color: orange;
+    padding: 20px;
+    border-radius: 50%;
+    border: 1px solid white;
+    color: white;
+    z-index: 999;
     .lb-close{
+
+      color: white;
+
+
 
     }
 
 
   }
 
+
   .lb-number{
-    display: none;
+    display: none!important;
+  }
+
+  .lb-details{
+    padding: 19px;
+    h3{
+      color: white;
+      margin-top: 0px;
+      }
+
+      p{
+            color: #e2e2e2;
+      }
   }
 
   }

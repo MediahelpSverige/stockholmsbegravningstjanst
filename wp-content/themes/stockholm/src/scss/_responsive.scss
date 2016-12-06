@@ -1,4 +1,51 @@
+@media (min-width: 765px) {
+  //Close container
+  .lb-closeContainer{
+    position: absolute;
+    top: -475px;
+    display: block;
+    right: -20px;
+    background-color: orange;
+    padding: 20px;
+    border-radius: 50%;
+    border: 1px solid white;
+    color: white;
+    z-index: 999;
+    .lb-close{
+
+      color: white;
+
+
+
+    }
+
+
+  }
+}
+
 @media (max-width: 767px){
+
+  .lb-closeContainer{
+    position: absolute;
+    bottom:20px;
+    display: block;
+    right: 20px;
+    background-color: orange;
+    padding: 20px;
+    border-radius: 50%;
+    border: 1px solid white;
+    color: white;
+    z-index: 999;
+    .lb-close{
+
+      color: white;
+
+
+
+    }
+
+
+  }
 
 header{
   .container > .navbar-collapse{
