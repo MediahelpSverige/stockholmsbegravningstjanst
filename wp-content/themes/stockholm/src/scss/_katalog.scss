@@ -1,5 +1,24 @@
 body{
 
+  .lightbox{
+
+  .lb-closeContainer{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    .lb-close{
+
+    }
+
+
+  }
+
+  .lb-number{
+    display: none;
+  }
+
+  }
+
 @media (max-width: 991px){
   #flowers-list{
     .vara-box-pic{

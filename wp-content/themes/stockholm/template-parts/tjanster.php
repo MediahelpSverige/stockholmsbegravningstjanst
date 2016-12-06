@@ -148,7 +148,6 @@ $imgMaxCount = 9;
           $kistor = get_post_meta( $query[0]->ID, 'kistor1', true );
               foreach( $kistor as $kista){
 
-                print_r($kista);
 
              	?>
 
