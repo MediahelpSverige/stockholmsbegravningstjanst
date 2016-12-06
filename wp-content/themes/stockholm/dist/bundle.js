@@ -13129,17 +13129,11 @@
 
 	__webpack_require__(127);
 
-	var _katalog = __webpack_require__(129);
-
-	var _katalog2 = _interopRequireDefault(_katalog);
-
 	var _responsive = __webpack_require__(161);
 
 	var _responsive2 = _interopRequireDefault(_responsive);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	console.log(_responsive2.default);
 
 	(0, _jquery2.default)(document).ready(function () {
 
@@ -24771,88 +24765,7 @@
 
 
 /***/ },
-/* 129 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function($) {"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	var katalog = function () {
-	  function katalog(elem, katalogArray, listElem) {
-	    _classCallCheck(this, katalog);
-
-	    // our variable holding starting index of this "page"
-	    var index = 0;
-	    var perPage = 9;
-
-	    $(elem).each(function (index) {
-	      katalogArray.push(this);
-	    });
-
-	    populate();
-	  }
-
-	  _createClass(katalog, [{
-	    key: "showModal",
-	    value: function showModal(id) {}
-	  }, {
-	    key: "getPageNum",
-	    value: function getPageNum() {}
-
-	    //Pagination
-
-	  }, {
-	    key: "next",
-	    value: function next() {
-
-	      //Check for max page
-
-	    }
-	  }, {
-	    key: "prev",
-	    value: function prev() {}
-
-	    //check for min page
-
-	    //Populate the lsit array
-
-	  }, {
-	    key: "populate",
-	    value: function populate() {
-	      var begin = (currentPage - 1) * numberPerPage;
-	      var end = begin + numberPerPage;
-
-	      pageList = list.slice(begin, end);
-	      console.log(pageList);
-	      drawList();
-	    }
-
-	    //Render the list
-
-	  }, {
-	    key: "drawList",
-	    value: function drawList() {
-	      document.getElementById(listElem).innerHTML = "";
-	      for (r = 0; r < pageList.length; r++) {
-	        document.getElementById(listElem).innerHTML += "<li>" + pageList[r].innerHTML + "</li>";
-	      }
-	    }
-	  }]);
-
-	  return katalog;
-	}();
-
-	exports.default = katalog;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(27)))
-
-/***/ },
+/* 129 */,
 /* 130 */,
 /* 131 */,
 /* 132 */,

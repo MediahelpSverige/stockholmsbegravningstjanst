@@ -1,15 +1,21 @@
-export default class katalog {
+class katalog {
   constructor(elem,katalogArray, listElem) {
 
     // our variable holding starting index of this "page"
     var index = 0;
-    var perPage = 9;
+    var numberPerPage = 9;
+    var list = katalogArray;
+    var currentPage = 1;
+    var numberOfPages = 0;
+
+    numberOfPages = this.getNumberOfPages(list);
+
 
     $(elem).each( function( index ) {
       katalogArray.push(this);
     });
 
-    populate();
+    this.populate();
 
   }
 
@@ -17,31 +23,35 @@ export default class katalog {
 
   }
 
-  getPageNum() {
-
+  getNumberOfPages(list) {
+      return Math.ceil(list.length / this.numberPerPage);
   }
 
   //Pagination
   next() {
 
     //Check for max page
+    this.currentPage += 1;
+    loadList();
 
   }
-  
+
   prev(){
 
     //check for min page
+    this.currentPage -= 1;
+    loadList();
 
   }
 
 //Populate the lsit array
   populate() {
-    var begin = ((currentPage - 1) * numberPerPage);
-    var end = begin + numberPerPage;
+    var begin = ((this.currentPage - 1) * this.numberPerPage);
+    var end = begin + this.numberPerPage;
 
-    pageList = list.slice(begin, end);
-    console.log(pageList);
-    drawList();
+    pageList = this.list.slice(begin, end);
+
+    this.drawList();
 
   }
 

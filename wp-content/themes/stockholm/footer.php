@@ -70,6 +70,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 
 <script src="<?php bloginfo('template_directory'); ?>/js/custom.js"></script>
+<script src="<?php bloginfo('template_directory'); ?>/js/lightbox2/dist/js/lightbox.min.js"></script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAFCJUiH4RVlSpYZWVtNyHu6GLEull_9E"></script>
 

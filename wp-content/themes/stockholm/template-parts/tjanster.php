@@ -12,8 +12,8 @@
  */
 
 get_header(1); ?>
-
-
+<link href="<?php bloginfo('template_url'); ?>/js/lightbox2/dist/css/lightbox.min.css" rel="stylesheet" type="text/css"/>
+<script src="<?php bloginfo('template_url'); ?>/src/js/katalog.js"> </script>
 
 <div class="inner-page">
 
@@ -59,12 +59,12 @@ $imgMaxCount = 9;
                         <div class="vara-box-pic">
 
                           <?php
-                            $src = wp_get_attachment_image_src($blomma['blommor-bild'], 'medium');
+                            $src = wp_get_attachment_image_src($blomma['blommor-bild'], 'full');
 
 
                           ?>
 
-                            <a class="fancyboxgroup" href="<?php echo $src[0]; ?>" rel="group1" data-id="" title="<?php echo $blomma['blommor-titel']; ?>
+                            <a class="fancyboxgroup" href="<?php echo $src[0]; ?>" rel="group1" data-id="" data-lightbox="blommor" data-title="<?php echo $blomma['blommor-titel']; ?>
                               <form action='<?php echo get_the_permalink(131); ?>#tab2' class='galform' method='POST' >
                             	<p class='pricea'>
                             		<a  class='bestimg btn-default-small' href='javascript:void(0);' >Beställ nu</a></p>
@@ -148,15 +148,17 @@ $imgMaxCount = 9;
           $kistor = get_post_meta( $query[0]->ID, 'kistor1', true );
               foreach( $kistor as $kista){
 
+                print_r($kista);
+
              	?>
 
                 <li <?php if($paginationv >= 9){ echo 'class="hidden"'; } ?>>
                     <div class="vara-box vara2">
                         <div class="vara-box-pic">
                           <?php
-                            $src = wp_get_attachment_image_src($kista['kistor-bild'], 'medium');
+                            $src = wp_get_attachment_image_src($kista['kistor-bild'], 'full');
                           ?>
-                            <a class="fancyboxgroup" href="<?php echo $src[0]; ?>" rel="group1" data-id="" title="<?php echo $kista['kistor-titel']; ?>">
+                            <a class="fancyboxgroup" href="<?php echo $src[0]; ?>" rel="group1" data-lightbox="kistor" data-title="<?php echo $kista['kistor-text']; ?>">
                             		<img src="<?php echo  $src[0]; ?>" alt="" /></a>
                         </div>
                         <span><a href="javascript:void();"><?php echo $kista['kistor-text']; ?></a></span>
@@ -208,6 +210,12 @@ $imgMaxCount = 9;
 <script>
 	jQuery(document).ready(function($){
 
+var blommorElem = $('#kistor-slider li');
+var blommorArray = [];
+var blommorDisplayElement = document.getElementById("flowers-list");
+
+    //var blommorKatalog = new katalog(blommorElem, blommorArray, blommorDisplayElement);
+    //var kistorKatalog = new katalog();
     //vara2 kistor
 
     // our variable holding starting index of this "page"
@@ -219,6 +227,11 @@ var index2 = 0;
     //slideshow for the flower
     var maxKistorCount = 9;
     var kistorarray = []
+
+    console.log();
+
+
+
     $('#kistor-slider li').each( function( index ) {
       kistorarray.push(this);
     });
