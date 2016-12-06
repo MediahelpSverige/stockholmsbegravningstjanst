@@ -65,7 +65,6 @@
 <!--page script goes here-->
 
 <script src="<?php bloginfo('template_directory'); ?>/js/jquery-1.11.1.js"></script>
-<script src="<?php bloginfo('template_directory'); ?>/js/bootstrap.min.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/js/owl.carousel.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/js/slick.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>

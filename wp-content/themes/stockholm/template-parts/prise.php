@@ -18,7 +18,7 @@ get_header(3); ?>
 	<div class="contact topgap-inner priser-content">
 		<div class="container page-top">
 			<div class="row" id="top-row">
-				<div class="col-sm-9">
+				<div class="col-sm-9 begra">
 			<div id="top-text">
 			<?php echo apply_filters( 'the_content', $post->post_content );  ?>
 			</div>

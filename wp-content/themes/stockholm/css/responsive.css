@@ -353,7 +353,7 @@ header .navbar-header{
         z-index: 9;
         left: 0px;
         right: 0px;
-        top: 100%;
+        top: 120%;
     }
     .menu-listingHd .navbar-nav li a {
         color: #fff;

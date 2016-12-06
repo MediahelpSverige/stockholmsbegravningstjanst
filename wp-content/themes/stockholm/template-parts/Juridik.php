@@ -14,7 +14,7 @@
 get_header(2); ?>
 
 <div class="inner-page">
-	<div class="container page-top">
+	<div class="container page-top begra">
 
   		<div class="vara-btm scrl-1 pdng0">
 

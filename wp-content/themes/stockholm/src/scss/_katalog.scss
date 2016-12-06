@@ -1,0 +1,23 @@
+body{
+
+@media (max-width: 991px){
+  #flowers-list{
+    .vara-box-pic{
+      height: 120px;
+    }
+  }
+}
+
+@media (max-width:845px){
+  #flowers-list{
+    .vara-box-pic{
+      height: 200px;
+    }
+  }
+}
+  .flower-car{
+    img{
+        height: 180px;
+    }
+  }
+}

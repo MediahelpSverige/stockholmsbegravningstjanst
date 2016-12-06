@@ -11,7 +11,7 @@
  * @since Twenty Sixteen 1.0
  */
 
-get_header(); ?>
+get_header(3); ?>
 
 	<div class="contact topgap-inner priser-content">
 		<div class="container">

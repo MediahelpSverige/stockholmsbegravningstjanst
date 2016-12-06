@@ -1236,6 +1236,7 @@ textarea.form-controls{
     width: 100%;
     height: auto;
     display: block;
+    height: 180px;
 }
 .contact-inner-thank{
     border-top: 0;
