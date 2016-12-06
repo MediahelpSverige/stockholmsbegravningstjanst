@@ -7,7 +7,7 @@
 }
 .tab-form{
   .btn-default{
-    background-color: orange;
+    background-color: #ddb448;
     color: white;
     font-size: 20px;
     font-weight: lighter;
@@ -16,8 +16,24 @@
 }
 
 .btn-default{
-  background-color: orange;
+  background-color: #ddb448;
   color: white;
   font-weight: lighter;
   border: none;
+}
+
+a.btn-primrary{
+  margin-top: 15px;
+  display: inline-block;
+  background-color: #ddb448;
+  color: white;
+  padding:19px;
+  border-radius: 3px;
+      font-size: 13px;
+
+  span.glyphicon.glyphicon-file {
+    padding-right: 15px;
+}
+
+
 }
