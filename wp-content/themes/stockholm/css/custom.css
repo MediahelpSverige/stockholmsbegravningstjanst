@@ -1298,6 +1298,7 @@ textarea.form-controls{
 }
 .priser-content{
     padding-bottom: 90px;
+    padding-top: 30px;
 }
 .btn-submit.rd-mr-anc{
     font-size: 16px;
@@ -1558,6 +1559,8 @@ p#kont_text {
 
 div#top-row {
     margin-bottom: 50px;
+    display: flex;
+    /* align-items: center; */
 }
 
 .law-image{
@@ -1638,9 +1641,10 @@ div#prevkistor {
 }
 
 div#top-text{
-	float: left;
+	/* float: left; */
 	width: 70%;
-	margin-bottom: 74px;
+	/* margin-bottom: 74px; */
+	align-self: center;
 }
 
 .right_contact_field {
