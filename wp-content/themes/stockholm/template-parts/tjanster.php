@@ -65,9 +65,9 @@ $imgMaxCount = 9;
                           ?>
 
                             <a class="fancyboxgroup" href="<?php echo $src[0]; ?>" rel="group1" data-id="" data-lightbox="blommor" data-title="<?php echo $blomma['blommor-titel']; ?>
-                              <form action='<?php echo get_the_permalink(131); ?>#tab2' class='galform' method='POST' >
+                              <form action='<?php echo get_the_permalink(131); ?>#tab2' id='order' class='galform' method='POST' >
                             	<p class='pricea'>
-                            		<a  class='bestimg btn-default-small' href='javascript:void(0);' >Beställ nu</a></p>
+                            		<button class='bestimg btn-default-small' onclick='submit();'>Beställ nu</button></p>
                             		<input type='hidden' name='imgcnt' value='<?php echo $cntimg ;?>' />
                             		  </form>">
                             		<img src="<?php echo  $src[0]; ?>" alt="" /></a>
@@ -208,7 +208,21 @@ $imgMaxCount = 9;
 
 
 <script>
+
+
+
+  function submit() {
+     $('#order').submit()
+     console.log('submit');
+    }
+
+
+
 	jQuery(document).ready(function($){
+
+
+
+
 
 var blommorElem = $('#kistor-slider li');
 var blommorArray = [];
