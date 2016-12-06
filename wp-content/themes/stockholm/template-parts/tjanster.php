@@ -64,7 +64,9 @@ $imgMaxCount = 9;
 
                           ?>
 
-                            <a class="fancyboxgroup" href="<?php echo $src[0]; ?>" rel="group1" data-id="" data-lightbox="blommor" data-title="<?php echo $blomma['blommor-titel']; ?>
+                            <a class="fancyboxgroup" href="<?php echo $src[0]; ?>" rel="group1" data-id="" data-lightbox="blommor" data-title="
+                              <h3><?php echo $blomma['blommor-titel']; ?></h3>
+                              <p><?php echo $blomma['blommor-text']; ?></p>
                               <form action='<?php echo get_the_permalink(131); ?>#tab2' id='order' class='galform' method='POST' >
                             	<p class='pricea'>
                             		<button class='bestimg btn-default-small' onclick='submit();'>Beställ nu</button></p>
@@ -218,6 +220,11 @@ $imgMaxCount = 9;
 
 
 	jQuery(document).ready(function($){
+
+
+    lightbox.option({
+      maxHeight:450
+    });
 
 
 
