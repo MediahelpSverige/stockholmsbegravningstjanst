@@ -103,9 +103,9 @@ get_header(); ?>
                    <ul class="nav nav-tabs" role="tablist">
                    	<?php $event_query = new WP_Query(array('post_type'  => 'kotakta', 'posts_per_page' => '-1',)        ); $c=1;
              while ( $event_query->have_posts() ) : $event_query->the_post();
-
+             $c++;
              ?>
-                        <li  class="kontor-li" role="presentation" <?php if($c==2){?>class="active"<?php }?>><a class="kontor-btn" href="#address<?php echo $post->ID; ?>" aria-controls="address<?php echo $post->ID; ?>" role="tab" data-toggle="tab"><?php the_title(); ?></a></li>
+                        <li  class="kontor-li <?php if($c==2){ echo "active"; } ?>" role="presentation"><a class="kontor-btn" href="#address<?php echo $post->ID; ?>" aria-controls="address<?php echo $post->ID; ?>" role="tab" data-toggle="tab"><?php the_title(); ?></a></li>
 
                         	 <?php  endwhile; ?>
 					<?php wp_reset_postdata(); ?>
@@ -127,12 +127,13 @@ get_header(); ?>
                   <div id="hembesok-ajax"></div>
 
                 	 	<?php $event_query = new WP_Query(array('post_type'  => 'kotakta', 'posts_per_page' => '-1',)        );
-						// $c=1;
+						$c=1;
              while ( $event_query->have_posts() ) : $event_query->the_post();
+             $c++;
 
              ?>
 
-                  <div role="tabpanel" class="tab-pane fade <?php //if($c==2){ echo 'in active'; }?>" id="address<?php echo $post->ID; ?>">
+                  <div role="tabpanel" class="tab-pane fade <?php if($c==2){ echo 'in active'; }?>" id="address<?php echo $post->ID; ?>">
                       <div class="info-addrss clearfix">
                         <div class="info-addrss-l info-addrss-ll">
                           <?php
