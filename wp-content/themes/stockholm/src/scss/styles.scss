@@ -1,3 +1,6 @@
+
+@import "variables";
+
 @import 'buttons';
 
 @import 'katalog';
@@ -9,6 +12,11 @@
 body{
 
 @import 'header';
+
+
+p{
+  color: $standardTextColor;
+}
 
 
   a{
