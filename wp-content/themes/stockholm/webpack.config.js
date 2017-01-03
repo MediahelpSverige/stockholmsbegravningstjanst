@@ -10,7 +10,8 @@ module.exports = {
 		path: './dist/',
 		filename: 'bundle.js'
 	},
-
+	devtool: 'source-map',
+	debug: true,
 	module: {
 		loaders: [
 			{
@@ -27,7 +28,7 @@ module.exports = {
 			},
 			{
 				test: /\.scss$/,
-				loaders:['style-loader', 'css-loader', 'sass-loader']
+				loaders:['style-loader',"css-loader?sourceMap", "sass-loader?sourceMap"]
 			},
       {
 				test: /\.css$/,

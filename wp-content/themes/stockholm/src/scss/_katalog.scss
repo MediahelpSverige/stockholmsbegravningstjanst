@@ -14,19 +14,14 @@ body{
 
   //Close container
   .lb-closeContainer{
-    position: absolute;
-    display: block;
-    background-color: orange;
-    padding: 20px;
-    border-radius: 50%;
-    border: 1px solid white;
     color: white;
     z-index: 999;
+    float: right;
+    padding: 10px;
     .lb-close{
 
+      float:none;
       color: white;
-
-
 
     }
 

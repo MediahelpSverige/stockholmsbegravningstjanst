@@ -187,6 +187,7 @@
 
 
         //        fancybox
+        /*
                 $(".vara-box a").fancybox({
                     fitToView: false,
                     beforeShow: function(){
@@ -216,6 +217,7 @@
 
   }
 });
+*/
 
   });
 </script>
